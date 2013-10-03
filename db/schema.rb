@@ -16,16 +16,17 @@ ActiveRecord::Schema.define(version: 20131003170352) do
   create_table "posts", force: true do |t|
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "location"
     t.text     "content"
     t.string   "sender_desc"
     t.string   "receiver_desc"
     t.string   "mood"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "sender_id"
   end
 
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+  add_index "posts", ["sender_id"], name: "index_posts_on_sender_id"
 
   create_table "users", force: true do |t|
 	  t.string   "email",                  default: "", null: false
@@ -44,6 +45,5 @@ ActiveRecord::Schema.define(version: 20131003170352) do
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["username","email"], name: "index_users_on_username_and_email", unique: true
 end

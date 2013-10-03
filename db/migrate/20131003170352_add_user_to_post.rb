@@ -1,5 +1,6 @@
-class AddUserToPost < ActiveRecord::Migration
+class AddSenderToPost < ActiveRecord::Migration
   def change
-    add_reference :posts, :user, index: true
+    add_column :posts, :sender_id, :integer
+    add_index :posts, :sender_id
   end
 end
