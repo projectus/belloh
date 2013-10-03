@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20131003170352) do
     t.text     "content"
     t.string   "sender_desc"
     t.string   "receiver_desc"
-    t.string   "mood"
+    t.string   "mood", default: 'neutral'
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sender_id"

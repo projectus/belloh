@@ -31,15 +31,24 @@
 <% end %>
 
 <script>
-  $(function(){
-    getLocation();
-  });
+// Javascript to fetch user's location upon submitting the form
 
-	function setPosition(position) {
-		var lon=document.getElementById("post_longitude");
-		var lat=document.getElementById("post_latitude");			
+	$(function() {
+	  $('#new_post').submit(function() {
+			if (lon.value && lat.value) 
+			  return true;
+	    getLocation();
+	    return false; // return false to cancel form action
+	  });
+	});
+
+	var lon=document.getElementById("post_longitude");
+	var lat=document.getElementById("post_latitude");
+		
+	function setPosition(position) {			
     lat.value=position.coords.latitude; 
 		lon.value=position.coords.longitude;
+		$('#new_post').submit(); // submit 	
 	}
   var x=document.getElementById("geo");
 	

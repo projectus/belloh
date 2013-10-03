@@ -7,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content
       t.string :sender_desc
       t.string :receiver_desc
-      t.string :mood
+      t.string :mood, default: 'neutral'
 
       t.timestamps
     end

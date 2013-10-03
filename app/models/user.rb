@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 	  @login
 	end
 
+  # Code so user can log in using either username or email
   def self.find_first_by_auth_conditions(warden_conditions)
 	  conditions = warden_conditions.dup
 		if login = conditions.delete(:login)
