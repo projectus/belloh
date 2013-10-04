@@ -1,0 +1,21 @@
+<div class="well">
+
+    <% @posts.each do |post| %>
+      <div class="row">
+        <%= post.location %>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <%= post.sender.username unless post.sender.nil? %>
+        </div>
+        <div class="span3">[<%= post.sender_desc %>]</div>
+        <div class="span1">@</div>
+        <div class="span3">[<%= post.receiver_desc %>]</div>
+        <div class="span1"><%= link_to 'Show', post %>
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+      <div class="row">
+        <%= post.content %>
+      </div>
+    <% end %>
+</div>

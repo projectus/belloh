@@ -1,9 +1,18 @@
 class PostsController < ApplicationController
 
   def index
-	  @posts = Post.all
+	  
   end
 
+  def currloc
+	  coords = [params[:lat],params[:lon]]
+	  @posts = Post.near(coords,1)
+	  @location = Geocoder::search(coords).first.address
+	  respond_to do |format|
+      format.js
+    end
+	end
+	
   def show
 	  @post = Post.find(params[:id])
   end

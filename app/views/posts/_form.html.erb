@@ -37,7 +37,7 @@
 	  $('#new_post').submit(function() {
 			if (lon.value && lat.value) 
 			  return true;
-	    getLocation();
+	    getLocation(setPosition);
 	    return false; // return false to cancel form action
 	  });
 	});
@@ -50,18 +50,5 @@
 		lon.value=position.coords.longitude;
 		$('#new_post').submit(); // submit 	
 	}
-  var x=document.getElementById("geo");
-	
-	function getLocation() {
-	  if (navigator.geolocation) {
-		  navigator.geolocation.getCurrentPosition(setPosition, function(){
-			  x.innerHTML="Geolocation failed. You may have to allow location services.";
-		});
-		}
-		else {
-			x.innerHTML="Geolocation is not supported by this browser.";
-		}
-	}
-	
 </script>
 

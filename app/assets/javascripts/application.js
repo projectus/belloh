@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+var geostatus=document.getElementById("geostatus");
+
+function getLocation(setPosition) {
+  if (navigator.geolocation) {
+	  navigator.geolocation.getCurrentPosition(setPosition, function(){
+		  geostatus.innerHTML="Geolocation failed. You may have to allow location services.";
+	});
+	}
+	else {
+		geostatus.innerHTML="Geolocation is not supported by this browser.";
+	}
+}

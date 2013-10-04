@@ -1,22 +1,20 @@
-<div class="well">
+<div id="posts"></div>
 
-    <% @posts.each do |post| %>
-      <div class="row">
-        <%= post.location %>
-      </div>
-      <div class="row">
-        <div class="span3">
-          <%= post.sender.username unless post.sender.nil? %>
-        </div>
-        <div class="span3">[<%= post.sender_desc %>]</div>
-        <div class="span1">@</div>
-        <div class="span3">[<%= post.receiver_desc %>]</div>
-        <div class="span1"><%= link_to 'Show', post %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-      </div>
-      <div class="row">
-        <%= post.content %>
-      </div>
-    <% end %>
-  </tbody>
-</table>
+<script>
+  // Javascript to fetch user's location and fill with relevant posts
+	$(function() {
+	  getLocation(setPosition);
+	});
+		
+	function setPosition(position) {			
+    var lat=position.coords.latitude; 
+		var lon=position.coords.longitude;
+		var the_data = 'lat=' + encodeURIComponent(lat)
+	               +'&lon=' + encodeURIComponent(lon);
+		$.ajax({
+		  data: the_data,
+		  type: 'get',
+		  url: '<%=j currloc_path %>'
+		});
+	}
+</script>

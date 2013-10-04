@@ -1,6 +1,7 @@
 Belloh::Application.routes.draw do
 
   resources :posts, except: [:edit, :update]
+  get 'currloc', to: 'posts#currloc', as: :currloc
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
