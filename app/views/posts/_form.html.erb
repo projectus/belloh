@@ -35,30 +35,34 @@
 
 	$(function() {
 	  $('#new_post').submit(function() {
-			if (lon.value && lat.value) 
-			  return true;
-	    getLocation();
-	    return false; // return false to cancel form action
+		if (lon.value && lat.value) {
+          return true;
+        } else {
+          getLocation();
+          return false; // return false to cancel form action
+        }
 	  });
 	});
 
 	var lon=document.getElementById("post_longitude");
 	var lat=document.getElementById("post_latitude");
 		
-	function setPosition(position) {			
-    lat.value=position.coords.latitude; 
-		lon.value=position.coords.longitude;
-		$('#new_post').submit(); // submit 	
+	function setPosition(position) {
+      lat.value=position.coords.latitude;
+	  lon.value=position.coords.longitude;
+      $('#new_post').submit(); // submit
 	}
-  var x=document.getElementById("geo");
+    var x=document.getElementById("geo");
 	
 	function getLocation() {
 	  if (navigator.geolocation) {
-		  navigator.geolocation.getCurrentPosition(setPosition);
-		}
-		else {
-			x.innerHTML="Geolocation is not supported by this browser.";
-		}
+        navigator.geolocation.getCurrentPosition(setPosition, function(){
+          alert("geolocation failed");
+        }, {maximumAge:60000,timeout:10000, enableHighAccuracy:true});
+	  }
+	  else {
+	    x.innerHTML="Geolocation is not supported by this browser.";
+	  }
 	}
 </script>
 
