@@ -64748,3 +64748,4583 @@ Processing by PostsController#currloc as */*
   Rendered posts/_list.html.erb (8.8ms)
   Rendered posts/currloc.js.erb (10.4ms)
 Completed 200 OK in 157ms (Views: 12.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:23:28 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:23:29 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:23:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:30 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:31 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:33 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:34 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:35 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:23:36 -0400
+
+
+Started GET "/currloc?lat=43.4723201&lon=-80.53307769999999" for 127.0.0.1 at 2013-10-04 03:23:39 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723201", "lon"=>"-80.53307769999999"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723201) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53307769999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723201 AND posts.longitude >= -80.53307769999999) THEN 45.0 WHEN (posts.latitude < 43.4723201 AND posts.longitude >= -80.53307769999999) THEN 135.0 WHEN (posts.latitude < 43.4723201 AND posts.longitude < -80.53307769999999) THEN 225.0 WHEN (posts.latitude >= 43.4723201 AND posts.longitude < -80.53307769999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784692168891 AND 43.48679327831108 AND posts.longitude BETWEEN -80.5530212607188 AND -80.51313413928119) ORDER BY distance ASC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (1.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (5.7ms)
+  Rendered posts/_list.html.erb (105.5ms)
+  Rendered posts/currloc.js.erb (106.9ms)
+Completed 200 OK in 629ms (Views: 118.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:24:30 -0400
+
+
+Started GET "/currloc?lat=43.47219317662677&lon=-80.53309637506425" for 127.0.0.1 at 2013-10-04 03:24:33 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.47219317662677", "lon"=>"-80.53309637506425"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.47219317662677) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53309637506425) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.47219317662677 AND posts.longitude >= -80.53309637506425) THEN 45.0 WHEN (posts.latitude < 43.47219317662677 AND posts.longitude >= -80.53309637506425) THEN 135.0 WHEN (posts.latitude < 43.47219317662677 AND posts.longitude < -80.53309637506425) THEN 225.0 WHEN (posts.latitude >= 43.47219317662677 AND posts.longitude < -80.53309637506425) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45771999831568 AND 43.48666635493785 AND posts.longitude BETWEEN -80.55303989389887 AND -80.51315285622962) ORDER BY distance ASC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.2ms)
+  Rendered posts/currloc.js.erb (12.9ms)
+Completed 200 OK in 1891ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:05 -0400
+
+
+Started GET "/currloc?lat=43.47214070453396&lon=-80.53304382620031" for 127.0.0.1 at 2013-10-04 03:25:09 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.47214070453396", "lon"=>"-80.53304382620031"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.47214070453396) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53304382620031) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.47214070453396 AND posts.longitude >= -80.53304382620031) THEN 45.0 WHEN (posts.latitude < 43.47214070453396 AND posts.longitude >= -80.53304382620031) THEN 135.0 WHEN (posts.latitude < 43.47214070453396 AND posts.longitude < -80.53304382620031) THEN 225.0 WHEN (posts.latitude >= 43.47214070453396 AND posts.longitude < -80.53304382620031) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45766752622288 AND 43.48661388284505 AND posts.longitude BETWEEN -80.55298732771944 AND -80.51310032468119) ORDER BY distance ASC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.0ms)
+  Rendered posts/currloc.js.erb (11.4ms)
+Completed 200 OK in 165ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:16 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+
+
+Started GET "/currloc?lat=43.472304799999996&lon=-80.53306479999999" for 127.0.0.1 at 2013-10-04 03:25:17 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472304799999996", "lon"=>"-80.53306479999999"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472304799999996) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53306479999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472304799999996 AND posts.longitude >= -80.53306479999999) THEN 45.0 WHEN (posts.latitude < 43.472304799999996 AND posts.longitude >= -80.53306479999999) THEN 135.0 WHEN (posts.latitude < 43.472304799999996 AND posts.longitude < -80.53306479999999) THEN 225.0 WHEN (posts.latitude >= 43.472304799999996 AND posts.longitude < -80.53306479999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45783162168891 AND 43.48677797831108 AND posts.longitude BETWEEN -80.55300835566985 AND -80.51312124433014) ORDER BY distance ASC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (9.7ms)
+  Rendered posts/currloc.js.erb (11.2ms)
+Completed 200 OK in 175ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:37 -0400
+
+
+Started GET "/currloc?lat=43.4723246&lon=-80.5330932" for 127.0.0.1 at 2013-10-04 03:26:38 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723246", "lon"=>"-80.5330932"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723246) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330932) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723246 AND posts.longitude >= -80.5330932) THEN 45.0 WHEN (posts.latitude < 43.4723246 AND posts.longitude >= -80.5330932) THEN 135.0 WHEN (posts.latitude < 43.4723246 AND posts.longitude < -80.5330932) THEN 225.0 WHEN (posts.latitude >= 43.4723246 AND posts.longitude < -80.5330932) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457851421688915 AND 43.486797778311086 AND posts.longitude BETWEEN -80.55303676220379 AND -80.5131496377962) ORDER BY distance ASC, created_at DESC
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (94.2ms)
+  Rendered posts/currloc.js.erb (95.5ms)
+Completed 200 OK in 635ms (Views: 98.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:26:49 -0400
+
+
+Started GET "/currloc?lat=43.47218201129848&lon=-80.53307294609859" for 127.0.0.1 at 2013-10-04 03:26:50 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.47218201129848", "lon"=>"-80.53307294609859"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.47218201129848) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53307294609859) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.47218201129848 AND posts.longitude >= -80.53307294609859) THEN 45.0 WHEN (posts.latitude < 43.47218201129848 AND posts.longitude >= -80.53307294609859) THEN 135.0 WHEN (posts.latitude < 43.47218201129848 AND posts.longitude < -80.53307294609859) THEN 225.0 WHEN (posts.latitude >= 43.47218201129848 AND posts.longitude < -80.53307294609859) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45770883298739 AND 43.486655189609564 AND posts.longitude BETWEEN -80.5530164612487 AND -80.51312943094847) ORDER BY distance ASC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (9.1ms)
+  Rendered posts/currloc.js.erb (10.4ms)
+Completed 200 OK in 1715ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:33 -0400
+
+
+Started GET "/currloc?lat=43.47232&lon=-80.5330926" for 127.0.0.1 at 2013-10-04 03:34:34 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.47232", "lon"=>"-80.5330926"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.47232) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330926) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.47232 AND posts.longitude >= -80.5330926) THEN 45.0 WHEN (posts.latitude < 43.47232 AND posts.longitude >= -80.5330926) THEN 135.0 WHEN (posts.latitude < 43.47232 AND posts.longitude < -80.5330926) THEN 225.0 WHEN (posts.latitude >= 43.47232 AND posts.longitude < -80.5330926) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784682168892 AND 43.48679317831109 AND posts.longitude BETWEEN -80.5530361606858 AND -80.5131490393142) ORDER BY "posts".created_at ASC, created_at DESC
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (44.9ms)
+  Rendered posts/currloc.js.erb (46.3ms)
+Completed 200 OK in 1251ms (Views: 49.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:42 -0400
+
+
+Started GET "/currloc?lat=43.4723092&lon=-80.5331099" for 127.0.0.1 at 2013-10-04 03:34:43 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723092", "lon"=>"-80.5331099"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723092) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5331099) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723092 AND posts.longitude >= -80.5331099) THEN 45.0 WHEN (posts.latitude < 43.4723092 AND posts.longitude >= -80.5331099) THEN 135.0 WHEN (posts.latitude < 43.4723092 AND posts.longitude < -80.5331099) THEN 225.0 WHEN (posts.latitude >= 43.4723092 AND posts.longitude < -80.5331099) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45783602168891 AND 43.486782378311084 AND posts.longitude BETWEEN -80.55305345712183 AND -80.51316634287816) ORDER BY "posts".created_at ASC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.4ms)
+  Rendered posts/currloc.js.erb (11.8ms)
+Completed 200 OK in 160ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:46 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+
+
+Started GET "/currloc?lat=43.4723246&lon=-80.53310739999999" for 127.0.0.1 at 2013-10-04 03:34:47 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723246", "lon"=>"-80.53310739999999"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723246) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53310739999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723246 AND posts.longitude >= -80.53310739999999) THEN 45.0 WHEN (posts.latitude < 43.4723246 AND posts.longitude >= -80.53310739999999) THEN 135.0 WHEN (posts.latitude < 43.4723246 AND posts.longitude < -80.53310739999999) THEN 225.0 WHEN (posts.latitude >= 43.4723246 AND posts.longitude < -80.53310739999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457851421688915 AND 43.486797778311086 AND posts.longitude BETWEEN -80.55305096220378 AND -80.5131638377962) ORDER BY "posts".created_at ASC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.4ms)
+  Rendered posts/currloc.js.erb (11.9ms)
+Completed 200 OK in 240ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:53 -0400
+
+
+Started GET "/currloc?lat=43.4723231&lon=-80.53310259999999" for 127.0.0.1 at 2013-10-04 03:34:54 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723231", "lon"=>"-80.53310259999999"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723231) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53310259999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723231 AND posts.longitude >= -80.53310259999999) THEN 45.0 WHEN (posts.latitude < 43.4723231 AND posts.longitude >= -80.53310259999999) THEN 135.0 WHEN (posts.latitude < 43.4723231 AND posts.longitude < -80.53310259999999) THEN 225.0 WHEN (posts.latitude >= 43.4723231 AND posts.longitude < -80.53310259999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784992168891 AND 43.48679627831108 AND posts.longitude BETWEEN -80.55304616170878 AND -80.5131590382912) ORDER BY "posts".created_at ASC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.0ms)
+  Rendered posts/currloc.js.erb (11.3ms)
+Completed 200 OK in 242ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:34:57 -0400
+
+
+Started GET "/currloc?lat=43.4723188&lon=-80.53309" for 127.0.0.1 at 2013-10-04 03:34:58 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723188", "lon"=>"-80.53309"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723188) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53309) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723188 AND posts.longitude >= -80.53309) THEN 45.0 WHEN (posts.latitude < 43.4723188 AND posts.longitude >= -80.53309) THEN 135.0 WHEN (posts.latitude < 43.4723188 AND posts.longitude < -80.53309) THEN 225.0 WHEN (posts.latitude >= 43.4723188 AND posts.longitude < -80.53309) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784562168891 AND 43.48679197831108 AND posts.longitude BETWEEN -80.5530335602898 AND -80.5131464397102) ORDER BY "posts".created_at ASC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.3ms)
+  Rendered posts/currloc.js.erb (12.7ms)
+Completed 200 OK in 180ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:00 -0400
+
+
+Started GET "/currloc?lat=43.472314999999995&lon=-80.5330953" for 127.0.0.1 at 2013-10-04 03:35:01 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472314999999995", "lon"=>"-80.5330953"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472314999999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330953) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472314999999995 AND posts.longitude >= -80.5330953) THEN 45.0 WHEN (posts.latitude < 43.472314999999995 AND posts.longitude >= -80.5330953) THEN 135.0 WHEN (posts.latitude < 43.472314999999995 AND posts.longitude < -80.5330953) THEN 225.0 WHEN (posts.latitude >= 43.472314999999995 AND posts.longitude < -80.5330953) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784182168891 AND 43.48678817831108 AND posts.longitude BETWEEN -80.55303885903581 AND -80.51315174096419) ORDER BY "posts".created_at ASC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.6ms)
+  Rendered posts/currloc.js.erb (12.0ms)
+Completed 200 OK in 260ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:35:27 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:28 -0400
+
+
+Started GET "/currloc?lat=43.4723082&lon=-80.533093" for 127.0.0.1 at 2013-10-04 03:35:29 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723082", "lon"=>"-80.533093"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723082) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.533093) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723082 AND posts.longitude >= -80.533093) THEN 45.0 WHEN (posts.latitude < 43.4723082 AND posts.longitude >= -80.533093) THEN 135.0 WHEN (posts.latitude < 43.4723082 AND posts.longitude < -80.533093) THEN 225.0 WHEN (posts.latitude >= 43.4723082 AND posts.longitude < -80.533093) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457835021688915 AND 43.486781378311086 AND posts.longitude BETWEEN -80.55303655679184 AND -80.51314944320815) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (99.1ms)
+  Rendered posts/currloc.js.erb (100.4ms)
+Completed 200 OK in 377ms (Views: 102.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:32 -0400
+
+
+Started GET "/currloc?lat=43.4723195&lon=-80.5331095" for 127.0.0.1 at 2013-10-04 03:35:34 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723195", "lon"=>"-80.5331095"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723195) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5331095) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723195 AND posts.longitude >= -80.5331095) THEN 45.0 WHEN (posts.latitude < 43.4723195 AND posts.longitude >= -80.5331095) THEN 135.0 WHEN (posts.latitude < 43.4723195 AND posts.longitude < -80.5331095) THEN 225.0 WHEN (posts.latitude >= 43.4723195 AND posts.longitude < -80.5331095) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784632168891 AND 43.48679267831108 AND posts.longitude BETWEEN -80.5530530605208 AND -80.5131659394792) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.2ms)
+  Rendered posts/currloc.js.erb (12.5ms)
+Completed 200 OK in 253ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:45 -0400
+
+
+Started GET "/currloc?lat=43.4722418783972&lon=-80.53315871841858" for 127.0.0.1 at 2013-10-04 03:35:50 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4722418783972", "lon"=>"-80.53315871841858"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4722418783972) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53315871841858) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4722418783972 AND posts.longitude >= -80.53315871841858) THEN 45.0 WHEN (posts.latitude < 43.4722418783972 AND posts.longitude >= -80.53315871841858) THEN 135.0 WHEN (posts.latitude < 43.4722418783972 AND posts.longitude < -80.53315871841858) THEN 225.0 WHEN (posts.latitude >= 43.4722418783972 AND posts.longitude < -80.53315871841858) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45776870008611 AND 43.486715056708285 AND posts.longitude BETWEEN -80.55310225332454 AND -80.51321518351261) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (8.3ms)
+  Rendered posts/currloc.js.erb (9.4ms)
+Completed 200 OK in 168ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:58 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+
+
+Started GET "/currloc?lat=43.4723262&lon=-80.5330961" for 127.0.0.1 at 2013-10-04 03:35:59 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723262", "lon"=>"-80.5330961"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723262) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330961) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723262 AND posts.longitude >= -80.5330961) THEN 45.0 WHEN (posts.latitude < 43.4723262 AND posts.longitude >= -80.5330961) THEN 135.0 WHEN (posts.latitude < 43.4723262 AND posts.longitude < -80.5330961) THEN 225.0 WHEN (posts.latitude >= 43.4723262 AND posts.longitude < -80.5330961) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785302168891 AND 43.48679937831108 AND posts.longitude BETWEEN -80.55303966273178 AND -80.51315253726821) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.5ms)
+  Rendered posts/currloc.js.erb (11.9ms)
+Completed 200 OK in 193ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:01 -0400
+
+
+Started GET "/currloc?lat=43.4723086&lon=-80.533103" for 127.0.0.1 at 2013-10-04 03:36:02 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723086", "lon"=>"-80.533103"}
+Completed 500 Internal Server Error in 3007ms
+
+NoMethodError (undefined method `address' for nil:NilClass):
+  app/controllers/posts_controller.rb:9:in `currloc'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:36:07 -0400
+
+
+Started GET "/currloc?lat=43.472319899999995&lon=-80.5330809" for 127.0.0.1 at 2013-10-04 03:36:08 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472319899999995", "lon"=>"-80.5330809"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472319899999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330809) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472319899999995 AND posts.longitude >= -80.5330809) THEN 45.0 WHEN (posts.latitude < 43.472319899999995 AND posts.longitude >= -80.5330809) THEN 135.0 WHEN (posts.latitude < 43.472319899999995 AND posts.longitude < -80.5330809) THEN 225.0 WHEN (posts.latitude >= 43.472319899999995 AND posts.longitude < -80.5330809) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784672168891 AND 43.48679307831108 AND posts.longitude BETWEEN -80.55302446065281 AND -80.5131373393472) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (9.8ms)
+  Rendered posts/currloc.js.erb (11.2ms)
+Completed 200 OK in 188ms (Views: 14.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:38:31 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:38:32 -0400
+
+
+Started GET "/currloc?lat=43.472304199999996&lon=-80.5331054" for 127.0.0.1 at 2013-10-04 03:38:33 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472304199999996", "lon"=>"-80.5331054"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472304199999996) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5331054) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472304199999996 AND posts.longitude >= -80.5331054) THEN 45.0 WHEN (posts.latitude < 43.472304199999996 AND posts.longitude >= -80.5331054) THEN 135.0 WHEN (posts.latitude < 43.472304199999996 AND posts.longitude < -80.5331054) THEN 225.0 WHEN (posts.latitude >= 43.472304199999996 AND posts.longitude < -80.5331054) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45783102168891 AND 43.48677737831108 AND posts.longitude BETWEEN -80.55304895547185 AND -80.51316184452814) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (10.4ms)
+  Rendered posts/currloc.js.erb (11.8ms)
+Completed 200 OK in 543ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:41:53 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1072ms (Views: 1071.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:41:54 -0400
+
+
+Started GET "/currloc?lat=43.4723335&lon=-80.5330886" for 127.0.0.1 at 2013-10-04 03:41:55 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723335", "lon"=>"-80.5330886"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723335) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330886) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723335 AND posts.longitude >= -80.5330886) THEN 45.0 WHEN (posts.latitude < 43.4723335 AND posts.longitude >= -80.5330886) THEN 135.0 WHEN (posts.latitude < 43.4723335 AND posts.longitude < -80.5330886) THEN 225.0 WHEN (posts.latitude >= 43.4723335 AND posts.longitude < -80.5330886) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45786032168891 AND 43.48680667831108 AND posts.longitude BETWEEN -80.55303216514076 AND -80.51314503485924) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (47.5ms)
+  Rendered posts/currloc.js.erb (49.2ms)
+Completed 200 OK in 1643ms (Views: 53.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:42:06 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1003ms (Views: 1002.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:07 -0400
+
+
+Started GET "/currloc?lat=43.472321099999995&lon=-80.533095" for 127.0.0.1 at 2013-10-04 03:42:08 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472321099999995", "lon"=>"-80.533095"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472321099999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.533095) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472321099999995 AND posts.longitude >= -80.533095) THEN 45.0 WHEN (posts.latitude < 43.472321099999995 AND posts.longitude >= -80.533095) THEN 135.0 WHEN (posts.latitude < 43.472321099999995 AND posts.longitude < -80.533095) THEN 225.0 WHEN (posts.latitude >= 43.472321099999995 AND posts.longitude < -80.533095) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784792168891 AND 43.48679427831108 AND posts.longitude BETWEEN -80.5530385610488 AND -80.51315143895121) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.6ms)
+  Rendered posts/currloc.js.erb (12.0ms)
+Completed 200 OK in 187ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:42:17 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1058ms (Views: 1057.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:18 -0400
+
+
+Started GET "/currloc?lat=43.4723227&lon=-80.5330894" for 127.0.0.1 at 2013-10-04 03:42:19 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723227", "lon"=>"-80.5330894"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723227) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330894) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723227 AND posts.longitude >= -80.5330894) THEN 45.0 WHEN (posts.latitude < 43.4723227 AND posts.longitude >= -80.5330894) THEN 135.0 WHEN (posts.latitude < 43.4723227 AND posts.longitude < -80.5330894) THEN 225.0 WHEN (posts.latitude >= 43.4723227 AND posts.longitude < -80.5330894) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457849521688914 AND 43.486795878311085 AND posts.longitude BETWEEN -80.55303296157679 AND -80.5131458384232) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.9ms)
+  Rendered posts/currloc.js.erb (13.8ms)
+Completed 200 OK in 355ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:42:37 -0400
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:42:41 -0400
+Processing by PostsController#new as JS
+  Rendered posts/new.js.erb (0.4ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/currloc?lat=43.472326699999996&lon=-80.53309399999999" for 127.0.0.1 at 2013-10-04 03:42:41 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472326699999996", "lon"=>"-80.53309399999999"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472326699999996) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53309399999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472326699999996 AND posts.longitude >= -80.53309399999999) THEN 45.0 WHEN (posts.latitude < 43.472326699999996 AND posts.longitude >= -80.53309399999999) THEN 135.0 WHEN (posts.latitude < 43.472326699999996 AND posts.longitude < -80.53309399999999) THEN 225.0 WHEN (posts.latitude >= 43.472326699999996 AND posts.longitude < -80.53309399999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785352168891 AND 43.48679987831108 AND posts.longitude BETWEEN -80.55303756289678 AND -80.5131504371032) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (9.1ms)
+  Rendered posts/currloc.js.erb (10.4ms)
+Completed 200 OK in 499ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:42:44 -0400
+Processing by PostsController#new as JS
+  Rendered posts/new.js.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:42:44 -0400
+Processing by PostsController#new as JS
+  Rendered posts/new.js.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:43:16 -0400
+
+
+Started GET "/currloc?lat=43.4723261&lon=-80.5330996" for 127.0.0.1 at 2013-10-04 03:43:17 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723261", "lon"=>"-80.5330996"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723261) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330996) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723261 AND posts.longitude >= -80.5330996) THEN 45.0 WHEN (posts.latitude < 43.4723261 AND posts.longitude >= -80.5330996) THEN 135.0 WHEN (posts.latitude < 43.4723261 AND posts.longitude < -80.5330996) THEN 225.0 WHEN (posts.latitude >= 43.4723261 AND posts.longitude < -80.5330996) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785292168891 AND 43.48679927831108 AND posts.longitude BETWEEN -80.55304316269878 AND -80.51315603730121) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.2ms)
+  Rendered posts/currloc.js.erb (11.6ms)
+Completed 200 OK in 584ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:43:19 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.7ms)
+  Rendered posts/_form.html.erb (7.2ms)
+  Rendered posts/new.js.erb (9.1ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-04 03:43:44 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YuKkvY+0NNkkl3bsp3OactLUat6Svh1mimH2WZOvj4=", "post"=>{"sender_desc"=>"your mom", "receiver_desc"=>"my son", "content"=>"come home, nigga", "longitude"=>"-80.53312989999999", "latitude"=>"43.4723213"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("content", "created_at", "latitude", "location", "longitude", "receiver_desc", "sender_desc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["content", "come home, nigga"], ["created_at", Fri, 04 Oct 2013 07:43:44 UTC +00:00], ["latitude", 43.4723213], ["location", "188-202 Lester Street, Waterloo, ON N2L 3W3, Canada"], ["longitude", -80.53312989999999], ["receiver_desc", "my son"], ["sender_desc", "your mom"], ["updated_at", Fri, 04 Oct 2013 07:43:44 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/posts
+Completed 302 Found in 253ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2013-10-04 03:43:44 -0400
+
+ActionController::RoutingError (No route matches [GET] "/posts"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247@Rails4.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:44:07 -0400
+
+
+Started GET "/currloc?lat=43.4723086&lon=-80.53310549999999" for 127.0.0.1 at 2013-10-04 03:44:08 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723086", "lon"=>"-80.53310549999999"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723086) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53310549999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723086 AND posts.longitude >= -80.53310549999999) THEN 45.0 WHEN (posts.latitude < 43.4723086 AND posts.longitude >= -80.53310549999999) THEN 135.0 WHEN (posts.latitude < 43.4723086 AND posts.longitude < -80.53310549999999) THEN 225.0 WHEN (posts.latitude >= 43.4723086 AND posts.longitude < -80.53310549999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45783542168891 AND 43.486781778311084 AND posts.longitude BETWEEN -80.55304905692383 AND -80.51316194307616) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.6ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (50.1ms)
+  Rendered posts/currloc.js.erb (51.5ms)
+Completed 200 OK in 229ms (Views: 54.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:44:23 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (58.6ms)
+  Rendered posts/new.js.erb (59.9ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:05 -0400
+
+
+Started GET "/currloc?lat=43.472321099999995&lon=-80.53309019999999" for 127.0.0.1 at 2013-10-04 03:46:06 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472321099999995", "lon"=>"-80.53309019999999"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472321099999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53309019999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472321099999995 AND posts.longitude >= -80.53309019999999) THEN 45.0 WHEN (posts.latitude < 43.472321099999995 AND posts.longitude >= -80.53309019999999) THEN 135.0 WHEN (posts.latitude < 43.472321099999995 AND posts.longitude < -80.53309019999999) THEN 225.0 WHEN (posts.latitude >= 43.472321099999995 AND posts.longitude < -80.53309019999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784792168891 AND 43.48679427831108 AND posts.longitude BETWEEN -80.55303376104878 AND -80.5131466389512) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (11.4ms)
+  Rendered posts/currloc.js.erb (12.8ms)
+Completed 200 OK in 1591ms (Views: 16.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:46:10 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.8ms)
+  Rendered posts/new.js.erb (8.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (8.5ms)
+  Rendered posts/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:12 -0400
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (5.0ms)
+  Rendered posts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:46:26 -0400
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (7.4ms)
+  Rendered posts/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:37 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:38 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:41 -0400
+
+
+Started GET "/currloc?lat=43.472338099999995&lon=-80.53306599999999" for 127.0.0.1 at 2013-10-04 03:48:42 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472338099999995", "lon"=>"-80.53306599999999"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472338099999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53306599999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472338099999995 AND posts.longitude >= -80.53306599999999) THEN 45.0 WHEN (posts.latitude < 43.472338099999995 AND posts.longitude >= -80.53306599999999) THEN 135.0 WHEN (posts.latitude < 43.472338099999995 AND posts.longitude < -80.53306599999999) THEN 225.0 WHEN (posts.latitude >= 43.472338099999995 AND posts.longitude < -80.53306599999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45786492168891 AND 43.48681127831108 AND posts.longitude BETWEEN -80.55300956665873 AND -80.51312243334125) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (10.7ms)
+  Rendered posts/currloc.js.erb (12.2ms)
+Completed 200 OK in 507ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:48:44 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.js.erb (7.5ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (8.4ms)
+  Rendered posts/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:48:46 -0400
+
+
+Started GET "/currloc?lat=43.4723318&lon=-80.53308439999999" for 127.0.0.1 at 2013-10-04 03:49:13 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723318", "lon"=>"-80.53308439999999"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723318) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53308439999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723318 AND posts.longitude >= -80.53308439999999) THEN 45.0 WHEN (posts.latitude < 43.4723318 AND posts.longitude >= -80.53308439999999) THEN 135.0 WHEN (posts.latitude < 43.4723318 AND posts.longitude < -80.53308439999999) THEN 225.0 WHEN (posts.latitude >= 43.4723318 AND posts.longitude < -80.53308439999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457858621688914 AND 43.486804978311085 AND posts.longitude BETWEEN -80.55302796457975 AND -80.51314083542023) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (10.0ms)
+  Rendered posts/currloc.js.erb (11.2ms)
+Completed 200 OK in 152ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:49:14 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.1ms)
+  Rendered posts/new.js.erb (7.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:19 -0400
+
+
+Started GET "/currloc?lat=43.472349699999995&lon=-80.53309349999999" for 127.0.0.1 at 2013-10-04 03:50:20 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472349699999995", "lon"=>"-80.53309349999999"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472349699999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53309349999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472349699999995 AND posts.longitude >= -80.53309349999999) THEN 45.0 WHEN (posts.latitude < 43.472349699999995 AND posts.longitude >= -80.53309349999999) THEN 135.0 WHEN (posts.latitude < 43.472349699999995 AND posts.longitude < -80.53309349999999) THEN 225.0 WHEN (posts.latitude >= 43.472349699999995 AND posts.longitude < -80.53309349999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45787652168891 AND 43.48682287831108 AND posts.longitude BETWEEN -80.55303707048671 AND -80.51314992951328) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.1ms)
+  Rendered posts/currloc.js.erb (12.4ms)
+Completed 200 OK in 164ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:50:22 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.0ms)
+  Rendered posts/new.js.erb (7.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:50:52 -0400
+
+
+Started GET "/currloc?lat=43.4723572&lon=-80.53307509999999" for 127.0.0.1 at 2013-10-04 03:50:53 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723572", "lon"=>"-80.53307509999999"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723572) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53307509999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723572 AND posts.longitude >= -80.53307509999999) THEN 45.0 WHEN (posts.latitude < 43.4723572 AND posts.longitude >= -80.53307509999999) THEN 135.0 WHEN (posts.latitude < 43.4723572 AND posts.longitude < -80.53307509999999) THEN 225.0 WHEN (posts.latitude >= 43.4723572 AND posts.longitude < -80.53307509999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45788402168891 AND 43.48683037831108 AND posts.longitude BETWEEN -80.55301867296168 AND -80.5131315270383) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (17.9ms)
+  Rendered posts/currloc.js.erb (19.3ms)
+Completed 200 OK in 158ms (Views: 22.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:50:54 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.3ms)
+  Rendered posts/new.js.erb (7.5ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:52:14 -0400
+
+
+Started GET "/currloc?lat=43.4723179&lon=-80.5330803" for 127.0.0.1 at 2013-10-04 03:52:15 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723179", "lon"=>"-80.5330803"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723179) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330803) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723179 AND posts.longitude >= -80.5330803) THEN 45.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude >= -80.5330803) THEN 135.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude < -80.5330803) THEN 225.0 WHEN (posts.latitude >= 43.4723179 AND posts.longitude < -80.5330803) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457844721688915 AND 43.486791078311086 AND posts.longitude BETWEEN -80.5530238599928 AND -80.51313674000718) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (16.5ms)
+  Rendered posts/currloc.js.erb (17.8ms)
+Completed 200 OK in 521ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:52:17 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (8.1ms)
+  Rendered posts/new.js.erb (9.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:16 -0400
+
+
+Started GET "/currloc?lat=43.472319299999995&lon=-80.5331082" for 127.0.0.1 at 2013-10-04 03:53:17 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472319299999995", "lon"=>"-80.5331082"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472319299999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5331082) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472319299999995 AND posts.longitude >= -80.5331082) THEN 45.0 WHEN (posts.latitude < 43.472319299999995 AND posts.longitude >= -80.5331082) THEN 135.0 WHEN (posts.latitude < 43.472319299999995 AND posts.longitude < -80.5331082) THEN 225.0 WHEN (posts.latitude >= 43.472319299999995 AND posts.longitude < -80.5331082) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784612168891 AND 43.48679247831108 AND posts.longitude BETWEEN -80.5530517604548 AND -80.5131646395452) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.8ms)
+  Rendered posts/currloc.js.erb (12.2ms)
+Completed 200 OK in 1586ms (Views: 16.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:53:20 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (8.2ms)
+  Rendered posts/new.js.erb (10.0ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:42 -0400
+
+
+Started GET "/currloc?lat=43.4723179&lon=-80.53310730000001" for 127.0.0.1 at 2013-10-04 03:53:43 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723179", "lon"=>"-80.53310730000001"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723179) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53310730000001) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723179 AND posts.longitude >= -80.53310730000001) THEN 45.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude >= -80.53310730000001) THEN 135.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude < -80.53310730000001) THEN 225.0 WHEN (posts.latitude >= 43.4723179 AND posts.longitude < -80.53310730000001) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457844721688915 AND 43.486791078311086 AND posts.longitude BETWEEN -80.55305085999282 AND -80.5131637400072) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (11.3ms)
+  Rendered posts/currloc.js.erb (12.7ms)
+Completed 200 OK in 924ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:53:45 -0400
+
+
+Started GET "/currloc?lat=43.472328&lon=-80.5331076" for 127.0.0.1 at 2013-10-04 03:53:46 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472328", "lon"=>"-80.5331076"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472328) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5331076) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472328 AND posts.longitude >= -80.5331076) THEN 45.0 WHEN (posts.latitude < 43.472328 AND posts.longitude >= -80.5331076) THEN 135.0 WHEN (posts.latitude < 43.472328 AND posts.longitude < -80.5331076) THEN 225.0 WHEN (posts.latitude >= 43.472328 AND posts.longitude < -80.5331076) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785482168891 AND 43.48680117831108 AND posts.longitude BETWEEN -80.55305116332578 AND -80.51316403667421) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.2ms)
+  Rendered posts/currloc.js.erb (11.4ms)
+Completed 200 OK in 159ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:53:47 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.1ms)
+  Rendered posts/new.js.erb (7.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:37 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+
+
+Started GET "/currloc?lat=43.4723244&lon=-80.53308960000001" for 127.0.0.1 at 2013-10-04 03:55:38 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723244", "lon"=>"-80.53308960000001"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723244) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53308960000001) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723244 AND posts.longitude >= -80.53308960000001) THEN 45.0 WHEN (posts.latitude < 43.4723244 AND posts.longitude >= -80.53308960000001) THEN 135.0 WHEN (posts.latitude < 43.4723244 AND posts.longitude < -80.53308960000001) THEN 225.0 WHEN (posts.latitude >= 43.4723244 AND posts.longitude < -80.53308960000001) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785122168891 AND 43.486797578311084 AND posts.longitude BETWEEN -80.5530331621378 AND -80.51314603786223) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (9.8ms)
+  Rendered posts/currloc.js.erb (11.0ms)
+Completed 200 OK in 152ms (Views: 14.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:55:41 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.0ms)
+  Rendered posts/new.js.erb (7.3ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:23 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:24 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:24 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:56:24 -0400
+
+
+Started GET "/currloc?lat=43.4723237&lon=-80.5330638" for 127.0.0.1 at 2013-10-04 03:56:24 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723237", "lon"=>"-80.5330638"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723237) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330638) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723237 AND posts.longitude >= -80.5330638) THEN 45.0 WHEN (posts.latitude < 43.4723237 AND posts.longitude >= -80.5330638) THEN 135.0 WHEN (posts.latitude < 43.4723237 AND posts.longitude < -80.5330638) THEN 225.0 WHEN (posts.latitude >= 43.4723237 AND posts.longitude < -80.5330638) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785052168891 AND 43.48679687831108 AND posts.longitude BETWEEN -80.55300736190678 AND -80.51312023809321) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (9.6ms)
+  Rendered posts/currloc.js.erb (10.9ms)
+Completed 200 OK in 178ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 03:56:25 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.2ms)
+  Rendered posts/new.js.erb (7.5ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:58:15 -0400
+
+
+Started GET "/currloc?lat=43.472329099999996&lon=-80.53307699999999" for 127.0.0.1 at 2013-10-04 03:58:16 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472329099999996", "lon"=>"-80.53307699999999"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472329099999996) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53307699999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472329099999996 AND posts.longitude >= -80.53307699999999) THEN 45.0 WHEN (posts.latitude < 43.472329099999996 AND posts.longitude >= -80.53307699999999) THEN 135.0 WHEN (posts.latitude < 43.472329099999996 AND posts.longitude < -80.53307699999999) THEN 225.0 WHEN (posts.latitude >= 43.472329099999996 AND posts.longitude < -80.53307699999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785592168891 AND 43.48680227831108 AND posts.longitude BETWEEN -80.55302056368876 AND -80.51313343631122) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.5ms)
+  Rendered posts/_post.html.erb (0.4ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (46.9ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (5.5ms)
+  Rendered posts/currloc.js.erb (55.7ms)
+Completed 200 OK in 575ms (Views: 59.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 03:59:36 -0400
+
+
+Started GET "/currloc?lat=43.4723344&lon=-80.5330572" for 127.0.0.1 at 2013-10-04 03:59:37 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723344", "lon"=>"-80.5330572"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723344) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330572) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723344 AND posts.longitude >= -80.5330572) THEN 45.0 WHEN (posts.latitude < 43.4723344 AND posts.longitude >= -80.5330572) THEN 135.0 WHEN (posts.latitude < 43.4723344 AND posts.longitude < -80.5330572) THEN 225.0 WHEN (posts.latitude >= 43.4723344 AND posts.longitude < -80.5330572) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457861221688916 AND 43.48680757831109 AND posts.longitude BETWEEN -80.55300076543776 AND -80.51311363456225) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (11.8ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/currloc.js.erb (20.3ms)
+Completed 200 OK in 230ms (Views: 23.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:14 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+
+
+Started GET "/currloc?lat=43.472349099999995&lon=-80.53304519999999" for 127.0.0.1 at 2013-10-04 04:00:15 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472349099999995", "lon"=>"-80.53304519999999"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472349099999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53304519999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472349099999995 AND posts.longitude >= -80.53304519999999) THEN 45.0 WHEN (posts.latitude < 43.472349099999995 AND posts.longitude >= -80.53304519999999) THEN 135.0 WHEN (posts.latitude < 43.472349099999995 AND posts.longitude < -80.53304519999999) THEN 225.0 WHEN (posts.latitude >= 43.472349099999995 AND posts.longitude < -80.53304519999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45787592168891 AND 43.48682227831108 AND posts.longitude BETWEEN -80.5529887702887 AND -80.51310162971127) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (12.5ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/currloc.js.erb (20.4ms)
+Completed 200 OK in 164ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:00:34 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:34 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:34 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+
+
+Started GET "/currloc?lat=43.4723028&lon=-80.5330723" for 127.0.0.1 at 2013-10-04 04:00:35 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723028", "lon"=>"-80.5330723"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723028) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330723) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723028 AND posts.longitude >= -80.5330723) THEN 45.0 WHEN (posts.latitude < 43.4723028 AND posts.longitude >= -80.5330723) THEN 135.0 WHEN (posts.latitude < 43.4723028 AND posts.longitude < -80.5330723) THEN 225.0 WHEN (posts.latitude >= 43.4723028 AND posts.longitude < -80.5330723) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457829621688916 AND 43.48677597831109 AND posts.longitude BETWEEN -80.55301585500986 AND -80.51312874499014) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.7ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.9ms)
+  Rendered posts/currloc.js.erb (18.8ms)
+Completed 200 OK in 154ms (Views: 22.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:00:55 -0400
+
+
+Started GET "/currloc?lat=43.472326599999995&lon=-80.5330481" for 127.0.0.1 at 2013-10-04 04:00:56 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.472326599999995", "lon"=>"-80.5330481"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.472326599999995) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330481) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.472326599999995 AND posts.longitude >= -80.5330481) THEN 45.0 WHEN (posts.latitude < 43.472326599999995 AND posts.longitude >= -80.5330481) THEN 135.0 WHEN (posts.latitude < 43.472326599999995 AND posts.longitude < -80.5330481) THEN 225.0 WHEN (posts.latitude >= 43.472326599999995 AND posts.longitude < -80.5330481) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45785342168891 AND 43.48679977831108 AND posts.longitude BETWEEN -80.55299166286377 AND -80.51310453713623) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.5ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/currloc.js.erb (18.6ms)
+Completed 200 OK in 177ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:02:43 -0400
+
+
+Started GET "/currloc?lat=43.4723194&lon=-80.533098" for 127.0.0.1 at 2013-10-04 04:02:44 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723194", "lon"=>"-80.533098"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723194) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.533098) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723194 AND posts.longitude >= -80.533098) THEN 45.0 WHEN (posts.latitude < 43.4723194 AND posts.longitude >= -80.533098) THEN 135.0 WHEN (posts.latitude < 43.4723194 AND posts.longitude < -80.533098) THEN 225.0 WHEN (posts.latitude >= 43.4723194 AND posts.longitude < -80.533098) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784622168892 AND 43.48679257831109 AND posts.longitude BETWEEN -80.5530415604878 AND -80.51315443951219) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (10.3ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.8ms)
+  Rendered posts/currloc.js.erb (18.2ms)
+Completed 200 OK in 531ms (Views: 21.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:04:10 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1041ms (Views: 1041.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:04:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:04:11 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:04:12 -0400
+
+
+Started GET "/currloc?lat=43.4723064&lon=-80.533096" for 127.0.0.1 at 2013-10-04 04:04:13 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723064", "lon"=>"-80.533096"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723064) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.533096) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723064 AND posts.longitude >= -80.533096) THEN 45.0 WHEN (posts.latitude < 43.4723064 AND posts.longitude >= -80.533096) THEN 135.0 WHEN (posts.latitude < 43.4723064 AND posts.longitude < -80.533096) THEN 225.0 WHEN (posts.latitude >= 43.4723064 AND posts.longitude < -80.533096) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457833221688915 AND 43.486779578311086 AND posts.longitude BETWEEN -80.55303955619785 AND -80.51315244380216) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.4ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.9ms)
+  Rendered posts/currloc.js.erb (18.5ms)
+Completed 200 OK in 527ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2013-10-04 04:04:15 -0400
+Processing by PostsController#new as JS
+  Rendered posts/_errors.html.erb (0.8ms)
+  Rendered posts/_form.html.erb (13.5ms)
+  Rendered posts/new.js.erb (19.9ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:05:32 -0400
+
+
+Started GET "/currloc?lat=43.4723135&lon=-80.53308299999999" for 127.0.0.1 at 2013-10-04 04:05:33 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723135", "lon"=>"-80.53308299999999"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723135) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.53308299999999) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723135 AND posts.longitude >= -80.53308299999999) THEN 45.0 WHEN (posts.latitude < 43.4723135 AND posts.longitude >= -80.53308299999999) THEN 135.0 WHEN (posts.latitude < 43.4723135 AND posts.longitude < -80.53308299999999) THEN 225.0 WHEN (posts.latitude >= 43.4723135 AND posts.longitude < -80.53308299999999) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784032168891 AND 43.486786678311084 AND posts.longitude BETWEEN -80.55302655854081 AND -80.51313944145917) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_list.html.erb (10.0ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (5.5ms)
+  Rendered posts/currloc.js.erb (18.2ms)
+Completed 200 OK in 542ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:07:23 -0400
+
+
+Started GET "/currloc?lat=43.4723179&lon=-80.5330809" for 127.0.0.1 at 2013-10-04 04:07:24 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723179", "lon"=>"-80.5330809"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723179) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330809) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723179 AND posts.longitude >= -80.5330809) THEN 45.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude >= -80.5330809) THEN 135.0 WHEN (posts.latitude < 43.4723179 AND posts.longitude < -80.5330809) THEN 225.0 WHEN (posts.latitude >= 43.4723179 AND posts.longitude < -80.5330809) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.457844721688915 AND 43.486791078311086 AND posts.longitude BETWEEN -80.55302445999281 AND -80.51313734000719) ORDER BY "posts"."created_at" DESC, created_at DESC
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.9ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (6.3ms)
+  Rendered posts/currloc.js.erb (20.3ms)
+Completed 200 OK in 218ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:19 -0400
+
+
+Started GET "/currloc?lat=43.4723116&lon=-80.5330894" for 127.0.0.1 at 2013-10-04 04:08:20 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723116", "lon"=>"-80.5330894"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723116) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.5330894) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723116 AND posts.longitude >= -80.5330894) THEN 45.0 WHEN (posts.latitude < 43.4723116 AND posts.longitude >= -80.5330894) THEN 135.0 WHEN (posts.latitude < 43.4723116 AND posts.longitude < -80.5330894) THEN 225.0 WHEN (posts.latitude >= 43.4723116 AND posts.longitude < -80.5330894) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45783842168891 AND 43.48678477831108 AND posts.longitude BETWEEN -80.55303295791381 AND -80.51314584208617) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.1ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (10.2ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (4.4ms)
+  Rendered posts/currloc.js.erb (17.1ms)
+Completed 200 OK in 562ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YuKkvY+0NNkkl3bsp3OactLUat6Svh1mimH2WZOvj4=", "post"=>{"sender_desc"=>"test", "receiver_desc"=>"testing", "content"=>"one two three", "longitude"=>"-80.5330774", "latitude"=>"43.4723269"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "latitude", "location", "longitude", "receiver_desc", "sender_desc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["content", "one two three"], ["created_at", Fri, 04 Oct 2013 08:08:38 UTC +00:00], ["latitude", 43.4723269], ["location", "188-202 Lester Street, Waterloo, ON N2L 3W3, Canada"], ["longitude", -80.5330774], ["receiver_desc", "testing"], ["sender_desc", "test"], ["updated_at", Fri, 04 Oct 2013 08:08:38 UTC +00:00]]
+  [1m[35m (5.0ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 198ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-10-04 04:08:38 -0400
+
+
+Started GET "/currloc?lat=43.4723141&lon=-80.533078" for 127.0.0.1 at 2013-10-04 04:08:39 -0400
+Processing by PostsController#currloc as */*
+  Parameters: {"lat"=>"43.4723141", "lon"=>"-80.533078"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT posts.*, (69.09332411348201 * ABS(posts.latitude - 43.4723141) * 0.7071067811865475) + (59.836573914187355 * ABS(posts.longitude - -80.533078) * 0.7071067811865475) AS distance, CASE WHEN (posts.latitude >= 43.4723141 AND posts.longitude >= -80.533078) THEN 45.0 WHEN (posts.latitude < 43.4723141 AND posts.longitude >= -80.533078) THEN 135.0 WHEN (posts.latitude < 43.4723141 AND posts.longitude < -80.533078) THEN 225.0 WHEN (posts.latitude >= 43.4723141 AND posts.longitude < -80.533078) THEN 315.0 END AS bearing FROM "posts" WHERE (posts.latitude BETWEEN 43.45784092168891 AND 43.486787278311084 AND posts.longitude BETWEEN -80.55302155873882 AND -80.51313444126119) ORDER BY "posts"."created_at" DESC, created_at DESC[0m
+  Rendered posts/_post.html.erb (0.3ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_post.html.erb (0.2ms)
+  Rendered posts/_list.html.erb (13.8ms)
+  Rendered posts/_errors.html.erb (0.1ms)
+  Rendered posts/_form.html.erb (5.0ms)
+  Rendered posts/currloc.js.erb (21.4ms)
+Completed 200 OK in 215ms (Views: 24.4ms | ActiveRecord: 0.5ms)

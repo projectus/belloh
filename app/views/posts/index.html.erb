@@ -1,7 +1,11 @@
 <div id="posts">Loading nearby posts</div>
 
-<%= link_to 'New post', new_post_path, class: 'btn' %>
-
+<div id="new_post_link">
+  <%= link_to 'New post', "javascript:void(0)", onClick: "showForm();" %>
+</div>
+<div id="new_post_box">
+<div>
+	
 <script>
   // Javascript to fetch user's location and fill with relevant posts
 	$(function() {
@@ -18,5 +22,10 @@
 		  type: 'get',
 		  url: '<%=j currloc_path %>'
 		});
+	}
+	
+	function showForm() {
+		$('#new_post_box').show();
+		$('#new_post_link').hide();
 	}
 </script>

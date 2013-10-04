@@ -30,6 +30,7 @@
   </div>
 <% end %>
 
+<%= link_to 'Cancel', "javascript:void(0)", onClick: "hideForm();" %>
 <script>
 // Javascript to fetch user's location upon submitting the form
 
@@ -40,15 +41,22 @@
 	    getLocation(setPosition);
 	    return false; // return false to cancel form action
 	  });
+	
+	  $('#cancel').on('click',function(){alert('ok');})
 	});
 
 	var lon=document.getElementById("post_longitude");
 	var lat=document.getElementById("post_latitude");
 		
 	function setPosition(position) {
-      lat.value=position.coords.latitude;
+    lat.value=position.coords.latitude;
 	  lon.value=position.coords.longitude;
-      $('#new_post').submit(); // submit
+    $('#new_post').submit(); // submit
+	}
+	
+	function hideForm() {
+		$('#new_post_box').hide();
+		$('#new_post_link').show();
 	}
 </script>
 
