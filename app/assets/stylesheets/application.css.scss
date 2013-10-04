@@ -12,7 +12,12 @@
  *= require_tree .
  */
 
-@import "bootstrap";
+#geostatus {
+  background: pink !important;
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  font-weight: bold;
+}
 
 .navbar {
   margin-bottom: 0px !important;
@@ -25,7 +30,7 @@
   background: #E2E2E2;
   border-right: 1px solid #B8B8B8;
   border-left: 1px solid #B8B8B8;
-
-
 }
+
+@import "bootstrap";
 

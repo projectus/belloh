@@ -18,13 +18,12 @@
   </div>
 </div>
 
-<div id="geostatus"></div>
-
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% end %>
 
-<div class="content row-fluid">
+<div class="container">
+	<div id="geostatus">Getting current location...</div>
   <%= yield %>
 </div>
 

@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   def index
-	  
   end
 
   def currloc
@@ -12,10 +11,6 @@ class PostsController < ApplicationController
       format.js
     end
 	end
-	
-  def show
-	  @post = Post.find(params[:id])
-  end
 
   def new
 	  @post = Post.new
@@ -31,9 +26,6 @@ class PostsController < ApplicationController
         format.html { render action: 'new' }
       end
     end
-  end
-
-  def destroy
   end
 
   private
