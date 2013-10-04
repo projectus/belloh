@@ -54,11 +54,14 @@
 	
 	function getLocation() {
 	  if (navigator.geolocation) {
-		  navigator.geolocation.getCurrentPosition(setPosition);
+		  navigator.geolocation.getCurrentPosition(setPosition, function(){
+			  x.innerHTML="Geolocation failed. You may have to allow location services.";
+		});
 		}
 		else {
 			x.innerHTML="Geolocation is not supported by this browser.";
 		}
 	}
+	
 </script>
 
