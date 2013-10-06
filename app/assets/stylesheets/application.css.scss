@@ -25,8 +25,8 @@ body{
 }
 
 .map-box {
-  width: 200px;
-  height: 200px;
+
+
   background: red;
   float: right;
 }
@@ -36,26 +36,87 @@ body{
   height: 600px;
   margin: auto;
   margin-top: 20px;
+  clear: both;
 
   .wrapper-top {
     border-top: 1px solid #FFF;
 
-    height: 50px;
+    height: 40px;
     background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
+
+    select {
+      margin-top: 5px;
+    }
   }
 
   .wrapper-content {
     height: 560px;
     background: #FFF;
+
+    .sender, .receiver {
+      font-weight: bold;
+    }
+
+    .post-inner {
+      float: left;
+      width: 70%;
+    }
+
+    .post-message {
+      margin-top: 5px;
+      font-size: 10pt;
+    }
+
+    .post-time {
+      float: right;
+      font-size: 9pt;
+      font-style: italic;
+      margin-right: 10px;
+      margin-top: -10px;
+    }
+
+    .post-location {
+      float: right;
+      margin-top: 15px;
+      font-size: 9pt;
+
+    }
   }
 }
 
+.top-div {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  height: 250px;
+
+}
+
+.top-content {
+  background: #EEE;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+  height: 200px;
+  clear: both;
+}
+
+.margin {
+  height: 50px;
+}
+
+.geo-bar {
+  background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
+
+  height: 40px;
+}
 
 #geostatus {
-  background: pink !important;
-  margin: 10px 0 10px 0;
   padding: 10px;
   font-weight: bold;
+  font-size: 10pt;
+  text-shadow: 0 1px 1px #F7F7F7;
+  color: #555 !important;
+  float: left;
 }
 
 .navbar {
