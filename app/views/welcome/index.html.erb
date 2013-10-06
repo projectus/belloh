@@ -1,21 +1,37 @@
-<div class="top-div row-fluid">
-  <div id="new_post_box" class="span9">
-	  <%= render 'posts/form' %>
+<div class="top-div">
+  <div class="geo-bar">
+    <div id="geostatus">Getting current location...</div>
+
+    <div class="pull-right">
+      <img class="locator-img" src ="http://png.findicons.com/files/icons/2597/the_clean_desk/40/location_fav.png" />
+    </div>
   </div>
 
-  <div class="map-box span3">
-    ddd
+  <div class="top-content">
+    <div id="new_post_box">
+	    <%= render 'posts/form' %>
+    </div>
+    <div class="map-box">
+      <img src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=200x200&sensor=false">
+    </div>
   </div>
 </div>
 
+<div class="margin"></div>
+
 <div class="wrapper">
   <div class="wrapper-top">
+    Sort By Time
+    <select>
+      <option>Most Recent</option>
+      <option>Least Recent</option>
+    </select>
+    <input type="text" placeholder="Filter Posts">
   </div>
 
   <div class="wrapper-content">
     <div id="posts">Loading nearby posts</div>
   </div>
-
 </div>
 
 <script>

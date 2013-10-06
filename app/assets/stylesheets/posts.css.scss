@@ -10,18 +10,30 @@
 }
 
 #new_post_box {
-	background: #FFF;
-    padding: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+
     float: left;
+    width: 70%;
+    border-right: 1px dotted #AAA;
 
 }
 
 .post-headline {
-	margin-bottom: 5px;
+	//margin-bottom: 5px;
 	//padding: 5px;
+
 	cursor: pointer;
+    border-bottom: 1px solid #CCC;
     min-height: 40px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #5A5956 !important;
+
+    .post-inner {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
 }
 
 .post-content {
@@ -31,7 +43,8 @@
 }
 
 .post-neutral {
-  background-image:         linear-gradient(to bottom, #F5F5F5, #E6E6E6);
+  background-image:         
+  linear-gradient(to bottom, #F5F5F5, #E6E6E6);
 }
 
 .post-positive {

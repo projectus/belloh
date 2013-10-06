@@ -11,7 +11,6 @@ class PostsController < ApplicationController
 
   def create
 	  @post = Post.new(post_params)
-    p post_params
     respond_to do |format|
       if @post.save
         format.html { redirect_to root_url }
