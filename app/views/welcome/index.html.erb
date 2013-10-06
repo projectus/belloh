@@ -8,7 +8,7 @@
   </div>
 
   <div class="top-content">
-    <div id="new_post_box">
+    <div id="new_post_box" class="post-neutral">
 	    <%= render 'posts/form' %>
     </div>
     <div class="map-box">
@@ -67,6 +67,30 @@
           getLocation(getPosts);
       });
 
+			$("#post_mood").change(function() {
+			    var mood = $("#post_mood option:selected").text();
+				  switch(mood)
+					{
+					case "Neutral":
+					  $("#new_post_box").removeClass();
+					  $("#new_post_box").addClass('post-neutral');
+					  break;
+					case "Positive":
+					  $("#new_post_box").removeClass();
+				    $("#new_post_box").addClass('post-positive');
+					  break;
+					case "Negative":
+					  $("#new_post_box").removeClass();
+				    $("#new_post_box").addClass('post-negative');
+					  break;
+					case "Caution":
+					  $("#new_post_box").removeClass();
+				    $("#new_post_box").addClass('post-caution');
+					  break;
+					default:
+					  break;
+					}
+			});
   });
 
 	function getPosts(position) {
