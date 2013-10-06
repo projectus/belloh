@@ -40,6 +40,16 @@ body{
 
   .wrapper-top {
     border-top: 1px solid #FFF;
+    text-shadow: 0 1px 1px #F7F7F7;
+    font-size: 9pt;
+
+    .button-groups{
+      .current-location{
+        float: left;
+
+      }
+    }
+
 
     height: 40px;
     background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
@@ -50,9 +60,8 @@ body{
   }
 
   .wrapper-content {
-    height: 560px;
-    background: #FFF;
-
+    background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
     .sender, .receiver {
       font-weight: bold;
     }
