@@ -1,35 +1,15 @@
-
-
 <%= form_for(@post) do |f| %>
-  <%= render 'errors' %>
+  <%= render 'posts/errors' %>
 
 	<div class="row-fluid subject-line">
-
-
-
-      [ <%= f.text_field :sender_desc %> ]
-
-	    @
-
-
-      [ <%= f.text_field :receiver_desc %> ]
-
+    [ <%= f.text_field :sender_desc %> ]
+    @
+    [ <%= f.text_field :receiver_desc %> ]
   </div>
 	<div class="row-fluid">
-
-      Message:
-
-      <select>
-        <option>Neutral</option>
-        <option>Good</option>
-        <option>Bad</option>
-        <option>Caution</option>
-
-      </select>
-
-
-      <%= f.text_area :content, class: 'input-xxlarge' %>
-
+    Message:
+    <%= f.select :mood, Post.moods %>
+    <%= f.text_area :content, class: 'input-xxlarge' %>
   </div>
   <div>
     <%= f.submit 'Post' %>
@@ -61,11 +41,6 @@
     lat.value=position.coords.latitude;
 	  lon.value=position.coords.longitude;
     $('#new_post').submit(); // submit
-	}
-
-	function hideForm() {
-		$('#new_post_box').hide();
-		$('#new_post_link').show();
 	}
 </script>
 

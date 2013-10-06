@@ -10,4 +10,10 @@ class Post < ActiveRecord::Base
 	
 	validates :mood, inclusion: MOODS
 	validates_presence_of :latitude, :longitude
+
+  before_validation do self.mood.downcase! end
+	
+	def self.moods
+	  MOODS.map(&:capitalize)
+	end
 end

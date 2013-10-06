@@ -1,6 +1,6 @@
 Belloh::Application.routes.draw do
 
-  resources :posts, only: [:new, :create]
+  resources :posts, only: [:create]
   get 'currloc', to: 'posts#currloc', as: :currloc
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
@@ -8,8 +8,7 @@ Belloh::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'welcome#index'
-  root 'posts#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
