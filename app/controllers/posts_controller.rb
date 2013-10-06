@@ -1,8 +1,5 @@
 class PostsController < ApplicationController
 
-  def index
-  end
-
   def currloc
 	  coords = [params[:lat],params[:lon]]
 	  @posts = Post.near(coords,1,:order => {:created_at=>:desc})

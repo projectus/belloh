@@ -1,4 +1,59 @@
-<div class="center">
+<div class="top-div row-fluid">
+  <div id="new_post_box" class="span9">
+  </div>
 
+  <div class="map-box span3">
+    ddd
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="wrapper-top">
+  </div>
+
+  <div class="wrapper-content">
+    <div id="posts">Loading nearby posts</div>
+  </div>
 
 </div>
+
+<script>
+  // Javascript to fetch user's location and fill with relevant posts
+
+    $(function(){
+
+        var p = {
+            "coords": {
+                "latitude": 40.7506,
+                "longitude": -73.9936
+            }
+        }
+        getPosts(p);
+
+        $(".locator-img").click(function(){
+            getLocation(getPosts);
+        });
+
+    });
+
+	function getPosts(position) {
+        var lat=position.coords.latitude;
+		var lon=position.coords.longitude;
+		var the_data = 'lat=' + encodeURIComponent(lat)
+	               +'&lon=' + encodeURIComponent(lon);
+
+		$.ajax({
+		  data: the_data,
+		  type: 'get',
+		  url: '<%=j currloc_path %>'
+		});
+	}
+	
+	function showForm() {
+		$('#new_post_box').show();
+		$('#new_post_link').hide();
+	}
+
+    showForm();
+
+</script>
