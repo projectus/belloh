@@ -1,6 +1,6 @@
 Belloh::Application.routes.draw do
 
-  resources :posts, only: [:new, :create]
+  resources :posts, only: [:create]
   get 'currloc', to: 'posts#currloc', as: :currloc
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
