@@ -27,3 +27,8 @@ function getLocation(setPosition) {
 		geostatus.innerHTML="Geolocation is not supported by this browser.";
 	}
 }
+
+
+$(document).bind("ready", function(){
+
+})

@@ -1,25 +1,35 @@
+
+
 <%= form_for(@post) do |f| %>
   <%= render 'errors' %>
 
-	<div class="row-fluid">
-	  <div class="span5">
-		  <%= f.label :sender_desc %>
-      <%= f.text_field :sender_desc %>
-    </div>
-    <div class="span2">
+	<div class="row-fluid subject-line">
+
+
+
+      [ <%= f.text_field :sender_desc %> ]
+
 	    @
-	  </div>
-    <div class="span5">
-		  <%= f.label :receiver_desc %>
-      <%= f.text_field :receiver_desc %>
-    </div>
+
+
+      [ <%= f.text_field :receiver_desc %> ]
+
   </div>
 	<div class="row-fluid">
-		<div class="span2"></div>
-		<div class="span8">
-		  <%= f.label :content %>
+
+      Message:
+
+      <select>
+        <option>Neutral</option>
+        <option>Good</option>
+        <option>Bad</option>
+        <option>Caution</option>
+
+      </select>
+
+
       <%= f.text_area :content, class: 'input-xxlarge' %>
-    </div>
+
   </div>
   <div>
     <%= f.submit 'Post' %>
@@ -30,30 +40,29 @@
   </div>
 <% end %>
 
-<%= link_to 'Cancel', "javascript:void(0)", onClick: "hideForm();" %>
 <script>
 // Javascript to fetch user's location upon submitting the form
 
 	$(function() {
 	  $('#new_post').submit(function() {
-			if (lon.value && lat.value) 
+			if (lon.value && lat.value)
 			  return true;
 	    getLocation(setPosition);
 	    return false; // return false to cancel form action
 	  });
-	
+
 	  $('#cancel').on('click',function(){alert('ok');})
 	});
 
 	var lon=document.getElementById("post_longitude");
 	var lat=document.getElementById("post_latitude");
-		
+
 	function setPosition(position) {
     lat.value=position.coords.latitude;
 	  lon.value=position.coords.longitude;
     $('#new_post').submit(); // submit
 	}
-	
+
 	function hideForm() {
 		$('#new_post_box').hide();
 		$('#new_post_link').show();

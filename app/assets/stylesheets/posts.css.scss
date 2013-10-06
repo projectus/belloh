@@ -4,20 +4,24 @@
 
 #posts {
 	background: lightgray;
-	padding: 5px 15px 5px 5px;
+	//padding: 5px 15px 5px 5px;
 	color: purple;
 	font-size: large;
 }
 
 #new_post_box {
-	background: darkorange;
-	display: none;
+	background: #FFF;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    float: left;
+
 }
 
 .post-headline {
 	margin-bottom: 5px;
-	padding: 5px;
+	//padding: 5px;
 	cursor: pointer;
+    min-height: 40px;
 }
 
 .post-content {
@@ -27,7 +31,7 @@
 }
 
 .post-neutral {
-	background: lightblue;
+  background-image:         linear-gradient(to bottom, #F5F5F5, #E6E6E6);
 }
 
 .post-positive {
@@ -40,4 +44,8 @@
 
 .post-caution {
 	background: lightyellow;
+}
+
+.subject-line {
+  font-size: 25pt;
 }
