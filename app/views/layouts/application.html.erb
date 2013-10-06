@@ -8,25 +8,39 @@
 </head>
 <body>
 
-<div class="navbar navbar-inverse">
-  <div class="navbar-inner">
-    <a class="brand" href="#">Belloh</a>
-    <ul class="nav">
-      <li class="active"><a href="#">Home</a></li>
+<div class="navigation">
 
-    </ul>
+  <div class="navigation-center">
+    <img src="http://png-5.findicons.com/files/icons/2118/nuvola/48/bell.png" />
+    Bell oh
+
+    <form class="navbar-search pull-right">
+      <input type="text" class="search-query" placeholder="Search for Landmarks">
+      <img class="locator-img" src ="http://png.findicons.com/files/icons/2597/the_clean_desk/40/location_fav.png" />
+
+
+    </form>
+
+
   </div>
-</div>
 
-<div id="geostatus"></div>
+
+</div>
 
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% end %>
 
-<div class="content row-fluid">
+
+
+
+
+
+
+
+	<div id="geostatus">Getting current location...</div>
   <%= yield %>
-</div>
+
 
 </body>
 

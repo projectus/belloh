@@ -1,21 +1,17 @@
 class PostsController < ApplicationController
 
   def index
-	  
   end
 
   def currloc
 	  coords = [params[:lat],params[:lon]]
-	  @posts = Post.near(coords,1)
+	  @posts = Post.near(coords,1,:order => {:created_at=>:desc})
 	  @location = Geocoder::search(coords).first.address
+	  @post = Post.new
 	  respond_to do |format|
       format.js
     end
 	end
-	
-  def show
-	  @post = Post.find(params[:id])
-  end
 
   def new
 	  @post = Post.new
@@ -26,14 +22,11 @@ class PostsController < ApplicationController
     p post_params
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_url }
+        format.html { redirect_to root_url }
       else
         format.html { render action: 'new' }
       end
     end
-  end
-
-  def destroy
   end
 
   private

@@ -1,0 +1,14 @@
+<a data-toggle="collapse" data-target="#collapse<%= count %>">
+<div class="row-fluid post-headline post-<%= post.mood %>">
+	<%= post.sender.nil? ? '' : post.sender.username %>
+  [<%= post.sender_desc %>]
+  @
+  [<%= post.receiver_desc %>]
+</div>
+</a>
+
+<div id="collapse<%= count %>" class="collapse">
+	<div class="row-fluid post-content">
+	  <%= post.content %>
+	</div>
+</div>    

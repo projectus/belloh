@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20131003170352) do
   end
 
   add_index "posts", ["sender_id"], name: "index_posts_on_sender_id"
+  add_index "posts", ["latitude","longitude"], name: "index_posts_on_latitude_and_longitude"
 
   create_table "users", force: true do |t|
 	  t.string   "email",                  default: "", null: false

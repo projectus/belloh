@@ -12,10 +12,79 @@
  *= require_tree .
  */
 
-@import "bootstrap";
+body{
+  background: #B6B6B6 !important;
+}
+
+.subject-line{
+  input[type="text"] {
+    height: 30px;
+    width: 260px !important;
+    margin-top: 10px;
+  }
+}
+
+.map-box {
+  width: 200px;
+  height: 200px;
+  background: red;
+  float: right;
+}
+
+.wrapper {
+  width: 75%;
+  height: 600px;
+  margin: auto;
+  margin-top: 20px;
+
+  .wrapper-top {
+    border-top: 1px solid #FFF;
+
+    height: 50px;
+    background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
+  }
+
+  .wrapper-content {
+    height: 560px;
+    background: #FFF;
+  }
+}
+
+
+#geostatus {
+  background: pink !important;
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  font-weight: bold;
+}
 
 .navbar {
   margin-bottom: 0px !important;
+}
+
+.navigation {
+  height: 70px;
+  width: 100%;
+  background-color: #000;
+  color: #FFF;
+  //background-image: -webkit-gradient(linear, left top, left bottom, from(#F3C509), to(#EB931F));
+  //background-image: -webkit-linear-gradient(top, #F3C509, #EB931F);
+  //background-image:    -moz-linear-gradient(top, #F3C509, #EB931F);
+  //background-image:      -o-linear-gradient(top, #F3C509, #EB931F);
+  //background-image:         linear-gradient(to bottom, #F3C509, #EB931F);
+  //border-bottom: 1px solid red;
+
+}
+
+.navigation-center {
+  margin: auto;
+  width: 900px;
+  padding-top: 10px;
+  font-size: 24pt;
+}
+
+.pin {
+  width: 50px;
 }
 
 .center {
@@ -25,7 +94,7 @@
   background: #E2E2E2;
   border-right: 1px solid #B8B8B8;
   border-left: 1px solid #B8B8B8;
-
-
 }
+
+@import "bootstrap";
 

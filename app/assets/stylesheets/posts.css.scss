@@ -1,3 +1,51 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#posts {
+	background: lightgray;
+	//padding: 5px 15px 5px 5px;
+	color: purple;
+	font-size: large;
+}
+
+#new_post_box {
+	background: #FFF;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+    float: left;
+
+}
+
+.post-headline {
+	margin-bottom: 5px;
+	//padding: 5px;
+	cursor: pointer;
+    min-height: 40px;
+}
+
+.post-content {
+	margin-bottom: 5px;
+	padding: 5px;
+	background: white;
+}
+
+.post-neutral {
+  background-image:         linear-gradient(to bottom, #F5F5F5, #E6E6E6);
+}
+
+.post-positive {
+	background: lightgreen;
+}
+
+.post-negative {
+	background: pink;
+}
+
+.post-caution {
+	background: lightyellow;
+}
+
+.subject-line {
+  font-size: 25pt;
+}
