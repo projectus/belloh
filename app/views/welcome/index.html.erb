@@ -13,6 +13,38 @@
               $(this).next(".selecttext").text(val);
           });
       });
+
+      $(".button-tog").bind("click", function(){
+          if (!$(this).hasClass("button-active")){
+
+              $(".button-tog").each(function(){
+                  $(this).removeClass("button-active")
+              })
+
+              $(this).addClass("button-active")
+          }
+      })
+
+      $(".button-tog").css("cursor", "pointer")
+
+      $(".button-tog").bind("mouseover", function(){
+
+         $(this).css({
+                 "-moz-box-shadow": "0 0 3px 1px #888",
+                 "-webkit-box-shadow": "0 0 3px 1px #888",
+                 "box-shadow": "0 0 3px 1px #888"
+         })
+      }).bind("mouseout", function(){
+          $(this).css({
+              "-moz-box-shadow": "none",
+              "-webkit-box-shadow": "none",
+              "box-shadow": "none"
+          })
+
+
+      })
+
+
   });
 </script>
 
@@ -30,7 +62,7 @@
 	    <%= render 'posts/form' %>
     </div>
     <div class="map-box">
-      <img src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=200x200&sensor=false">
+      <img class="map" src="#" />
     </div>
   </div>
 </div>
@@ -46,7 +78,7 @@
         Current Location
       </div>
 
-      <div id="all-places" class="button-active">
+      <div id="all-places" class="button-active button-tog">
         <img src="http://png-1.findicons.com/files/icons/2212/carpelinx/16/browser.png" />
         All Places
       </div>
@@ -94,6 +126,10 @@
       });
 
       $("#current-location").click(function(){
+
+
+
+
           getLocation(getPosts);
       });
 
@@ -134,10 +170,15 @@
   });
 
 	function getPosts(position) {
-    var lat=position.coords.latitude;
+        var lat=position.coords.latitude;
 		var lon=position.coords.longitude;
 		var the_data = 'lat=' + encodeURIComponent(lat)
 	               +'&lon=' + encodeURIComponent(lon);
+
+        var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false"
+
+        $(".map").attr("src", srcString)
+
 
 		$.ajax({
 		  data: the_data,
