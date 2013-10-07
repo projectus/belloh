@@ -13,6 +13,11 @@
               $(this).next(".selecttext").text(val);
           });
       });
+
+
+
+
+
   })
 
 </script>
@@ -103,7 +108,7 @@
 
       getPosts(p);
 
-      $(".locator-img").click(function(){
+      $(".locator-img, .current-location").click(function(){
           getLocation(getPosts);
       });
 
