@@ -13,8 +13,7 @@
               $(this).next(".selecttext").text(val);
           });
       });
-  })
-
+  });
 </script>
 
 <div class="top-div">
@@ -42,12 +41,12 @@
   <div class="wrapper-top">
     <div class="button-group">
 
-      <div class="button-tog current-location">
+      <div id="current-location" class="button-tog">
         <img src="http://png.findicons.com/files/icons/974/glyphish/11/map_pin.png" />
         Current Location
       </div>
 
-      <div class="button-active all-places">
+      <div id="all-places" class="button-active">
         <img src="http://png-1.findicons.com/files/icons/2212/carpelinx/16/browser.png" />
         All Places
       </div>
@@ -87,29 +86,25 @@
   // Javascript to fetch user's location and fill with relevant posts
   $(function(){
 
-      var p = {
-          "coords": {
-              "latitude": 40.7506,
-              "longitude": -73.9936
-          }
-      }
-
-      var allLocation = {
-          "coords": {
-              "latitude": "nil",
-              "longitude": "nil"
-          }
-      }
-
-      getPosts(p);
-
       $(".locator-img").click(function(){
           getLocation(getPosts);
       });
 
-      $(".all-places").click(function(){
-          getPosts(allLocation);
-      })
+      $("#current-location").click(function(){
+          getLocation(getPosts);
+      });
+
+      $("#all-places").click(function(){
+	      var world = {
+	          "coords": {
+	              "latitude": "nil",
+	              "longitude": "nil"
+	          }
+	      }
+        getPosts(world);
+      });
+
+      $("#all-places").click();
 
 			$("#post_mood").change(function() {
 			    var mood = $("#post_mood option:selected").text();

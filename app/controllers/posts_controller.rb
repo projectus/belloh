@@ -2,16 +2,14 @@ class PostsController < ApplicationController
 
   def currloc
 	  coords = [params[:lat],params[:lon]]
-
+	
     if coords.first == "nil"
       @posts = Post.all
       @location = "Around the World"
     else
       @posts = Post.near(coords,1,:order => {:created_at=>:desc})
       @location = Geocoder::search(coords).first.address
-
     end
-
 
 	  respond_to do |format|
       format.js
