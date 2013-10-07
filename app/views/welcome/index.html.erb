@@ -62,7 +62,7 @@
 	    <%= render 'posts/form' %>
     </div>
     <div class="map-box">
-      <img class="map" src="#" />
+      <img id="map" src="#" />
     </div>
   </div>
 </div>
@@ -121,69 +121,69 @@
   // Javascript to fetch user's location and fill with relevant posts
   $(function(){
 
-      $(".locator-img").click(function(){
-          getLocation(getPosts);
-      });
+    setMap("<%=j @coords[0] %>","<%=j @coords[1] %>");
 
-      $("#current-location").click(function(){
+    $(".locator-img").click(function(){
+        getLocation(getPosts);
+    });
 
+    $("#current-location").click(function(){
+        getLocation(getPosts);
+    });
 
+    $("#all-places").click(function(){
+      var world = {
+          "coords": {
+              "latitude": "nil",
+              "longitude": "nil"
+          }
+      }
+      getPosts(world);
+    });
 
-
-          getLocation(getPosts);
-      });
-
-      $("#all-places").click(function(){
-	      var world = {
-	          "coords": {
-	              "latitude": "nil",
-	              "longitude": "nil"
-	          }
-	      }
-        getPosts(world);
-      });
-
-			$("#post_mood").change(function() {
-			    var mood = $("#post_mood option:selected").text();
-				  switch(mood)
-					{
-					case "Neutral":
-					  $("#new_post_box").removeClass();
-					  $("#new_post_box").addClass('post-neutral');
-					  break;
-					case "Positive":
-					  $("#new_post_box").removeClass();
-				    $("#new_post_box").addClass('post-positive');
-					  break;
-					case "Negative":
-					  $("#new_post_box").removeClass();
-				    $("#new_post_box").addClass('post-negative');
-					  break;
-					case "Caution":
-					  $("#new_post_box").removeClass();
-				    $("#new_post_box").addClass('post-caution');
-					  break;
-					default:
-					  break;
-					}
-			});
+		$("#post_mood").change(function() {
+	    var mood = $("#post_mood option:selected").text();
+		  switch(mood) {
+				case "Neutral":
+				  $("#new_post_box").removeClass();
+				  $("#new_post_box").addClass('post-neutral');
+				  break;
+				case "Positive":
+				  $("#new_post_box").removeClass();
+			    $("#new_post_box").addClass('post-positive');
+				  break;
+				case "Negative":
+				  $("#new_post_box").removeClass();
+			    $("#new_post_box").addClass('post-negative');
+				  break;
+				case "Caution":
+				  $("#new_post_box").removeClass();
+			    $("#new_post_box").addClass('post-caution');
+				  break;
+				default:
+				  break;
+			}
+		});
   });
 
 	function getPosts(position) {
-        var lat=position.coords.latitude;
+    var lat=position.coords.latitude;
 		var lon=position.coords.longitude;
 		var the_data = 'lat=' + encodeURIComponent(lat)
 	               +'&lon=' + encodeURIComponent(lon);
-
-        var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false"
-
-        $(".map").attr("src", srcString)
-
+	
+    setMap(lat,lon);
 
 		$.ajax({
 		  data: the_data,
 		  type: 'get',
 		  url: '<%=j currloc_path %>'
 		});
+	}
+	
+	function setMap(lat,lon) {
+		var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false";
+
+    $("#map").attr("src", srcString);
 	}
 </script>
