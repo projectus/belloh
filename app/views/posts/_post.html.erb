@@ -2,10 +2,10 @@
 <div class="row-fluid post-headline post-<%= post.mood %>">
   <div class="post-inner">
       <div class="post-header">
-          <%= post.sender.nil? ? '' : post.sender.username %>
-          [<span class="sender"><%= post.sender_desc %></span>]
-          @
-          [<span class="receiver"><%= post.receiver_desc %></span>]
+        <%= post.sender.nil? ? '' : post.sender.username %>
+        [<span class="sender"><%= post.sender_desc %></span>]
+        @
+        [<span class="receiver"><%= post.receiver_desc %></span>]
       </div>
       <div class="post-message">
         <%= post.content %>

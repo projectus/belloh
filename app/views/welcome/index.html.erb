@@ -50,7 +50,7 @@
 
 <div class="top-div">
   <div class="geo-bar">
-    <div id="geostatus">Getting current location...</div>
+    <div id="geostatus">Current Location: <%= @location %></div>
 
     <div class="pull-right">
       <img class="locator-img" src ="http://png.findicons.com/files/icons/2597/the_clean_desk/40/location_fav.png" />
@@ -110,30 +110,16 @@
   </div>
 
   <div class="wrapper-content">
-    <div id="posts">Loading nearby posts</div>
+	  
+    <div id="posts">
+	    <%= render 'posts/list' %>
+	  </div>
   </div>
 </div>
 
 <script>
   // Javascript to fetch user's location and fill with relevant posts
   $(function(){
-
-      var p = {
-          "coords": {
-              "latitude": 40.7506,
-              "longitude": -73.9936
-          }
-      }
-
-      var allLocation = {
-          "coords": {
-              "latitude": "nil",
-              "longitude": "nil"
-          }
-      }
-
-      getPosts(p);
-
 
       $(".locator-img").click(function(){
           getLocation(getPosts);
@@ -156,8 +142,6 @@
 	      }
         getPosts(world);
       });
-
-      $("#all-places").click();
 
 			$("#post_mood").change(function() {
 			    var mood = $("#post_mood option:selected").text();
@@ -191,9 +175,9 @@
 		var the_data = 'lat=' + encodeURIComponent(lat)
 	               +'&lon=' + encodeURIComponent(lon);
 
- var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + -15.800513,-47.91378&zoom=11&size=200x200&sensor=false
+        var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false"
 
-        $(".map").attr("src", "")
+        $(".map").attr("src", srcString)
 
 
 		$.ajax({

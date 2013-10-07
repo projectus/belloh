@@ -4,11 +4,13 @@ class PostsController < ApplicationController
 	  coords = [params[:lat],params[:lon]]
 	
     if coords.first == "nil"
-      @posts = Post.all
-      @location = "Around the World"
+      setup_posts_of_the_world
+      session[:coords] = nil
     else
       @posts = Post.near(coords,1,:order => {:created_at=>:desc})
       @location = Geocoder::search(coords).first.address
+      session[:coords] = coords
+      session[:location] = @location
     end
 
 	  respond_to do |format|

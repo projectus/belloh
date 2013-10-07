@@ -1,4 +1,4 @@
 <% @posts.each_with_index do |post,count| %>
-  <%= render partial: 'post', locals:{post: post, count: count} %>
+  <%= render partial: 'posts/post', locals:{post: post, count: count} %>
 <% end %>
 
