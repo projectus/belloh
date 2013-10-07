@@ -93,11 +93,23 @@
               "longitude": -73.9936
           }
       }
+
+      var allLocation = {
+          "coords": {
+              "latitude": "nil",
+              "longitude": "nil"
+          }
+      }
+
       getPosts(p);
 
       $(".locator-img").click(function(){
           getLocation(getPosts);
       });
+
+      $(".all-places").click(function(){
+          getPosts(allLocation);
+      })
 
 			$("#post_mood").change(function() {
 			    var mood = $("#post_mood option:selected").text();
