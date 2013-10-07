@@ -13,6 +13,7 @@
   float: left;
   width: 70%;
   border-right: 1px dotted #AAA;
+  padding: 10px;
 }
 
 .post-headline {
@@ -43,7 +44,7 @@
 }
 
 .post-positive {
-	background: lightgreen;
+  background-image: linear-gradient(to bottom, #AFD07B, #89AE47);
 }
 
 .post-negative {
@@ -56,4 +57,50 @@
 
 .subject-line {
   font-size: 25pt;
+}
+
+select {
+  border: none;
+  background:
+    none; outline:
+  none; opacity: 0;
+  -webkit-appearance: none;
+  filter: alpha(opacity=0);
+  width: 150px;
+}
+
+.selectbox select {
+  z-index: 10;
+  position: relative;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 4px 12px 4px 32px;
+  opacity: 0;
+  -webkit-appearance: none;
+  filter: alpha(opacity=0);
+}
+
+.selecttext {
+  z-index: 9;
+  position: absolute;
+  left: 5px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  background: transparent; color: #666;
+}
+
+.selectbox {
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  border: 1px solid #aeaeae;
+  background: #e6e6e6;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #e6e6e6));
+  background-image: linear-gradient(top, white, #e6e6e6);
+  border-radius: 5px; box-shadow: 0 1px 1px #d2d2d2;
 }

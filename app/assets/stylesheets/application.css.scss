@@ -39,33 +39,36 @@ body{
   clear: both;
 
   .wrapper-top {
-    border-top: 1px solid #FFF;
     text-shadow: 0 1px 1px #F7F7F7;
     font-size: 9pt;
+    height: 40px;
+    background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-top: 1px solid #777;
+    border-bottom: 1px solid #777;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
 
     .button-group{
       height: 40px;
       float: left;
+      font-weight: bold;
+      margin-left: 10px;
+      margin-right: 10px;
 
       .current-location{
-        float: left;
-        background: #FFF;
-
+        //border-right: none !important;
       }
-
       .all-places {
+        border-left: none !important;
+        margin-right: 10px;
       }
+
     }
 
-
-    height: 40px;
-    background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border-color: #777;
-    border-style: solid;
-    border-width: 1px;
-
-    select {
-      margin-top: 5px;
+    input {
+      height: 15px !important;
+      font-size: 14px;
+      margin-top: 7px;
     }
   }
 
@@ -113,8 +116,7 @@ body{
 
 .top-content {
   background: #EEE;
-  padding: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.45);
+  box-shadow: 0 2px 7px rgba(0,0,0,0.45);
   height: 200px;
   clear: both;
 }
@@ -124,7 +126,11 @@ body{
 }
 
 .geo-bar {
-  background-image:         linear-gradient(to bottom, #EDEDED, #BFBFBF);
+  background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
 
   height: 40px;
 }
@@ -143,10 +149,10 @@ body{
 }
 
 .navigation {
-  height: 70px;
+  height: 50px;
   width: 100%;
-  background-color: #000;
-  color: #FFF;
+  background-color: #EEE;
+  color: #000;
   //background-image: -webkit-gradient(linear, left top, left bottom, from(#F3C509), to(#EB931F));
   //background-image: -webkit-linear-gradient(top, #F3C509, #EB931F);
   //background-image:    -moz-linear-gradient(top, #F3C509, #EB931F);
@@ -178,17 +184,32 @@ body{
 
 .button-tog {
 
-  padding: 5px 20px;
-  border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa;
-  border-right: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
-  background-color: #FFF;
-  display: inline;
+  padding: 2px 10px;
+  border: 1px solid #888;
+  margin-top: 6px;
+  float: left;
+  background-image: linear-gradient(to bottom, #F6F6F6, #C6C6C6);
 }
 
+.button-active {
+  float: left;
+  padding: 2px 10px;
+  border-top: 1px solid #555;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #AAA;
+  margin-top: 6px;
+  background-image:         linear-gradient(to bottom, #8F8F8F, #D8D8D8);
 
+}
 
+select {
+  height: 20px !important;
+}
+
+form {
+  margin: 0px !important;
+}
 
 @import "bootstrap";
 

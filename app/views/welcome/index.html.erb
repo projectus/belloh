@@ -1,3 +1,22 @@
+<script>
+  $(document).bind('ready', function(){
+      $("select").each(function(){
+          $(this).wrap('<div class="selectbox"/>');
+          $(this).after("<span class='selecttext'></span><span class='select-arrow'></span>");
+      });
+
+      $("select").each(function(){
+          var val = $(this).children("option:selected").text();
+          $(this).next(".selecttext").text(val);
+          $(this).change(function(){
+              var val = $(this).children("option:selected").text();
+              $(this).next(".selecttext").text(val);
+          });
+      });
+  })
+
+</script>
+
 <div class="top-div">
   <div class="geo-bar">
     <div id="geostatus">Getting current location...</div>
@@ -23,13 +42,26 @@
   <div class="wrapper-top">
     <div class="button-group">
 
-      <div class="button-tog">
+      <div class="button-tog current-location">
+        <img src="http://png.findicons.com/files/icons/974/glyphish/11/map_pin.png" />
         Current Location
       </div>
 
-
+      <div class="button-active all-places">
+        <img src="http://png-1.findicons.com/files/icons/2212/carpelinx/16/browser.png" />
         All Places
+      </div>
 
+      Filter By:
+       <select>
+         <option>All</option>
+         <option>Sender Description</option>
+         <option>Receiver Description</option>
+         <option>Message Content</option>
+
+       </select>
+
+      <input type="text" placeholder="Filter Texts...">
 
 
     </div>
