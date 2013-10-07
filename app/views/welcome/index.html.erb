@@ -14,12 +14,38 @@
           });
       });
 
+      $(".button-tog").bind("click", function(){
+          if (!$(this).hasClass("button-active")){
+
+              $(".button-tog").each(function(){
+                  $(this).removeClass("button-active")
+              })
+
+              $(this).addClass("button-active")
+          }
+      })
+
+      $(".button-tog").css("cursor", "pointer")
+
+      $(".button-tog").bind("mouseover", function(){
+
+         $(this).css({
+                 "-moz-box-shadow": "0 0 3px 1px #888",
+                 "-webkit-box-shadow": "0 0 3px 1px #888",
+                 "box-shadow": "0 0 3px 1px #888"
+         })
+      }).bind("mouseout", function(){
+          $(this).css({
+              "-moz-box-shadow": "none",
+              "-webkit-box-shadow": "none",
+              "box-shadow": "none"
+          })
 
 
+      })
 
 
-  })
-
+  });
 </script>
 
 <div class="top-div">
@@ -36,7 +62,7 @@
 	    <%= render 'posts/form' %>
     </div>
     <div class="map-box">
-      <img src="http://maps.googleapis.com/maps/api/staticmap?center=-15.800513,-47.91378&zoom=11&size=200x200&sensor=false">
+      <img class="map" src="#" />
     </div>
   </div>
 </div>
@@ -47,12 +73,12 @@
   <div class="wrapper-top">
     <div class="button-group">
 
-      <div class="button-tog current-location">
+      <div id="current-location" class="button-tog">
         <img src="http://png.findicons.com/files/icons/974/glyphish/11/map_pin.png" />
         Current Location
       </div>
 
-      <div class="button-active all-places">
+      <div id="all-places" class="button-active button-tog">
         <img src="http://png-1.findicons.com/files/icons/2212/carpelinx/16/browser.png" />
         All Places
       </div>
@@ -108,13 +134,30 @@
 
       getPosts(p);
 
-      $(".locator-img, .current-location").click(function(){
+
+      $(".locator-img").click(function(){
           getLocation(getPosts);
       });
 
-      $(".all-places").click(function(){
-          getPosts(allLocation);
-      })
+      $("#current-location").click(function(){
+
+
+
+
+          getLocation(getPosts);
+      });
+
+      $("#all-places").click(function(){
+	      var world = {
+	          "coords": {
+	              "latitude": "nil",
+	              "longitude": "nil"
+	          }
+	      }
+        getPosts(world);
+      });
+
+      $("#all-places").click();
 
 			$("#post_mood").change(function() {
 			    var mood = $("#post_mood option:selected").text();
@@ -143,10 +186,15 @@
   });
 
 	function getPosts(position) {
-    var lat=position.coords.latitude;
+        var lat=position.coords.latitude;
 		var lon=position.coords.longitude;
 		var the_data = 'lat=' + encodeURIComponent(lat)
 	               +'&lon=' + encodeURIComponent(lon);
+
+ var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + -15.800513,-47.91378&zoom=11&size=200x200&sensor=false
+
+        $(".map").attr("src", "")
+
 
 		$.ajax({
 		  data: the_data,

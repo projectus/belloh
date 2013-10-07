@@ -17,9 +17,9 @@
 
 var geostatus=document.getElementById("geostatus");
 
-function getLocation(setPosition) {
+function getLocation(doSomethingWithPosition) {
   if (navigator.geolocation) {
-	  navigator.geolocation.getCurrentPosition(setPosition, function(){
+	  navigator.geolocation.getCurrentPosition(doSomethingWithPosition, function(){
 		  geostatus.innerHTML="Geolocation failed. You may have to allow location services.";
 	});
 	}
