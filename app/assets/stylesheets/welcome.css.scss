@@ -11,7 +11,7 @@
 
 #header {
 	background: pink;
-	padding: 30px 0 30px 0;
+	padding: 20px 0 20px 0;
 	margin-bottom: 10px;
 	
 	#new_post_box {
@@ -86,7 +86,9 @@
 }
 
 #sidebar, #content, #header {
-	background: image-url('bkg/debut_dark.png'); 
+
+  background-color:rgba(0,0,0,0.7);
+	//background: image-url('bkg/debut_dark.png');
   box-shadow: 0 0 5px 1px black;
 }
 

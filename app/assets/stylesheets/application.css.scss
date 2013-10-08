@@ -13,7 +13,9 @@
  */
 
 body{
-  background: image-url('bkg/rainbow.png') no-repeat center center fixed;
+
+  background: image-url('https://uwaterloo.ca/includes_new/images/homepage/solar-car-DC.jpg') no-repeat center center fixed;
+  //background: image-url('bkg/rainbow.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,6 +47,18 @@ body{
 	  font-size: 24pt;
 	}
 }
+
+#about {
+  background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+
+  h4 {
+
+  }
+}
+
 
 @import "bootstrap";
 
