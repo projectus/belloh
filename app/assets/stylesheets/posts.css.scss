@@ -4,18 +4,22 @@
 
 .post-neutral {
   background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
+  color: black !important;
 }
 
 .post-positive {
   background-image: linear-gradient(to bottom, #99CC66, #66CC00);
+  color: black !important;
 }
 
 .post-negative {
   background-image: linear-gradient(to bottom, #FF3333, #CC0000);
+  color: lightgray !important;
 }
 
 .post-caution {
   background-image: linear-gradient(to bottom, #FFCC99, #FF9900);
+  color: black !important;
 }
 
 .post-first {
@@ -25,7 +29,6 @@
 .post {	
   padding: 10px;
   margin-left: -10px;
-  color: #5A5956 !important;
   box-shadow: 0 0 2px 1px #1b1b24;
 
   .post-content {
