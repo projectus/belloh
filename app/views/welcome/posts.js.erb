@@ -1,37 +1,3 @@
-<div id="geobar" class="row">
-  <div id="geostatus">Current Location: <%= @location %></div>
-
-  <div class="pull-right">
-    <img id="locator-img" src ="http://png.findicons.com/files/icons/2597/the_clean_desk/40/location_fav.png" />
-  </div>
-</div>
-
-<div id="posts_header" class="row">
-	  <div class="span9">
-			<div id="new_post_box" class="post-neutral">
-		    <%= render 'posts/form' %>
-		  </div>
-	  </div>
-	  <div class="span3">
-	    <img id="map" src="#" />
-	  </div>
-</div>
-
-<div id="posts_filters" class="row">
-  <div class="span8">
-	  <div id="filter" class="btn">
-      Filter
-    </div>
-  </div>
-</div>
-
-<div class="row">  
-  <div id="posts">
-    <%= render 'posts/list' %>
-  </div>
-</div>
-
-<script>
 // Javascript to fetch user's location and fill with relevant posts
 $(function(){
 
@@ -49,10 +15,14 @@ $(function(){
   });
 
   $("#current-location").click(function(){
+    //$("#all-locations").removeClass('active');
+    //$(this).addClass('active');
     getLocation(getPosts);
   });
 
   $("#all-locations").click(function(){
+    //$("#current-location").removeClass('active');
+    //$(this).addClass('active');
     var world = {
       "coords": {
           "latitude": "nil",
@@ -69,8 +39,8 @@ $(function(){
   }
 
 	$("#post_mood").change(function() {
-    var mood = $("#post_mood option:selected").text().toLowerCase();
-    var id = 'new_post_box';
+    var mood = $("#post_mood option:selected").text().toLowerCase();;
+    var id = 'new_post_box'
     swap_class(id,'post-'+mood);
 	});
 });
@@ -93,7 +63,6 @@ function getPosts(position) {
 }
 
 function setMap(lat,lon) {
-	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=185x185&sensor=false";
+	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false";
   $("#map").attr("src", srcString);
 }
-</script>

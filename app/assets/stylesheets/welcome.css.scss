@@ -2,3 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#geobar {
+  background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+
+	#geostatus {
+	  padding: 10px;
+	  font-weight: bold;
+	  font-size: 10pt;
+	  text-shadow: 0 1px 1px #F7F7F7;
+	  color: #555 !important;
+	  float: left;
+	}
+}
+
+#new_post_box {
+  padding: 10px;
+	#new_post_sender_receiver {
+		font-size: x-large;
+	}
+	
+	#post_mood {
+		width: 90px;
+		margin-left: 0 !important;
+	}
+}
+
+#posts_header {
+	background: white;
+}
+
+#posts_filters {
+	background: green;
+}
+
+#posts {
+	background: red;
+}

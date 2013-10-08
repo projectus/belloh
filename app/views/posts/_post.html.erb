@@ -1,23 +1,24 @@
 
-<div class="row-fluid post-headline post-<%= post.mood %>">
-  <div class="post-inner">
-      <div class="post-header">
-        <%= post.sender.nil? ? '' : post.sender.username %>
-        [<span class="sender"><%= post.sender_desc %></span>]
-        @
-        [<span class="receiver"><%= post.receiver_desc %></span>]
-      </div>
-      <div class="post-message">
-        <%= post.content %>
-      </div>
+<div class="row-fluid post post-<%= post.mood %>">
+  <div class="post-content">
+    <div class="post-header">
+      <%= post.sender.nil? ? '' : post.sender.username %>
+      [<span class="sender"><%= post.sender_desc %></span>]
+      @
+      [<span class="receiver"><%= post.receiver_desc %></span>]
+    </div>
+    <div class="post-message">
+      <%= post.content %>
+    </div>
   </div>
 
-  <div class="post-time">
-    September 11 2013
-  </div>
+  <div class="post-details">
+	  <div class="post-time">
+	    September 11 2013
+	  </div>
 
-  <div class="post-location">
-    202 Lester Street, Waterloo, ON, Canada
+	  <div class="post-location">
+	    202 Lester Street, Waterloo, ON, Canada
+	  </div>
   </div>
-
 </div>
