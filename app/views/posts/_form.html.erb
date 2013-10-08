@@ -8,12 +8,12 @@
   </div>
 
 	<div>
-    <%= f.text_area :content, placeholder: 'Message', class: 'input-xxlarge' %>
+    <%= f.text_area :content, placeholder: 'Message' %>
   </div>
 
   <div>
 	  <%= f.select :mood, Post.moods %>
-    <%= f.submit 'Post Belloh', class: 'btn btn-info pull-right' %>
+    <%= f.submit 'Belloh', class: 'btn btn-info pull-right' %>
   </div>
 
   <%= hidden_field_tag "post[longitude]" %>

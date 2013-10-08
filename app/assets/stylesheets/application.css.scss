@@ -21,10 +21,14 @@ body{
 	margin-top: 5px;
 }
 
-#nav-center {
-  margin: auto;
-  width: 900px;
-  font-size: 24pt;
+.navbar-inner {
+	box-shadow: 0 0 10px 1px black !important;	
+  
+	#nav-center {
+	  margin: auto;
+	  width: 900px;
+	  font-size: 24pt;
+	}
 }
 
 @import "bootstrap";

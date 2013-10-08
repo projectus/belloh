@@ -9,25 +9,31 @@
 	
 	#new_post_box {
 	  padding: 10px;
-	  margin: 0 auto;
-	  width: 545px;
+	  margin: auto;
+	  width: 552px;
 	  border-radius: 10px;
 	  box-shadow: 0 0 2px 1px #00000F;
-	
-		#new_post_header {
-			font-size: x-large;
-			margin: auto;
-			width: 530px;
-		}
+
 		form {
 			margin: 0;
-		}
+			#new_post_header {
+				font-size: xx-large;
+				input {
+					margin-top: 8px;
+				}
+			}
+			textarea {
+				width: 538px;
+			}
+		}	
 	}
 }
 
 #sidebar {
-	margin-left: 10px;
+	margin-left: 730px;
 	text-align: center;
+	position: fixed;
+	
 	#map {
 		margin-top: 10px;
 		border-radius: 10px;
