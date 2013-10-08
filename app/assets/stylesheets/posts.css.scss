@@ -31,16 +31,14 @@
   margin-left: -10px;
   box-shadow: 0 0 2px 1px #1b1b24;
 
-  .post-content {
-	  float: left;
-  
-	  .sender, .receiver {
-	    font-weight: bold;
-	  }
-	
-    .post-message {
-      font-size: 10pt;
-    }
+  .post-header {
+    font-weight: bold;
+    float: left;
+  }
+
+  .post-message {
+    font-size: 10pt;
+    margin-top: 6px;
   }
   
   .post-time {
