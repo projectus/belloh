@@ -10,4 +10,8 @@ class WelcomeController < ApplicationController
 	    @location = session[:location]
 		end
   end
+
+  def about
+
+  end
 end
