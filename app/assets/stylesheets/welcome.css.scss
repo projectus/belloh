@@ -2,43 +2,80 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#geobar {
-  background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-top: 1px solid #777;
-  border-bottom: 1px solid #777;
-  border-left: 1px solid #999;
-  border-right: 1px solid #999;
-
-	#geostatus {
+#header {
+	background: pink;
+	padding: 30px 0 30px 0;
+	margin-bottom: 10px;
+	
+	#new_post_box {
 	  padding: 10px;
-	  font-weight: bold;
-	  font-size: 10pt;
-	  text-shadow: 0 1px 1px #F7F7F7;
-	  color: #555 !important;
-	  float: left;
+	  margin: 0 auto;
+	  width: 545px;
+	  border-radius: 10px;
+	  box-shadow: 0 0 2px 1px #00000F;
+	
+		#new_post_header {
+			font-size: x-large;
+			margin: auto;
+			width: 530px;
+		}
+		form {
+			margin: 0;
+		}
 	}
 }
 
-#new_post_box {
-  padding: 10px;
-	#new_post_sender_receiver {
-		font-size: x-large;
+#sidebar {
+	margin-left: 10px;
+	text-align: center;
+	#map {
+		margin-top: 10px;
+		border-radius: 10px;
 	}
 	
-	#post_mood {
-		width: 90px;
-		margin-left: 0 !important;
+	#geostatus {
+	  font-weight: bold;
+	  font-size: 10pt;
+	  color: #FFF;
+	  margin: 10px;
+	}
+	
+	#current-location {
+		margin-left: 30px;
+	}
+
+	#all-locations {
+		margin-right: 30px;
+	}
+
+  #all-locations, #current-location {
+		width: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+	
+	#location_search {
+		width: 180px;
+		margin: 10px;
 	}
 }
 
-#posts_header {
-	background: white;
+#sidebar, #header {
+	border-radius: 10px 10px 0 0;
 }
 
-#posts_filters {
-	background: green;
+#filter {
+	padding: 10px 30px 10px 30px;
+	input {
+	  margin: 0;
+	}
+}
+
+#sidebar, #content, #header {
+	background: image-url('bkg/debut_dark.png'); 
+  box-shadow: 0 0 5px 1px black;
 }
 
 #posts {
-	background: red;
+	padding: 10px 30px 10px 30px;
 }

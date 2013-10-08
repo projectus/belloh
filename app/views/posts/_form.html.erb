@@ -1,29 +1,22 @@
 <%= form_for(@post) do |f| %>
   <%= render 'posts/errors' %>
 
-	<div id="new_post_header" class="row-fluid">
-		<div id="new_post_sender_receiver" class="span10">
-    [ <%= f.text_field :sender_desc %> ]
+	<div id="new_post_header">
+    [ <%= f.text_field :sender_desc, placeholder: 'Sender description' %> ]
     @
-    [ <%= f.text_field :receiver_desc %> ]
-    </div>
-    <div class="span2">
-      <%= f.select :mood, Post.moods %>
-    </div>
+    [ <%= f.text_field :receiver_desc, placeholder: 'Receiver description' %> ]
   </div>
 
 	<div>
-    Message:<br/>
-    <%= f.text_area :content, class: 'input-xxlarge' %>
+    <%= f.text_area :content, placeholder: 'Message', class: 'input-xxlarge' %>
   </div>
 
   <div>
-    <%= f.submit 'Post Belloh' %>
+	  <%= f.select :mood, Post.moods %>
+    <%= f.submit 'Post Belloh', class: 'btn btn-info pull-right' %>
   </div>
 
-  <div>
-    <%= hidden_field_tag "post[longitude]" %>
-    <%= hidden_field_tag "post[latitude]" %>
-  </div>
+  <%= hidden_field_tag "post[longitude]" %>
+  <%= hidden_field_tag "post[latitude]" %>
 <% end %>
 

@@ -1,34 +1,33 @@
-<div id="geobar" class="row">
-  <div id="geostatus">Current Location: <%= @location %></div>
 
-  <div class="pull-right">
-    <img id="locator-img" src ="http://png.findicons.com/files/icons/2597/the_clean_desk/40/location_fav.png" />
-  </div>
-</div>
-
-<div id="posts_header" class="row">
-	  <div class="span9">
+<div class="row">
+	<div class="span1"></div>
+	<div class="span8">
+		<div id="header">
 			<div id="new_post_box" class="post-neutral">
 		    <%= render 'posts/form' %>
 		  </div>
 	  </div>
-	  <div class="span3">
-	    <img id="map" src="#" />
+	  <div id="content">
+		  <div id="filter">
+		    <input type="text" placeholder="Filter posts">
+	    </div>
+		  <div id="posts">
+		    <%= render 'posts/list' %>
+		  </div>
 	  </div>
-</div>
+	</div>
+	<div id="sidebar" class="span3">
+		<img id="map" src="#" class="img-polaroid"/>
+		
+	  <div id="geostatus">Current Location: <%= @location %></div>
 
-<div id="posts_filters" class="row">
-  <div class="span8">
-	  <div id="filter" class="btn">
-      Filter
-    </div>
-  </div>
-</div>
+		<div class="row-fluid">
+		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
+		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
+		</div>
 
-<div class="row">  
-  <div id="posts">
-    <%= render 'posts/list' %>
-  </div>
+    <input id="location_search" type="text" placeholder="Search for location">
+	</div>
 </div>
 
 <script>
@@ -71,7 +70,7 @@ $(function(){
 	$("#post_mood").change(function() {
     var mood = $("#post_mood option:selected").text().toLowerCase();
     var id = 'new_post_box';
-    swap_class(id,'post-'+mood);
+    replace_class(id,'post-'+mood);
 	});
 });
 

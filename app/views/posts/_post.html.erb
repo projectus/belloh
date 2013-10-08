@@ -1,5 +1,5 @@
 
-<div class="row-fluid post post-<%= post.mood %>">
+<div class="row-fluid post post-<%= post.mood %> <%= 'post-first' if count==0 %>">
   <div class="post-content">
     <div class="post-header">
       <%= post.sender.nil? ? '' : post.sender.username %>
@@ -12,13 +12,7 @@
     </div>
   </div>
 
-  <div class="post-details">
-	  <div class="post-time">
-	    September 11 2013
-	  </div>
-
-	  <div class="post-location">
-	    202 Lester Street, Waterloo, ON, Canada
-	  </div>
-  </div>
+	<div class="post-time">
+	  <%= post.created_at.to_s %>
+	</div>
 </div>

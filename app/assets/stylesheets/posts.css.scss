@@ -3,53 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post-neutral {
-  background-image: linear-gradient(to bottom, #F5F5F5, #E6E6E6);
+  background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
 }
 
 .post-positive {
-  background-image: linear-gradient(to bottom, #AFD07B, #89AE47);
+  background-image: linear-gradient(to bottom, #99CC66, #66CC00);
 }
 
 .post-negative {
-	background: pink;
+  background-image: linear-gradient(to bottom, #FF3333, #CC0000);
 }
 
 .post-caution {
-	background: lightyellow;
+  background-image: linear-gradient(to bottom, #FFCC99, #FF9900);
+}
+
+.post-first {
+	border-radius: 10px 10px 0 0;
 }
 
 .post {	
-  border-bottom: 1px solid #CCC;
-  min-height: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
+  margin-left: -10px;
   color: #5A5956 !important;
+  box-shadow: 0 0 2px 1px #1b1b24;
 
   .post-content {
-    margin-left: 10px;
-    margin-right: 10px;
-
+	  float: left;
+  
 	  .sender, .receiver {
 	    font-weight: bold;
 	  }
 	
     .post-message {
-      margin-top: 5px;
       font-size: 10pt;
     }
   }
-
-  .post-details {
+  
+  .post-time {
+    font-style: italic;
 	  float: right;
     font-size: 9pt;
-    margin-top: -50px;
-    margin-right: 10px;
-  
-	  .post-time {
-	    font-style: italic;
-	  }
-
-	  .post-location {
-	  }
   }
 }
