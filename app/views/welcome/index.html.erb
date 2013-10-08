@@ -73,6 +73,8 @@ $(function(){
 
   setMap(post_latitude.value,post_longitude.value);
 
+  $('.post-location').tooltip({"placement":"left"});
+
   $("#current-location").click(function(){
     getLocation(getPosts);
   });
