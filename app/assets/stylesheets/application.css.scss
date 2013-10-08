@@ -13,12 +13,27 @@
  */
 
 body{
-  background: #B6B6B6 !important;
+  background: image-url('bkg/rainbow.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 60px;
 }
 
 /* Picture of the hippo */
 .nav img {
 	margin-top: 5px;
+}
+
+.nav {
+	.brand {
+	  padding: 10px !important;
+  }
+}
+
+.nav li a {
+	padding: 0 !important;
 }
 
 .navbar-inner {

@@ -8,16 +8,28 @@
 </head>
 <body>
 
-<div class="navbar">
+<div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div id="nav-center">
 	    <ul class="nav nav-left">
 		    <li><a class="brand" href="<%= root_path %>">Belloh</a></li>
       </ul>
       <ul class="nav pull-right">
-	      <li><img src="http://png-4.findicons.com/files/icons/5/animals/32/hippopotamus.png" /></li>
+	      <li><a href="#bellohModal" role="button" data-toggle="modal">
+		      <img src="http://png-4.findicons.com/files/icons/5/animals/32/hippopotamus.png" />
+		    </a></li>
 	    </ul>
     </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+	  Belloh at the world
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body">
   </div>
 </div>
 

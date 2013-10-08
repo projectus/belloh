@@ -1,4 +1,49 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+<script>
+
+function initialize() {
+  var input = /** @type {HTMLInputElement} */(document.getElementById('location_search'));
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      // Inform the user that the place was not found and return.
+      geostatus.innerHTML = 'hub not found';
+      return;
+    }
+/*
+    var address = '';
+    if (place.address_components) {
+      address = [
+        (place.address_components[0] && place.address_components[0].short_name || ''),
+        (place.address_components[1] && place.address_components[1].short_name || ''),
+        (place.address_components[2] && place.address_components[2].short_name || '')
+      ].join(' ');
+    }
+*/
+    geostatus.innerHTML = 'Posting at: '+place.name;
+	  post_latitude.value=place.geometry.location.lat();
+	  post_longitude.value=place.geometry.location.lng();
+	  input.value='';
+    alert(input.value);
+  });
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
 <div id="main" class="row">
+	<div class="span3"></div>
+	<div id="sidebar" class="span3" data-spy="affix">
+		<input id="location_search" type="text" placeholder="Search for hub...">
+		<div class="row-fluid">
+		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
+		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
+		</div>
+		<img id="map" src="#" class="img-polaroid"/>
+		<div id="geostatus">Posting at: <%= @location %></div>	
+	</div>
 	<div class="span8">
 		<div id="header">
 			<div id="new_post_box" class="post-neutral">
@@ -14,21 +59,11 @@
 		  </div>
 	  </div>
 	</div>
-	<div id="sidebar" class="span3">
-		<img id="map" src="#" class="img-polaroid"/>		
-	  <div id="geostatus">Current Location: <%= @location %></div>
-		<div class="row-fluid">
-		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
-		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
-		</div>
-    <input id="location_search" type="text" placeholder="Search for location">
-	</div>
 </div>
 
 <script>
 // Javascript to fetch user's location and fill with relevant posts
 $(function(){
-
   var post_longitude=document.getElementById("post_longitude");
   var post_latitude=document.getElementById("post_latitude");
 	var geostatus=document.getElementById("geostatus");
@@ -83,7 +118,7 @@ function getPosts(position) {
 }
 
 function setMap(lat,lon) {
-	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=185x185&sensor=false";
+	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=12&size=185x185&sensor=false";
 	if (lat=="nil") srcString = "<%=j image_path 'tiles/globe.png' %>";
   $("#map").attr("src", srcString);
 }

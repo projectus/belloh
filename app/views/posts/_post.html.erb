@@ -8,7 +8,7 @@
 	      [<%= post.receiver_desc %>]
 	    </div>
 			<div class="post-time">
-			  <%= post.created_at.to_s %>
+			  <%= post.created_at.localtime.strftime('%l:%M:%S%P - %b %-d, %y') %>
 			</div>
 		</div>
     <div class="post-message">
