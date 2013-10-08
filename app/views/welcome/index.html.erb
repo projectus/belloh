@@ -84,6 +84,7 @@ function getPosts(position) {
 
 function setMap(lat,lon) {
 	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=185x185&sensor=false";
+	if (lat=="nil") srcString = "<%=j image_path 'tiles/globe.png' %>";
   $("#map").attr("src", srcString);
 }
 </script>
