@@ -13,195 +13,37 @@
  */
 
 body{
-  background: #B6B6B6 !important;
+  background: image-url('bkg/rainbow.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 60px;
 }
 
-.subject-line{
-  input[type="text"] {
-    height: 30px;
-    width: 260px !important;
-    margin-top: 10px;
+/* Picture of the hippo */
+.nav img {
+	margin-top: 5px;
+}
+
+.nav {
+	.brand {
+	  padding: 10px !important;
   }
 }
 
-.map-box {
-  background: red;
-  float: right;
+.nav li a {
+	padding: 0 !important;
 }
 
-.wrapper {
-  width: 75%;
-  height: 600px;
-  margin: auto;
-  margin-top: 20px;
-  clear: both;
-
-  .wrapper-top {
-    text-shadow: 0 1px 1px #F7F7F7;
-    font-size: 9pt;
-    height: 40px;
-    background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border-top: 1px solid #777;
-    border-bottom: 1px solid #777;
-    border-left: 1px solid #999;
-    border-right: 1px solid #999;
-
-    .button-group{
-      height: 40px;
-      float: left;
-      font-weight: bold;
-      margin-left: 10px;
-      margin-right: 10px;
-
-      #all-places {
-        border-left: none !important;
-        margin-right: 10px;
-      }
-
-    }
-
-    input {
-      height: 15px !important;
-      font-size: 14px;
-      margin-top: 7px;
-    }
-  }
-
-  .wrapper-content {
-    background-image: linear-gradient(to bottom, #EDEDED, #BFBFBF);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.45);
-    .sender, .receiver {
-      font-weight: bold;
-    }
-
-    .post-inner {
-      float: left;
-      width: 70%;
-    }
-
-    .post-message {
-      margin-top: 5px;
-      font-size: 10pt;
-    }
-
-    .post-time {
-      float: right;
-      font-size: 9pt;
-      font-style: italic;
-      margin-right: 10px;
-      margin-top: -10px;
-    }
-
-    #post-location {
-      float: right;
-      margin-top: 15px;
-      font-size: 9pt;
-    }
-  }
-}
-
-.top-div {
-  width: 75%;
-  margin: auto;
-  margin-top: 20px;
-  height: 250px;
-
-}
-
-.top-content {
-  background: #EEE;
-  box-shadow: 0 2px 7px rgba(0,0,0,0.45);
-  height: 200px;
-  clear: both;
-}
-
-.margin {
-  height: 50px;
-}
-
-.geo-bar {
-  background: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  border-top: 1px solid #777;
-  border-bottom: 1px solid #777;
-  border-left: 1px solid #999;
-  border-right: 1px solid #999;
-
-  height: 40px;
-}
-
-#geostatus {
-  padding: 10px;
-  font-weight: bold;
-  font-size: 10pt;
-  text-shadow: 0 1px 1px #F7F7F7;
-  color: #555 !important;
-  float: left;
-}
-
-.navbar {
-  margin-bottom: 0px !important;
-}
-
-.navigation {
-  height: 50px;
-  width: 100%;
-  background-color: #EEE;
-  color: #000;
-  //background-image: -webkit-gradient(linear, left top, left bottom, from(#F3C509), to(#EB931F));
-  //background-image: -webkit-linear-gradient(top, #F3C509, #EB931F);
-  //background-image:    -moz-linear-gradient(top, #F3C509, #EB931F);
-  //background-image:      -o-linear-gradient(top, #F3C509, #EB931F);
-  //background-image:         linear-gradient(to bottom, #F3C509, #EB931F);
-  //border-bottom: 1px solid red;
-
-}
-
-.navigation-center {
-  margin: auto;
-  width: 900px;
-  padding-top: 10px;
-  font-size: 24pt;
-}
-
-.pin {
-  width: 50px;
-}
-
-.center {
-  width: 900px;
-  margin: auto;
-  height: 800px;
-  background: #E2E2E2;
-  border-right: 1px solid #B8B8B8;
-  border-left: 1px solid #B8B8B8;
-}
-
-.button-tog {
-  padding: 2px 10px;
-  border: 1px solid #888;
-  margin-top: 6px;
-  float: left;
-  background-image: linear-gradient(to bottom, #F6F6F6, #C6C6C6);
-}
-
-.button-active {
-  float: left;
-  padding: 2px 10px;
-  border-top: 1px solid #555;
-  border-left: 1px solid #888;
-  border-right: 1px solid #888;
-  border-bottom: 1px solid #AAA;
-  margin-top: 6px;
-  background-image:         linear-gradient(to bottom, #8F8F8F, #D8D8D8);
-
-}
-
-select {
-  height: 20px !important;
-}
-
-form {
-  margin: 0px !important;
+.navbar-inner {
+	box-shadow: 0 0 10px 1px black !important;	
+  
+	#nav-center {
+	  margin: auto;
+	  width: 900px;
+	  font-size: 24pt;
+	}
 }
 
 @import "bootstrap";

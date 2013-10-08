@@ -1,0 +1,68 @@
+// Javascript to fetch user's location and fill with relevant posts
+$(function(){
+
+  var lon=document.getElementById("post_longitude");
+  var lat=document.getElementById("post_latitude");
+	var geostatus=document.getElementById("geostatus");
+
+  lat.value="<%=j @coords[0] %>";
+  lon.value="<%=j @coords[1] %>";
+
+  setMap(lat.value,lon.value);
+
+  $("#locator-img").click(function(){
+    getLocation(getPosts);
+  });
+
+  $("#current-location").click(function(){
+    //$("#all-locations").removeClass('active');
+    //$(this).addClass('active');
+    getLocation(getPosts);
+  });
+
+  $("#all-locations").click(function(){
+    //$("#current-location").removeClass('active');
+    //$(this).addClass('active');
+    var world = {
+      "coords": {
+          "latitude": "nil",
+          "longitude": "nil"
+      }
+    }
+    geostatus.innerHTML="Getting posts from world.";
+    getPosts(world);
+  });
+
+	function replace_class(affected_id,class_name) {
+	  $("#"+affected_id).removeClass();
+	  $("#"+affected_id).addClass(class_name);		
+  }
+
+	$("#post_mood").change(function() {
+    var mood = $("#post_mood option:selected").text().toLowerCase();;
+    var id = 'new_post_box'
+    swap_class(id,'post-'+mood);
+	});
+});
+
+function getPosts(position) {
+  var lat=position.coords.latitude;
+	var lon=position.coords.longitude;
+	var the_data = 'lat=' + encodeURIComponent(lat)
+               +'&lon=' + encodeURIComponent(lon);
+
+  setMap(lat,lon);
+  lat.value=lat;
+  lon.value=lon;
+
+	$.ajax({
+	  data: the_data,
+	  type: 'get',
+	  url: '<%=j currloc_path %>'
+	});
+}
+
+function setMap(lat,lon) {
+	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center=" + lat + "," + lon + "&zoom=11&size=200x200&sensor=false";
+  $("#map").attr("src", srcString);
+}

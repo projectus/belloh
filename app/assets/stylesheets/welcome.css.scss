@@ -2,3 +2,100 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#main {
+  margin-left: 24px;
+	.span8 {
+		margin-left: 10px;
+	}
+}
+
+#header {
+	background: pink;
+	padding: 30px 0 30px 0;
+	margin-bottom: 10px;
+	
+	#new_post_box {
+	  padding: 10px;
+	  margin: auto;
+	  width: 552px;
+	  border-radius: 10px;
+	  box-shadow: inset 0 0 5px 2px #00000F;
+
+		form {
+			margin: 0;
+			#new_post_header {
+				font-size: xx-large;
+				input {
+					margin-top: 8px;
+				}
+			}
+			textarea {
+				width: 538px;
+				resize: none;
+			}
+		}	
+	}
+}
+
+#sidebar {
+	//margin-left: 652px;
+	//margin-right: 100px;
+	text-align: center;
+	//position: fixed;
+	
+	#map {
+		border-radius: 10px;
+		width: 180px;
+	}
+	
+	#geostatus {
+	  font-weight: bold;
+	  font-size: 10pt;
+	  color: #FFF;
+	  margin: 10px;
+	}
+	
+	#current-location {
+		margin-left: 30px;
+	}
+
+	#all-locations {
+		margin-right: 30px;
+	}
+
+  #all-locations, #current-location {
+		width: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+	
+	#location_search {
+		width: 180px;
+		margin: 10px;
+	}
+}
+
+#sidebar, #header {
+	border-radius: 10px 10px 0 0;
+}
+
+#filter {
+	padding: 10px 30px 10px 30px;
+	input {
+	  margin: 0;
+	}
+}
+
+#sidebar, #content, #header {
+	background: image-url('bkg/debut_dark.png'); 
+  box-shadow: 0 0 5px 1px black;
+}
+
+#posts {
+	padding: 10px 30px 10px 30px;
+}
+
+.pac-container {
+	width: 300px !important;
+}
