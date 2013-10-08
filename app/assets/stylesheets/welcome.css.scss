@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#main {
+  margin-left: 24px;
+}
+
 #header {
 	background: pink;
 	padding: 30px 0 30px 0;
@@ -30,7 +34,7 @@
 }
 
 #sidebar {
-	margin-left: 730px;
+	margin-left: 652px;
 	text-align: center;
 	position: fixed;
 	
