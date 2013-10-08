@@ -33,18 +33,14 @@
 // Javascript to fetch user's location and fill with relevant posts
 $(function(){
 
-  var lon=document.getElementById("post_longitude");
-  var lat=document.getElementById("post_latitude");
+  var post_longitude=document.getElementById("post_longitude");
+  var post_latitude=document.getElementById("post_latitude");
 	var geostatus=document.getElementById("geostatus");
 
-  lat.value="<%=j @coords[0] %>";
-  lon.value="<%=j @coords[1] %>";
+  post_latitude.value="<%=j @coords[0] %>";
+  post_longitude.value="<%=j @coords[1] %>";
 
-  setMap(lat.value,lon.value);
-
-  $("#locator-img").click(function(){
-    getLocation(getPosts);
-  });
+  setMap(post_latitude.value,post_longitude.value);
 
   $("#current-location").click(function(){
     getLocation(getPosts);
@@ -80,8 +76,8 @@ function getPosts(position) {
                +'&lon=' + encodeURIComponent(lon);
 
   setMap(lat,lon);
-  lat.value=lat;
-  lon.value=lon;
+  post_latitude.value=lat;
+  post_longitude.value=lon;
 
 	$.ajax({
 	  data: the_data,
