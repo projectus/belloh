@@ -35,4 +35,16 @@ class WelcomeController < ApplicationController
   def here
 
   end
+
+  def splash
+    render :layout => 'splash'
+  end
+
+  def situations
+
+  end
+
+  def hubs
+    render :layout => 'splash'
+  end
 end

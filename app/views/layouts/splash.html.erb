@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Belloh</title>
+  <%= stylesheet_link_tag    "application" %>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+  <%= javascript_include_tag "application" %>
+  <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body class="splash">
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div id="nav-center">
+      <ul class="nav nav-left">
+        <li><a class="brand" href="<%= root_path %>">Belloh</a></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li><a href="#bellohModal" role="button" data-toggle="modal">
+
+          <img id="logo-img" width="30px" src="http://clipartist.info/Holidays/Xmas/Animal/hippo_line_art_thestructorr_hippo_black_white_line_art_christmas_xmas_stuffed_animal-1331px.png" />
+          <!--
+          <img width="30px" src="http://colouringbook.org/SVG/2011/COLOURINGBOOK.ORG/cartoon_hippo_black_white_line_art_scalable_vector_graphics_svg_inkscape_adobe_illustrator_clip_art_clipart_coloring_book_colouring-555px.png" />
+          <img src="http://png-4.findicons.com/files/icons/5/animals/32/hippopotamus.png" /> -->
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    Belloh at the world
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body">
+  </div>
+</div>
+
+<% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% end %>
+
+<div class="intro-bar">
+  kobe bryant
+</div>
+
+
+<div class="container">
+  <%= yield %>
+</div>
+
+</body>
+
+</html>
