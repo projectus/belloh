@@ -15,8 +15,8 @@
 			<div class="post-time row-fluid">
 			  <%= post.created_at.localtime.strftime('%l:%M:%S%P - %b %-d, %y') %>
 			</div>
-			<div class="row-fluid">
-				<%= image_tag 'tiles/globe.png', class: 'post-location', data: {title: post.location} %>
+			<div class="row-fluid post-location">
+				<%= image_tag 'tiles/globe.png', data: {title: post.location}, rel: 'tooltip' %>
 			</div>
 		</div>
 </div>

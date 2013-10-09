@@ -7,8 +7,10 @@ $(function(){
 
   setMap(post_latitude.value,post_longitude.value);
 
-  $('.post-location').tooltip({"placement":"left"});
-
+	$('#posts').tooltip({
+	    selector: '[rel=tooltip]'
+	});
+	
   $("#current-location").click(function(){
     getLocation(getPostsForLocation);
   });
