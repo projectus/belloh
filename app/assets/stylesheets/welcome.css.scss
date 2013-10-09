@@ -4,14 +4,10 @@
 
 #main {
   margin-left: 24px;
-	.span8 {
-		margin-left: 10px;
-	}
 }
 
 #header {
-	background: pink;
-	padding: 20px 0 20px 0;
+	padding: 10px 0 10px 0;
 	margin-bottom: 10px;
 	
 	#new_post_box {
@@ -23,12 +19,14 @@
 			margin: 0;
 			#new_post_header {
 				font-size: xx-large;
+				margin-bottom: 8px;
 				input {
-					margin-top: 8px;
+					margin: auto;
+					width: 220px !important;
 				}
 			}
 			textarea {
-				width: 538px;
+				width: 565px;
 				resize: none;
 			}
 		}	
@@ -38,6 +36,8 @@
 #sidebar {
 	text-align: center;
 	position: fixed;
+	width: 210px;
+	margin-left: 10px;
 	
 	#map {
 		border-radius: 10px;
@@ -76,11 +76,14 @@
 	border-radius: 10px 10px 0 0;
 }
 
-#filter {
-	width: 500px;
-	margin: auto;
-	input {
-		width: 100% !important;
+#content {
+	padding-top: 10px;
+	#filter {
+		width: 600px;
+		margin: auto;
+		input {
+			width: 588px !important;
+		}
 	}
 }
 
@@ -90,7 +93,7 @@
 }
 
 #posts, #new_post_box {
-	width: 553px;
+	width: 580px;
 	margin: auto;
 }
 

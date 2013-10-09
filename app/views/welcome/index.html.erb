@@ -1,7 +1,6 @@
 
 <div id="main" class="row">
-	<div class="span3"></div>
-	<div id="sidebar" class="span3">
+	<div id="sidebar">
 		<input id="location_search" type="text" placeholder="Search for hub...">
 		<div class="row-fluid">
 		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
@@ -10,6 +9,7 @@
 		<img id="map" src="#" class="img-polaroid"/>
 		<div id="geostatus">Posting at: <%= @location %></div>	
 	</div>
+	<div class="span3"></div>
 	<div class="span8">
 		<div id="header">
 			<div id="new_post_box" class="post-neutral">

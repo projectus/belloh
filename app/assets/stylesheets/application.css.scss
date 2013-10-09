@@ -45,7 +45,6 @@ input, textarea {
 
 .navbar {
   background: #3B3B3D !important;
-
 }
 
 .brand {
@@ -54,8 +53,8 @@ input, textarea {
 
 .navbar-inner {
 	box-shadow: 0 0 10px 1px black !important;
-    //background: #3B3B3D !important;
-    background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
+  border: none !important;
+  background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
 
 	#nav-center {
 	  margin: auto;
