@@ -36,12 +36,12 @@
 #sidebar {
 	text-align: center;
 	position: fixed;
-	width: 210px;
-	margin-left: 10px;
+	width: 240px;
+
 	
 	#map {
 		border-radius: 10px;
-		width: 180px;
+		width: 210px;
 	}
 	
 	#geostatus {
@@ -60,15 +60,16 @@
 	}
 
   #all-locations, #current-location {
-		width: 60px;
+    width: 60px;
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;
   }
 	
 	#location_search {
-		width: 180px;
+		width: 210px;
 		margin: 10px;
+        font-size: 10pt;
 	}
 }
 
@@ -98,5 +99,5 @@
 }
 
 .pac-container {
-	width: 300px !important;
+	width: 350px !important;
 }

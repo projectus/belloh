@@ -17,4 +17,20 @@ class WelcomeController < ApplicationController
   def terms
 
   end
+
+  def faq
+
+  end
+
+  def contact
+
+  end
+
+  def privacy
+
+  end
+
+  def here
+
+  end
 end
