@@ -10,6 +10,7 @@ Belloh::Application.routes.draw do
   root 'welcome#index'
 
   get 'about', to: "welcome#about"
+  get 'terms', to: "welcome#terms"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
