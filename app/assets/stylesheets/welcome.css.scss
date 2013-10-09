@@ -7,22 +7,23 @@
 }
 
 #header {
-	padding: 10px 0 10px 0;
+	padding: 10px;
 	margin-bottom: 10px;
 	
 	#new_post_box {
 	  padding: 10px;
 	  border-radius: 10px;
-	  box-shadow: inset 0 0 2px 1px #00000F;
+	  box-shadow: inset 0 0 1px 1px #00000F;
 
 		form {
 			margin: 0;
 			#new_post_header {
 				font-size: xx-large;
 				margin-bottom: 8px;
+				text-align: center;
+		    
 				input {
 					margin: auto;
-					width: 220px !important;
 				}
 			}
 			textarea {
@@ -93,11 +94,7 @@
   box-shadow: 0 0 5px 1px black;
 }
 
-#posts, #new_post_box {
-	width: 580px;
-	margin: auto;
-}
-
 .pac-container {
+	position: fixed !important;
 	width: 350px !important;
 }
