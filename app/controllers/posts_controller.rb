@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  def currloc
+  def index
 	  coords = [params[:lat],params[:lon]]
 	
     if coords.first == "nil"
