@@ -1,0 +1,6 @@
+<%= form_for(@virtual_hub) do |f| %>
+  <%= render 'errors' %>
+  <%= f.hidden_field :name %>
+  <div><%= f.submit 'Create', class: 'btn btn-info' %></div>
+<% end %>
+

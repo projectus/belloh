@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyString
+  sender_desc: MyString
+  receiver_desc: MyString
+  mood: MyString
+  sender_id: 1
+  hub_post_id: 
+
+two:
+  content: MyString
+  sender_desc: MyString
+  receiver_desc: MyString
+  mood: MyString
+  sender_id: 1
+  hub_post_id: 

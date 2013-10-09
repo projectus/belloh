@@ -1,0 +1,8 @@
+<% if @vhub.nil? %>
+	<h1>This virtual hub does not exist yet, want to create it?</h1>
+	<%= render 'form' %>
+<% else %>
+  <% @vhub.hub_posts.each do |post| %>
+	  <%= render 'posts/post' %>
+	<% end %>
+<% end %>

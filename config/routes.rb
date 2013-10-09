@@ -1,5 +1,17 @@
 Belloh::Application.routes.draw do
 
+	class Subdomain
+	  def self.matches?(request)
+	    request.subdomain.present? && request.subdomain != "www"
+	  end
+	end
+	
+	constraints(Subdomain) do
+	  get '/', to: 'virtual_hubs#show'
+	end
+	
+  resources :virtual_hubs, only: [:create]
+
   resources :posts, only: [:index,:create]
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
