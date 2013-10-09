@@ -1,4 +1,16 @@
+class Subdomain
+  def self.matches?(request)
+    request.subdomain.present? && request.subdomain != "www"
+  end
+end
+
 Belloh::Application.routes.draw do
+	
+	constraints(Subdomain) do
+	  get '/', to: 'virtual_hubs#show'
+	end
+	
+  resources :virtual_hubs, only: [:create]
 
   resources :posts, only: [:index,:create]
 
