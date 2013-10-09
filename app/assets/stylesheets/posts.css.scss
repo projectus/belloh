@@ -2,22 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post-neutral {
+[mood=neutral] {
   background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
   color: black !important;
 }
 
-.post-positive {
+[mood=positive] {
   background-image: linear-gradient(to bottom, #99CC66, #66CC00);
   color: black !important;
 }
 
-.post-negative {
+[mood=negative] {
   background-image: linear-gradient(to bottom, #FF3333, #CC0000);
   color: lightgray !important;
 }
 
-.post-caution {
+[mood=caution] {
   background-image: linear-gradient(to bottom, #FFCC99, #FF9900);
   color: black !important;
 }

@@ -1,5 +1,5 @@
 
-<div class="row-fluid post post-<%= post.mood %> <%= 'post-first' if count==0 %>">
+<div class="row-fluid post <%= 'post-first' if count==0 %>" mood="<%= post.mood %>">
 	  <div class="span9">
 	    <div class="post-header row-fluid">
 	      <%= post.sender.nil? ? '' : post.sender.username %>
