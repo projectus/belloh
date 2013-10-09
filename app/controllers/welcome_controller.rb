@@ -43,4 +43,8 @@ class WelcomeController < ApplicationController
   def situations
 
   end
+
+  def hubs
+    render :layout => 'splash'
+  end
 end
