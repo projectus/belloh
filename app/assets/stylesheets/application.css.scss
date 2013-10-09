@@ -23,6 +23,10 @@ body{
   padding-top: 60px;
 }
 
+input, textarea {
+	border-radius: 10px !important;
+}
+
 /* Picture of the hippo */
 .nav img {
 	margin-top: 2px;
