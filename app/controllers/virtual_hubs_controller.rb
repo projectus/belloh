@@ -3,6 +3,8 @@ class VirtualHubsController < ApplicationController
 	  @vhub = VirtualHub.where(name: request.subdomain).first
 	  @virtual_hub = VirtualHub.new
 	  @virtual_hub.name = request.subdomain
+	  @hub_post = HubPost.new
+	  @hub_post.virtual_hub = @vhub
   end
 
   def create

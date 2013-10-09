@@ -10,6 +10,7 @@ Belloh::Application.routes.draw do
 	  get '/', to: 'virtual_hubs#show'
 	end
 	
+	resources :hub_posts, only: [:create]
   resources :virtual_hubs, only: [:create]
 
   resources :posts, only: [:index,:create]
