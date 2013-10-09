@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03fe2f50-d581-41d7-9327-a627997f9cc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/hubs.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/splash.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/splash.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/splash.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/splash.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/hubs.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/hubs.html.erb" />
     </list>
     <ignored path="belloh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +23,7 @@
     <file path="/routes.rb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381352128043" ignored="false" />
     <file path="/terms.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381280182736" ignored="false" />
     <file path="/splash.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381346105399" ignored="false" />
-    <file path="/hubs.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381353822056" ignored="false" />
+    <file path="/hubs.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381354644950" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <file leaf-file-name="hubs.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/hubs.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="93" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.53636366">
+            <state line="87" column="121" selection-start="2631" selection-end="2631" vertical-scroll-proportion="0.42727274">
               <folding />
             </state>
           </provider>
@@ -809,7 +802,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/hubs.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="93" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.53636366">
+        <state line="87" column="121" selection-start="2631" selection-end="2631" vertical-scroll-proportion="0.42727274">
           <folding />
         </state>
       </provider>
