@@ -36,6 +36,7 @@ input, textarea {
 .nav {
 	.brand {
 	  padding: 10px !important;
+      font-family: 'Lily Script One', cursive !important;
   }
 }
 
@@ -49,6 +50,10 @@ input, textarea {
 
 .brand {
   color: #FFF !important;
+}
+
+#logo-img{
+  margin-top: 5px !important;
 }
 
 .navbar-inner {

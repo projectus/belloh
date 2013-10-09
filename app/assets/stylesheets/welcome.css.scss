@@ -37,12 +37,12 @@
 #sidebar {
 	text-align: center;
 	position: fixed;
-	width: 210px;
-	margin-left: 10px;
+	width: 240px;
+
 	
 	#map {
 		border-radius: 10px;
-		width: 180px;
+		width: 210px;
 	}
 	
 	#geostatus {
@@ -61,15 +61,16 @@
 	}
 
   #all-locations, #current-location {
-		width: 60px;
+    width: 60px;
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;
   }
 	
 	#location_search {
-		width: 180px;
+		width: 210px;
 		margin: 10px;
+        font-size: 10pt;
 	}
 }
 
@@ -93,13 +94,7 @@
   box-shadow: 0 0 5px 1px black;
 }
 
-#posts {
-	//padding: 10px;
-	//width: 580px;
-	//margin: auto;
-}
-
 .pac-container {
-	width: 300px !important;
 	position: fixed !important;
+	width: 350px !important;
 }
