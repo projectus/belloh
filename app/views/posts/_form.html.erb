@@ -54,16 +54,22 @@ $(function(){
 
     $('.input-prepend').each(function(){
         var $textarea = $(this).find('textarea');
-        var $span = $(this).find('span.add-on:eq(0)');
-        var $submit = $(this).find('input');
-        var height = $textarea.outerHeight()-
-				(parseInt($span.css('padding-top'))+
+        var $span = $(this).find('span.add-on');
+        var $submit = $(this).find('input[type=submit]');
+        var ta_height = $textarea.outerHeight();
+
+        var span_height = parseInt($span.css('padding-top'))+
 				parseInt($span.css('padding-bottom'))+
 				parseInt($span.css('margin-top'))+
-				parseInt($span.css('margin-bottom'))+
-				(parseInt($span.css('border-width'))*2));    
-        $span.height(height);
-        $submit.height(height-2);
+				parseInt($span.css('margin-bottom'));
+
+        var submit_height = parseInt($submit.css('padding-top'))+
+				parseInt($submit.css('padding-bottom'))+
+				parseInt($submit.css('margin-top'))+
+				parseInt($submit.css('margin-bottom'));
+					  
+        $span.height(ta_height-span_height);
+        $submit.height(ta_height-submit_height-2);
     });
 
 	  $('.mood-option').bind("mouseover", function(){
