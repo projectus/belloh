@@ -11,8 +11,38 @@
     <%= f.text_area :content, placeholder: 'Message' %>
   </div>
 
-  <div>
-	  <%= f.select :mood, Post.moods %>
+  <script>
+	$(function(){
+	    $('.mood-option').click(function(){
+		    var mood = $(this).attr('mood');
+		    $('#new_post_box').attr('mood',mood);
+		    $("#post_mood").val(mood);
+	    });
+	});
+  </script>
+
+  <div class="row-fluid">
+		<ul class="nav" style='width: 40px;float:left;'>
+	    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	        <%= image_tag 'tiles/hippo.png', style: 'width:40px;' %>
+	        <div class="triangle-bottomright"></div>
+	      </a>
+        <ul class="dropdown-menu">
+          <li class="row-fluid">
+            <ul class="unstyled span6">
+              <li mood="neutral" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+              <li mood="positive" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+            </ul>
+            <ul class="unstyled span6">
+              <li mood="caution" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+              <li mood="negative" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+            </ul>
+          </li>
+        </ul>
+	    </li>
+		</ul>
+	  <%= f.hidden_field :mood %>
     <%= f.submit 'Belloh', class: 'btn btn-info pull-right' %>
   </div>
 

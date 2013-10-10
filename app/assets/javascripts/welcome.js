@@ -25,11 +25,6 @@ $(function(){
     geostatus.innerHTML="Getting posts from world.";
     getPostsForLocation(world);
   });
-
-	$("#post_mood").change(function() {
-    var mood = $("#post_mood option:selected").text().toLowerCase();
-    $('#new_post_box').attr('mood',mood);
-	});
 });
 
 

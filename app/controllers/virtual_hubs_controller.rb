@@ -11,8 +11,7 @@ class VirtualHubsController < ApplicationController
 	  @virtual_hub = VirtualHub.new(vhub_params)
     respond_to do |format|
       if @virtual_hub.save
-	      @vhub = @virtual_hub
-        format.html { render action: 'show' }
+	      format.html { redirect_to root_path }
       else
         format.html { render action: 'show' }
       end
