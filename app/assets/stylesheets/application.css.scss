@@ -48,12 +48,12 @@ input, textarea {
 .nav {
 	.brand {
 	  padding: 10px !important;
-      font-family: 'Lily Script One', cursive !important;
+     font-family: 'Lemon', cursive !important;
   }
 }
 
 .brand-custom{
-  font-family: 'Helvetica Neue', cursive !important;
+  font-family: 'Lemon', cursive !important;
 }
 
 .nav li a {
@@ -206,6 +206,11 @@ body.founders {
     text-decoration: none !important;
   }
 
+}
+
+.inside-button {
+  padding-top: 10px !important;
+  font-weight: bold;
 }
 
 @import "bootstrap";
