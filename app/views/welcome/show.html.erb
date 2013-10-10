@@ -48,8 +48,8 @@ $(function(){
   $("#all-locations").click(function(){
     var world = {
       "coords": {
-          "latitude": "nil",
-          "longitude": "nil"
+        "latitude": "nil",
+        "longitude": "nil"
       }
     }
     geostatus.innerHTML="Getting posts from world.";
@@ -63,22 +63,34 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
 </script>
 
 <script>
-    var map;
-    function initialize() {
+    var map = null;
+
+    function initialize_interactive_map() {
+	    var lat = post_latitude.value;
+	    var lng = post_longitude.value;
+	    var latlng = new google.maps.LatLng(lat,lng);
+  
       var mapOptions = {
-          zoom: 8,
-          center: new google.maps.LatLng(-34.397, 150.644),
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        size: new google.maps.Size(400, 400, 'px', 'px')
       };
-      map = new google.maps.Map(document.getElementById('map-canvas'),
-              mapOptions);
+
+      map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+      });
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    //google.maps.event.addDomListener(canvas, 'shown', initialize);
 
-    $(document).bind("ready", function(){
-      $('#mapfull').on('shown', function () {
-        google.maps.event.trigger(map, 'resize');
+    $(function(){
+      $('#mapfull').on('shown',function () {
+	      //google.maps.event.trigger(map, 'resize');
+	     if (map == null) initialize_interactive_map();
       });
     });
 </script>
