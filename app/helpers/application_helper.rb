@@ -1,5 +1,5 @@
 module ApplicationHelper
 	def hub_name
-		@virtual_hub.nil? ? '' : ' @ [ ' + @virtual_hub.name + ' ]'
+		@vhub.nil? ? '' : ' @ [ ' + @vhub.name + ' ]'
 	end
 end
