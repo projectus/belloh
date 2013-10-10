@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03fe2f50-d581-41d7-9327-a627997f9cc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/uses.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/uses.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/uses.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="belloh.iws" />
@@ -28,7 +26,7 @@
     <file path="/splash.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381346105399" ignored="false" />
     <file path="/hubs.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381354644950" ignored="false" />
     <file path="/set_map.js" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381361071856" ignored="false" />
-    <file path="/uses.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381372156758" ignored="false" />
+    <file path="/uses.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381374516929" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
       <file leaf-file-name="welcome_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="4" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+            <state line="51" column="4" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,7 +58,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="31" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+            <state line="28" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,7 +67,7 @@
       <file leaf-file-name="uses.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/uses.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="328" selection-end="328" vertical-scroll-proportion="0.33163264">
+            <state line="58" column="10" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.8979592">
               <folding />
             </state>
           </provider>
@@ -725,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/welcome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="34" selection-start="1318" selection-end="1318" vertical-scroll-proportion="-8.727273">
@@ -781,23 +772,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="35" selection-start="779" selection-end="779" vertical-scroll-proportion="0.53571427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="31" selection-start="821" selection-end="821" vertical-scroll-proportion="0.0">
+        <state line="28" column="31" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="4" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
+        <state line="51" column="4" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -811,7 +795,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/welcome/uses.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="328" selection-end="328" vertical-scroll-proportion="0.33163264">
+        <state line="58" column="10" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.8979592">
           <folding />
         </state>
       </provider>
