@@ -102,10 +102,10 @@ body.founders {
 }
 
 #about {
-  background-image: linear-gradient(to bottom, #FFFFFF, #CCCCCC);
+  background-image: linear-gradient(to bottom, #FFFFFF, #D3D3D3);
   margin-left: 15px;
   margin-right: 15px;
-  padding: 40px 80px !important;
+  padding: 40px 0px !important;
   margin-top: 15px;
   border-radius: 5px !important;
 
@@ -219,6 +219,14 @@ body.founders {
   font-weight: bold;
 }
 
+
+.info-menu {
+  border-left: 1px solid #C3CFD9;
+  border-right: 1px solid #C3CFD9;
+  width: 200px;
+  margin-left: 10px;
+  background: #EEF2F5;
+}
 
 
 @import "bootstrap";
