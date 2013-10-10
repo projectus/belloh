@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   private
     def setup_posts_of_the_world
 	    @posts = Post.all
-      @location = "Around the World"
+      @location = I18n.t(:around_the_world)
 	  end
 end

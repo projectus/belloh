@@ -1,6 +1,8 @@
 class Subdomain
   def self.matches?(request)
-    request.subdomain.present? && request.subdomain != "www"
+    return false unless (request.subdomain.present? && request.subdomain != "www")
+    return false unless request.subdomain.size.between?(1,20)    
+    return true
   end
 end
 
@@ -9,6 +11,9 @@ Belloh::Application.routes.draw do
 	constraints(Subdomain) do
 	  get '/', to: 'virtual_hubs#show'
 	end
+
+  # You can have the root of your site routed with "root"
+  root 'welcome#show'
 	
 	resources :hub_posts, only: [:create]
   resources :virtual_hubs, only: [:create]
@@ -18,9 +23,6 @@ Belloh::Application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'welcome#show'
 
   get 'about', to: "welcome#about"
   get 'terms', to: "welcome#terms"

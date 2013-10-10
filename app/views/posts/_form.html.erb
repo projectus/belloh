@@ -2,9 +2,9 @@
   <%= render partial: 'posts/errors', locals: {post: post} %>
 
 	<div id="new_post_header">
-    [ <%= f.text_field :sender_desc, placeholder: 'Sender description' %> ]
+    [ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]
     @
-    [ <%= f.text_field :receiver_desc, placeholder: 'Receiver description' %> ]
+    [ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]
   </div>
 
   <div class="input-prepend input-append">
@@ -12,7 +12,7 @@
 	    <ul class="nav">
 	      <li class="dropdown">
 	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	          <%= image_tag 'tiles/hippo.png', style: 'width:40px;' %>
+	          <%= image_tag 'tiles/hippo.png' %>
 	          <div class="triangle-bottomright"></div>
 	        </a>
 	        <ul class="dropdown-menu">
@@ -30,7 +30,7 @@
 	      </li>
 	    </ul>
 	  </span>
-    <%= f.text_area :content, placeholder: 'Message' %>
+    <%= f.text_area :content, placeholder: t(:message_placeholder) %>
     <%= f.submit 'Belloh', class: 'btn btn-info' %>
   </div>
 
