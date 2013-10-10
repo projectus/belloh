@@ -11,6 +11,6 @@ function getPostsForLocation(location) {
 	  data: the_data,
 	  dataType: 'script',
 	  type: 'get',
-	  url: "/posts"
+	  url: '/posts'
 	});
 }
