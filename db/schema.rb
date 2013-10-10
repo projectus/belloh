@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20131009185700) do
     t.string   "content"
     t.string   "sender_desc"
     t.string   "receiver_desc"
-    t.string   "mood"
+    t.string   "mood",          default: "neutral"
     t.integer  "sender_id"
     t.integer  "virtual_hub_id"
     t.datetime "created_at"

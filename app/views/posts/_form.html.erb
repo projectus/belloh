@@ -32,7 +32,7 @@
         </ul>
 	    </li>
 		</ul>
-	  <%= f.hidden_field :mood %>
+	  <%= f.hidden_field :mood, id: 'mood' %>
     <%= f.submit 'Belloh', class: 'btn btn-info pull-right' %>
   </div>
 
@@ -49,7 +49,7 @@ $(function(){
     $('.mood-option').click(function(){
 	    var mood = $(this).attr('mood');
 	    $('#new_post_box').attr('mood',mood);
-	    $("#post_mood").val(mood);
+	    $("#mood").val(mood);
     });
 });
 </script>
