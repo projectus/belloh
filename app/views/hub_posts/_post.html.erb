@@ -1,19 +1,19 @@
 
 <div class="row-fluid post <%= 'post-first' if count==0 %>" mood="<%= post.mood %>">
-	  <div class="span9">
-	    <div class="post-header row-fluid">
-	      <%= post.sender.nil? ? '' : post.sender.username %>
-	      [<%= post.sender_desc %>]
-	      @
-	      [<%= post.receiver_desc %>]
-	    </div>
-	    <div class="post-message row-fluid">
-	      <%= post.content %>
-	    </div>
+  <div class="span9">
+    <div class="post-header row-fluid">
+      <%= post.sender.nil? ? '' : post.sender.username %>
+      [<%= post.sender_desc %>]
+      @
+      [<%= post.receiver_desc %>]
+    </div>
+    <div class="post-message row-fluid">
+      <%= post.content %>
+    </div>
+	</div>
+	<div class="span3">
+		<div class="post-time row-fluid">
+		  <%= post.created_at.localtime.strftime('%l:%M:%S%P - %b %-d, %y') %>
 		</div>
-		<div class="span3">
-			<div class="post-time row-fluid">
-			  <%= post.created_at.localtime.strftime('%l:%M:%S%P - %b %-d, %y') %>
-			</div>
-		</div>
+	</div>
 </div>

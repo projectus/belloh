@@ -1,5 +1,5 @@
-<%= form_for(@post) do |f| %>
-  <%= render 'posts/errors' %>
+<%= form_for(post) do |f| %>
+  <%= render partial: 'posts/errors', locals: {post: post} %>
 
 	<div id="new_post_header">
     [ <%= f.text_field :sender_desc, placeholder: 'Sender description' %> ]
@@ -10,16 +10,6 @@
 	<div>
     <%= f.text_area :content, placeholder: 'Message' %>
   </div>
-
-  <script>
-	$(function(){
-	    $('.mood-option').click(function(){
-		    var mood = $(this).attr('mood');
-		    $('#new_post_box').attr('mood',mood);
-		    $("#post_mood").val(mood);
-	    });
-	});
-  </script>
 
   <div class="row-fluid">
 		<ul class="nav" style='width: 40px;float:left;'>
@@ -46,7 +36,20 @@
     <%= f.submit 'Belloh', class: 'btn btn-info pull-right' %>
   </div>
 
-  <%= f.hidden_field :latitude %>
-  <%= f.hidden_field :longitude %>
+  <% if post.class == Post %>
+    <%= f.hidden_field :latitude %>
+    <%= f.hidden_field :longitude %>
+  <% else %>
+    <%= f.hidden_field :virtual_hub_id %>
+  <% end %>
 <% end %>
 
+<script>
+$(function(){
+    $('.mood-option').click(function(){
+	    var mood = $(this).attr('mood');
+	    $('#new_post_box').attr('mood',mood);
+	    $("#post_mood").val(mood);
+    });
+});
+</script>

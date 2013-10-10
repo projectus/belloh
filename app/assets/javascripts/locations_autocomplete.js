@@ -29,5 +29,3 @@ function initialize_locations_autocomplete() {
 		},10);
   });
 }
-
-google.maps.event.addDomListener(window, 'load', initialize_locations_autocomplete);
