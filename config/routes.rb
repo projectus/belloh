@@ -1,24 +1,19 @@
 class Subdomain
   def self.matches?(request)
     return false unless (request.subdomain.present? && request.subdomain != "www")
-    unless request.subdomain.size.between?(1,20)
-	    #p [request.domain,request.post_string].join
-	    host! [request.domain,request.post_string].join
-	    redirect 'post'
-	    return false
-	  end
+    return false unless request.subdomain.size.between?(1,20)    
     return true
   end
 end
 
 Belloh::Application.routes.draw do
-
-  # You can have the root of your site routed with "root"
-  root 'welcome#show'
 	
 	constraints(Subdomain) do
 	  get '/', to: 'virtual_hubs#show'
 	end
+
+  # You can have the root of your site routed with "root"
+  root 'welcome#show'
 	
 	resources :hub_posts, only: [:create]
   resources :virtual_hubs, only: [:create]

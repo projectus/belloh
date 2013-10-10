@@ -1,12 +1,12 @@
 <div id="main" class="row">
 	<div id="sidebar">
-		<input id="location_search" type="text" placeholder="Search for hub...">
+		<input id="location_search" type="text" placeholder="<%= t(:search_placeholder) %>">
 		<div class="row-fluid">
 		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
 		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
 		</div>
     <div class="map-div"><img id="map" src="#" class="img-polaroid"/></div>
-		<div id="geostatus">Posting at: <%= @location %></div>	
+		<div id="geostatus"><%= t(:posting_at)+@location %></div>	
 	</div>
 	<div class="span3"></div>
 	<div class="span8">
@@ -17,7 +17,7 @@
 	  </div>
 	  <div id="content">
 		  <div id="filter">
-		    <input type="text" placeholder="Filter posts">
+		    <input type="text" placeholder="<%= t(:filter_placeholder) %>">
         <div id="slider"></div>
 	    </div>
 		  <div id="posts" class="container-fluid">
