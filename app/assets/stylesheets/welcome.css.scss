@@ -103,8 +103,10 @@
 	
 	#location_search {
 		width: 210px;
+        height: 15px;
 		margin: 10px;
         font-size: 10pt;
+      border-radius: 3px !important;
 	}
 }
 
@@ -114,11 +116,12 @@
 
 #content {
 	padding-top: 10px;
+    padding-bottom: 10px;
 	#filter {
 		width: 600px;
 		margin: auto;
 		input {
-			width: 588px !important;
+			width: 200px !important;
 		}
 	}
 }
@@ -131,4 +134,12 @@
 .pac-container {
 	position: fixed !important;
 	width: 350px !important;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+#filter input {
+  border-radius: 3px !important;
 }

@@ -1,4 +1,3 @@
-
 <div id="main" class="row">
 	<div id="sidebar">
 		<input id="location_search" type="text" placeholder="Search for hub...">
@@ -6,7 +5,7 @@
 		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
 		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
 		</div>
-		<img id="map" src="#" class="img-polaroid"/>
+    <div class="map-div"><img id="map" src="#" class="img-polaroid"/></div>
 		<div id="geostatus">Posting at: <%= @location %></div>	
 	</div>
 	<div class="span3"></div>
@@ -19,6 +18,7 @@
 	  <div id="content">
 		  <div id="filter">
 		    <input type="text" placeholder="Filter posts">
+        <div id="slider"></div>
 	    </div>
 		  <div id="posts" class="container-fluid">
 		    <%= render 'posts/list' %>
@@ -26,3 +26,10 @@
 	  </div>
 	</div>
 </div>
+
+
+<script>
+    $(function() {
+      $( "#slider" ).slider();
+    });
+</script>

@@ -8,7 +8,7 @@ class VirtualHubsController < ApplicationController
   end
 
   def create
-	  @virtual_hub = VirtualHub.new(vhub_params)
+    @virtual_hub = VirtualHub.new(vhub_params)
     respond_to do |format|
       if @virtual_hub.save
 	      format.html { redirect_to root_path }
@@ -16,11 +16,11 @@ class VirtualHubsController < ApplicationController
         format.html { render action: 'show' }
       end
     end
-	end
+  end
 
-  private	
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def vhub_params
-      params.require(:virtual_hub).permit(:name)
-    end
+  private
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def vhub_params
+    params.require(:virtual_hub).permit(:name)
+  end
 end
