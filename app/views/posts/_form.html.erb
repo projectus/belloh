@@ -31,9 +31,10 @@
 	    </ul>
 	  </span>
     <%= f.text_area :content, placeholder: t(:message_placeholder) %>
-
-    <span class="btn btn-info inside-button" type="submit"><span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span></span>
-    <%#= f.submit ")))".html_safe, class: 'btn btn-info' %>
+	  <label for="commit" class="btn btn-info inside-button">
+      <span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span>
+      <%= f.submit nil, id: 'commit', style: 'display:none;' %>
+    </label>
   </div>
 
 	<%= f.hidden_field :mood, id: 'mood' %>
@@ -57,7 +58,7 @@ $(function(){
     $('.input-prepend').each(function(){
         var $textarea = $(this).find('textarea');
         var $span = $(this).find('span.add-on');
-        var $submit = $(this).find("[type='submit']");
+        var $submit = $(this).find("[for=commit]");
         var ta_height = $textarea.outerHeight();
 
         var span_height = parseInt($span.css('padding-top'))+

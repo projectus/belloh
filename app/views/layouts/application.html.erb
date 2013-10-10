@@ -24,7 +24,7 @@
           <li class="belloh-brackets">
             <span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span>
           </li>
-          <li><a class="brand" href="<%= root_path %>"><%= t(:logo) %> <%= hub_name %></a></li>
+          <li><a class="brand" href="<%= root_path %>"><%= t(:logo)+hub_name %></a></li>
       </ul>
       <ul class="nav pull-right">
           <li class="languages">
@@ -56,16 +56,6 @@
   <div class="modal-body"></div>
 </div>
 
-<div id="mapfull" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-header">
-    Pinpoint a location to <b>belloh</b>
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  </div>
-  <div class="modal-body">
-    <div id="map-canvas"></div>
-  </div>
-</div>
-
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% end %>
@@ -76,42 +66,19 @@
 
 <div class="footer">
   <div class="footer-left">
-    <span>
-       <%= link_to t(:about), about_path%>
-     </span>
-        <span>
-       <%= link_to t(:help), about_path%>
-     </span>
-    <span>
-       <%= link_to t(:terms), terms_path%>
-     </span>
-    <span>
-       <%= link_to t(:privacy), privacy_path%>
-     </span>
-
-    <span>
-       <%= link_to t(:hubs), hubs_path%>
-     </span>
-
-
-    <span>
-       <%= link_to t(:usage), uses_path%>
-     </span>
-
-    <span>
-       <%= link_to t(:blog), "http://belloh.blogspot.com" %>
-     </span>
-
-    <span>
-       <%= link_to t(:twitter), "https://twitter.com/@bellohworld" %>
-     </span>
-
+    <span><%= link_to t(:about), about_path%></span>
+    <span><%= link_to t(:help), about_path%></span>
+    <span><%= link_to t(:terms), terms_path%></span>
+    <span><%= link_to t(:privacy), privacy_path%></span>
+    <span><%= link_to t(:hubs), hubs_path %></span>
+    <span><%= link_to t(:usage), uses_path%></span>
+    <span><%= link_to t(:blog), "http://belloh.blogspot.com" %></span>
+    <span><%= link_to "Twitter", "https://twitter.com/@bellohworld" %></span>
   </div>
 
   <div class="footer-right">
-      <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
+    <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
   </div>
-
 </div>
 
 </body>
