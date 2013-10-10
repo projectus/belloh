@@ -147,6 +147,8 @@ body.founders {
 .footer {
    width: 100%;
   height: 20px;
+  font-family: 'proxima-nova','Helvetica Neue',Arial,Helvetica,sans-serif !important;
+  text-transform: uppercase;
   background-image: linear-gradient(to bottom, #252538, #111122) !important;
   opacity: 0.9;
   position: fixed;
@@ -169,7 +171,11 @@ body.founders {
       }
 
       a:hover {
-        text-decoration: overline underline !important;
+        text-decoration: none !important;
+      }
+
+      a:visited{
+        text-decoration: none !important;
       }
 
 
@@ -212,6 +218,8 @@ body.founders {
   padding-top: 10px !important;
   font-weight: bold;
 }
+
+
 
 @import "bootstrap";
 
