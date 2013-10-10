@@ -1,11 +1,22 @@
-fr:
-  sender_placeholder: "Sender Description"
-  receiver_placeholder: "Receiver Description"
-  message_placeholder: "Message"
-  search_placeholder: "Search for location..."
-  filter_placeholder: "Filter posts..."
-  posting_at:         "Posting at: "
-  around_the_world:   "Around the World"
+cn:
+  logo: "波啰"
+  sender_placeholder: "发寄者描述"
+  receiver_placeholder: "接收者描述"
+  message_placeholder: "信息"
+  search_placeholder: "搜索地点"
+  filter_placeholder: "过滤帖子"
+  posting_at:         "发布在"
+  around_the_world:   "世界各地"
+  about: "关于波啰"
+  help: "帮助"
+  terms: "法律声明"
+  privacy: "隐私"
+  hubs: "集域"
+  mobile: "手机"
+  usage: "应用"
+  blog: "Blog"
+  twitter: "Twitter"
+
   
   date:
     abbr_day_names:
@@ -27,7 +38,7 @@ fr:
       - juil.
       - août
       - sept.
-      - oct.
+      - 十月
       - nov.
       - déc.
     day_names:
@@ -53,7 +64,7 @@ fr:
       - juillet
       - août
       - septembre
-      - octobre
+      - 十月
       - novembre
       - décembre
     order:

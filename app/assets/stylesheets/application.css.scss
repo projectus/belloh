@@ -180,5 +180,25 @@ body.founders {
   }
 }
 
+.languages  {
+  margin-top: 2px !important;
+  a{
+    font-size: 12px !important;
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+  a:visited {
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+}
+
 @import "bootstrap";
 
