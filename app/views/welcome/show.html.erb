@@ -21,9 +21,7 @@
         <div id="slider"></div>
 	    </div>
 		  <div id="posts" class="container-fluid">
-				<% @posts.each_with_index do |post,count| %>
-				  <%= render partial: 'posts/post', locals:{post: post, count: count} %>
-				<% end %>
+				<%= render partial: 'posts/list' %>
 		  </div>
 	  </div>
 	</div>

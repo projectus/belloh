@@ -3,7 +3,7 @@ class HubPostsController < ApplicationController
 	  @hub_post = HubPost.new(hub_post_params)
     respond_to do |format|
       if @hub_post.save
-	      format.html
+	      format.html { redirect_to root_path }
         format.js
       else
 	      format.html
