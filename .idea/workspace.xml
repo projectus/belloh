@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="03fe2f50-d581-41d7-9327-a627997f9cc2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/chinese.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/chinese.html.erb" />
     </list>
     <ignored path="belloh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +27,7 @@
     <file path="/hubs.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381354644950" ignored="false" />
     <file path="/set_map.js" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381361071856" ignored="false" />
     <file path="/uses.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381421353088" ignored="false" />
-    <file path="/chinese.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381379267155" ignored="false" />
+    <file path="/chinese.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381433652405" ignored="false" />
     <file path="/test.html.erb" changelist="03fe2f50-d581-41d7-9327-a627997f9cc2" time="1381428937068" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,10 +57,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chinese.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="chinese.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/chinese.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="48" selection-start="0" selection-end="1897" vertical-scroll-proportion="-0.625">
+            <state line="73" column="20" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.6727273">
               <folding />
             </state>
           </provider>
@@ -75,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="63" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.37272727">
+            <state line="77" column="0" selection-start="2220" selection-end="2220" vertical-scroll-proportion="-22.916666">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,6 @@
         <option value="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/set_map.js" />
         <option value="$PROJECT_DIR$/app/views/welcome/cn.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/chinese.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss" />
         <option value="$PROJECT_DIR$/app/views/welcome/uses.html.erb" />
@@ -136,6 +135,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/chinese.html.erb" />
       </list>
     </option>
   </component>
@@ -777,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/chinese.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="48" selection-start="0" selection-end="1897" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/welcome_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="42" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
@@ -821,7 +814,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="63" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.37272727">
+        <state line="77" column="0" selection-start="2220" selection-end="2220" vertical-scroll-proportion="-22.916666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/chinese.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="20" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.6727273">
           <folding />
         </state>
       </provider>
