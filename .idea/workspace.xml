@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03fe2f50-d581-41d7-9327-a627997f9cc2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/chinese.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/cn.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/set_map.js.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/hub_posts.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/set_map.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/virtual_hub.js.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/show.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="belloh.iws" />
@@ -100,7 +102,7 @@
       <file leaf-file-name="welcome.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="25" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.8305085">
+            <state line="180" column="48" selection-start="2657" selection-end="2659" vertical-scroll-proportion="0.46327683">
               <folding />
             </state>
           </provider>
@@ -109,8 +111,10 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="62" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-35.0">
-              <folding />
+            <state line="43" column="62" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-26.875">
+              <folding>
+                <marker date="1381382144234" expanded="true" signature="36:106" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +123,10 @@
         <entry file="file://$PROJECT_DIR$/app/views/welcome/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="92" selection-start="669" selection-end="669" vertical-scroll-proportion="-10.0">
-              <folding />
+              <folding>
+                <marker date="1381382144234" expanded="true" signature="3096:3188" placeholder="{&quot;zoom&quot;: 8...}" />
+                <marker date="1381382144234" expanded="true" signature="3402:3438" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -836,8 +843,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="62" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-35.0">
-          <folding />
+        <state line="43" column="62" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-26.875">
+          <folding>
+            <marker date="1381382144234" expanded="true" signature="36:106" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -851,7 +860,10 @@
     <entry file="file://$PROJECT_DIR$/app/views/welcome/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="92" selection-start="669" selection-end="669" vertical-scroll-proportion="-10.0">
-          <folding />
+          <folding>
+            <marker date="1381382144234" expanded="true" signature="3096:3188" placeholder="{&quot;zoom&quot;: 8...}" />
+            <marker date="1381382144234" expanded="true" signature="3402:3438" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -873,7 +885,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/welcome.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="25" selection-start="2660" selection-end="2660" vertical-scroll-proportion="0.8305085">
+        <state line="180" column="48" selection-start="2657" selection-end="2659" vertical-scroll-proportion="0.46327683">
           <folding />
         </state>
       </provider>

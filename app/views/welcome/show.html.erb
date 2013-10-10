@@ -48,8 +48,8 @@ $(function(){
   $("#all-locations").click(function(){
     var world = {
       "coords": {
-          "latitude": "nil",
-          "longitude": "nil"
+        "latitude": "nil",
+        "longitude": "nil"
       }
     }
     geostatus.innerHTML="Getting posts from world.";
@@ -63,22 +63,68 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
 </script>
 
 <script>
-    var map;
-    function initialize() {
+    var map = null;
+
+    function initialize_interactive_map() {
+	    var lat = post_latitude.value;
+	    var lng = post_longitude.value;
+	    var latlng = new google.maps.LatLng(lat,lng);
+  
       var mapOptions = {
-          zoom: 8,
-          center: new google.maps.LatLng(-34.397, 150.644),
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        size: new google.maps.Size(400, 400, 'px', 'px')
       };
-      map = new google.maps.Map(document.getElementById('map-canvas'),
-              mapOptions);
+
+      map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+      var marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+      });
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    //google.maps.event.addDomListener(canvas, 'shown', initialize);
 
-    $(document).bind("ready", function(){
-      $('#mapfull').on('shown', function () {
-        google.maps.event.trigger(map, 'resize');
+    $(function(){
+      $('#mapfull').on('shown',function () {
+	      //google.maps.event.trigger(map, 'resize');
+	     if (map == null) initialize_interactive_map();
       });
+
+      create_fullscreen_link();
     });
+
+    function create_fullscreen_link() {
+		  var fullscreenlink = document.createElement("a");
+
+		  fullscreenlink.href="#mapfull";
+
+		  $(fullscreenlink).attr("role", "button");
+
+		  $(fullscreenlink).attr("data-toggle", "modal");
+
+		  var fullscreen = document.createElement("img");
+
+		  fullscreen.src = "http://png-1.findicons.com/files/icons/1150/tango/22/view_fullscreen.png";
+
+		  $(fullscreen).css({
+		      "position": "absolute",
+		      "right": "15px",
+		      "margin-top": "5px",
+		      "cursor": 'pointer',
+		      "opacity": "0.7"
+		  })
+
+		  $(fullscreenlink).append(fullscreen);
+
+		  $(".map-div").append(fullscreenlink);
+
+		  $(fullscreen).bind("mouseover", function(){
+		    $(this).css("opacity", "1");
+		  }).bind("mouseout", function(){
+		    $(this).css("opacity", "0.7");
+		  });
+    }
 </script>
