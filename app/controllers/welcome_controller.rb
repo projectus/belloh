@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def show
 	  @post = Post.new
 	  coords = session[:coords]
     if coords.nil?

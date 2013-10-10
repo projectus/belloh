@@ -5,17 +5,17 @@ function setMap(lat,lon) {
 	if (lat=="nil") srcString = "assets/tiles/globe.png";
   $("#map").attr("src", srcString);
 
-  var fullscreenlink = document.createElement("a")
+  var fullscreenlink = document.createElement("a");
 
   fullscreenlink.href="#mapfull";
 
-  $(fullscreenlink).attr("role", "button")
+  $(fullscreenlink).attr("role", "button");
 
-  $(fullscreenlink).attr("data-toggle", "modal")
+  $(fullscreenlink).attr("data-toggle", "modal");
 
-  var fullscreen = document.createElement("img")
+  var fullscreen = document.createElement("img");
 
-  fullscreen.src = "http://png-1.findicons.com/files/icons/1150/tango/22/view_fullscreen.png"
+  fullscreen.src = "http://png-1.findicons.com/files/icons/1150/tango/22/view_fullscreen.png";
 
   $(fullscreen).css({
       "position": "absolute",
@@ -25,13 +25,13 @@ function setMap(lat,lon) {
       "opacity": "0.7"
   })
 
-  $(fullscreenlink).append(fullscreen)
+  $(fullscreenlink).append(fullscreen);
 
-  $(".map-div").append(fullscreenlink)
+  $(".map-div").append(fullscreenlink);
 
   $(fullscreen).bind("mouseover", function(){
-      $(this).css("opacity", "1")
+      $(this).css("opacity", "1");
   }).bind("mouseout", function(){
-      $(this).css("opacity", "0.7")
-  })
+      $(this).css("opacity", "0.7");
+  });
 }

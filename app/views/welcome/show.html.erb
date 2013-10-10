@@ -1,0 +1,86 @@
+<div id="main" class="row">
+	<div id="sidebar">
+		<input id="location_search" type="text" placeholder="Search for hub...">
+		<div class="row-fluid">
+		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
+		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
+		</div>
+    <div class="map-div"><img id="map" src="#" class="img-polaroid"/></div>
+		<div id="geostatus">Posting at: <%= @location %></div>	
+	</div>
+	<div class="span3"></div>
+	<div class="span8">
+		<div id="header">
+			<div id="new_post_box" mood="<%= @post.mood %>">
+			  <%= render partial: 'posts/form', locals: {post: @post} %>
+		  </div>
+	  </div>
+	  <div id="content">
+		  <div id="filter">
+		    <input type="text" placeholder="Filter posts">
+        <div id="slider"></div>
+	    </div>
+		  <div id="posts" class="container-fluid">
+				<% @posts.each_with_index do |post,count| %>
+				  <%= render partial: 'posts/post', locals:{post: post, count: count} %>
+				<% end %>
+		  </div>
+	  </div>
+	</div>
+</div>
+
+
+<script>
+// Javascript to fetch user's location and fill with relevant posts
+$(function(){
+	var post_longitude=document.getElementById("post_longitude");
+  var post_latitude=document.getElementById("post_latitude");
+	var geostatus=document.getElementById("geostatus");
+
+  setMap(post_latitude.value,post_longitude.value);
+
+	$('#posts').tooltip({
+	    selector: '[rel=tooltip]'
+	});
+	
+  $("#current-location").click(function(){
+    getLocation(getPostsForLocation);
+  });
+
+  $("#all-locations").click(function(){
+    var world = {
+      "coords": {
+          "latitude": "nil",
+          "longitude": "nil"
+      }
+    }
+    geostatus.innerHTML="Getting posts from world.";
+    getPostsForLocation(world);
+  });
+
+	$( "#slider" ).slider();
+});
+
+google.maps.event.addDomListener(window, 'load', initialize_locations_autocomplete);
+</script>
+
+<script>
+    var map;
+    function initialize() {
+      var mapOptions = {
+          zoom: 8,
+          center: new google.maps.LatLng(-34.397, 150.644),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    $(document).bind("ready", function(){
+      $('#mapfull').on('shown', function () {
+        google.maps.event.trigger(map, 'resize');
+      });
+    });
+</script>

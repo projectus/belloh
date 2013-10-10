@@ -7,8 +7,11 @@
 <% else %>
 <div id="header">
 	<div id="new_post_box" mood="neutral">
-    <%= render 'hub_posts/form' %>
+	  <%= render partial: 'posts/form', locals: {post: @hub_post} %>
   </div>
 </div>
-	<%= render partial: 'hub_posts/list', locals: {posts: @vhub.posts} %>
+<% @vhub.posts.each_with_index do |post,count| %>
+  <%= render partial: 'hub_posts/post', locals:{post: post, count: count} %>
+<% end %>
+
 <% end %>
