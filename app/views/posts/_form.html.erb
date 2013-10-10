@@ -7,38 +7,34 @@
     [ <%= f.text_field :receiver_desc, placeholder: 'Receiver description' %> ]
   </div>
 
-	<div class="row-fluid">
-      <ul class="nav" style='width: 40px;float:left;'>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          <%= image_tag 'tiles/hippo.png', style: 'width:40px;' %>
-          <div class="triangle-bottomright"></div>
-        </a>
-        <ul class="dropdown-menu">
-          <li class="row-fluid">
-            <ul class="unstyled span6">
-              <li mood="neutral" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
-              <li mood="positive" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
-            </ul>
-            <ul class="unstyled span6">
-              <li mood="caution" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
-              <li mood="negative" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <div class="span9">
-      <%= f.text_area :content, placeholder: 'Message' %>
-      <%= f.submit 'Belloh', class: 'btn btn-info' %>
-    </div>
+  <div class="input-prepend input-append">
+	  <span class="add-on">
+	    <ul class="nav">
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          <%= image_tag 'tiles/hippo.png', style: 'width:40px;' %>
+	          <div class="triangle-bottomright"></div>
+	        </a>
+	        <ul class="dropdown-menu">
+	          <li class="row-fluid">
+	            <ul class="unstyled span6">
+	              <li mood="neutral" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+	              <li mood="positive" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+	            </ul>
+	            <ul class="unstyled span6">
+	              <li mood="caution" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+	              <li mood="negative" class="mood-option"><%= image_tag 'tiles/hippo.png' %></li>
+	            </ul>
+	          </li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </span>
+    <%= f.text_area :content, placeholder: 'Message' %>
+    <%= f.submit 'Belloh', class: 'btn btn-info' %>
   </div>
 
-  <div class="row-fluid">
-
-	  <%= f.hidden_field :mood, id: 'mood' %>
-
-  </div>
+	<%= f.hidden_field :mood, id: 'mood' %>
 
   <% if post.class == Post %>
     <%= f.hidden_field :latitude %>
@@ -55,5 +51,25 @@ $(function(){
 	    $('#new_post_box').attr('mood',mood);
 	    $("#mood").val(mood);
     });
+
+    $('.input-prepend').each(function(){
+        var $textarea = $(this).find('textarea');
+        var $span = $(this).find('span.add-on:eq(0)');
+        var $submit = $(this).find('input');
+        var height = $textarea.outerHeight()-
+				(parseInt($span.css('padding-top'))+
+				parseInt($span.css('padding-bottom'))+
+				parseInt($span.css('margin-top'))+
+				parseInt($span.css('margin-bottom'))+
+				(parseInt($span.css('border-width'))*2));    
+        $span.height(height);
+        $submit.height(height-2);
+    });
+
+	  $('.mood-option').bind("mouseover", function(){
+	    $(this).css("opacity", "1");
+	  }).bind("mouseout", function(){
+	    $(this).css("opacity", "0.7");
+	  });
 });
 </script>
