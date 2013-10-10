@@ -138,10 +138,46 @@ body.founders {
 
 .footer {
    width: 100%;
-  height: 25px;
-  background-image: linear-gradient(to bottom, #313140, #000011) !important;
+  height: 20px;
+  background-image: linear-gradient(to bottom, #252538, #111122) !important;
+  opacity: 0.9;
   position: fixed;
   bottom: 0px;
+  box-shadow: 0 0 6px 3px black !important;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+
+  .footer-left {
+    margin-left: 30px;
+    float:left;
+
+    span {
+      margin-right: 10px;
+
+      a{
+       color: #FFF !important;
+
+      }
+
+      a:hover {
+        text-decoration: overline underline !important;
+      }
+
+
+    }
+
+
+  }
+
+  .footer-right {
+    float: right;
+    margin-right: 30px;
+
+    .copyright-symbol {
+      font-size: 13px;
+    }
+  }
 }
 
 @import "bootstrap";

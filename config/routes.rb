@@ -27,6 +27,7 @@ Belloh::Application.routes.draw do
   get 'about', to: "welcome#about"
   get 'terms', to: "welcome#terms"
   get 'splash', to: "welcome#splash"
+  get 'privacy', to: "welcome#privacy"
   get 'hubs', to: "welcome#hubs"
   get 'uses', to: "welcome#uses"
   get 'cn', to: "welcome#cn"
