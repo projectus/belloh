@@ -26,6 +26,7 @@ Belloh::Application.routes.draw do
   get 'terms', to: "welcome#terms"
   get 'splash', to: "welcome#splash"
   get 'hubs', to: "welcome#hubs"
+  get 'uses', to: "welcome#uses"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
