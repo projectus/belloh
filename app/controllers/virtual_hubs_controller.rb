@@ -1,10 +1,13 @@
 class VirtualHubsController < ApplicationController
   def show
 	  @vhub = VirtualHub.where(name: request.subdomain).first
-	  @virtual_hub = VirtualHub.new
-	  @virtual_hub.name = request.subdomain
-	  @hub_post = HubPost.new
-	  @hub_post.virtual_hub = @vhub
+	  if @vhub.nil?
+	    @virtual_hub = VirtualHub.new
+	    @virtual_hub.name = request.subdomain
+	  else
+	    @hub_post = HubPost.new
+	    @hub_post.virtual_hub = @vhub
+    end
   end
 
   def create
