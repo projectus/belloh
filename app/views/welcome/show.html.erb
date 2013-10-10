@@ -46,6 +46,12 @@ $(function(){
     map = null;
   });
 
+  $("#current-location").bind("mouseover", function(){
+    $(this).css("opacity", "1");
+  }).bind("mouseout", function(){
+    $(this).css("opacity", "0.9");
+  });
+
   $("#all-locations").click(function(){
     var world = {
       "coords": {
@@ -55,6 +61,12 @@ $(function(){
     }
     geostatus.innerHTML="Getting posts from world.";
     getPostsForLocation(world);
+  });
+
+  $("#all-locations").bind("mouseover", function(){
+    $(this).css("opacity", "1");
+  }).bind("mouseout", function(){
+    $(this).css("opacity", "0.9");
   });
 
 	$( "#slider" ).slider();
