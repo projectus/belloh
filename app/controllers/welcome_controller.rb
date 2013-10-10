@@ -51,4 +51,8 @@ class WelcomeController < ApplicationController
   def uses
 
   end
+
+  def cn
+    render :layout => 'chinese'
+  end
 end
