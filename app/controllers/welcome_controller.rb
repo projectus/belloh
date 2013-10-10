@@ -55,4 +55,8 @@ class WelcomeController < ApplicationController
   def cn
     render :layout => 'chinese'
   end
+
+  def test
+    render :layout => 'test'
+  end
 end
