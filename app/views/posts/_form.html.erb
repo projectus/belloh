@@ -31,7 +31,8 @@
 	    </ul>
 	  </span>
     <%= f.text_area :content, placeholder: t(:message_placeholder) %>
-    <%= f.submit 'Belloh', class: 'btn btn-info' %>
+    <span class='btn btn-info' type='submit' name='commit'>Belloh</span>
+    <%#= f.submit 'Belloh', class: 'btn btn-info' %>
   </div>
 
 	<%= f.hidden_field :mood, id: 'mood' %>
@@ -55,7 +56,7 @@ $(function(){
     $('.input-prepend').each(function(){
         var $textarea = $(this).find('textarea');
         var $span = $(this).find('span.add-on');
-        var $submit = $(this).find('input[type=submit]');
+        var $submit = $(this).find("[type=submit]");
         var ta_height = $textarea.outerHeight();
 
         var span_height = parseInt($span.css('padding-top'))+

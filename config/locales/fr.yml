@@ -1,12 +1,19 @@
 fr:
   sender_placeholder: "Description de l'Expéditeur"
-  receiver_placeholder: "Description du Récepteur"
-  message_placeholder: "Message"
-  search_placeholder: "Recherche de site..."
-  filter_placeholder: "Filtre les messages..."
-  posting_at:         "Affichage à: "
-  around_the_world:   "Autour du Monde"
-  
+  receiver_placeholder: 'Description du Récepteur'
+  message_placeholder: 'Message'
+  search_placeholder: 'Recherche de site...'
+  filter_placeholder: 'Filtre les messages...'
+  posting_at:         'Affichage à: '
+  around_the_world:   'Autour du Monde'
+  about: 'A propos'
+  terms: 'Termes'
+  privacy: 'Privé'
+  hubs: 'Hubs'
+  usage: 'Usage'
+  blog: 'Blog'
+  logo: 'Belloh'
+    
   date:
     abbr_day_names:
       - dim

@@ -5,7 +5,8 @@
 	</div>
 	<%= render 'form' %>
 <% else %>
-  <div id="header" class="span8">
+<div class="span8">
+  <div id="header">
 	  <div id="new_post_box" mood="<%= @hub_post.mood %>">
 	    <%= render partial: 'posts/form', locals: {post: @hub_post} %>
     </div>
@@ -13,4 +14,5 @@
   <% @vhub.posts.each_with_index do |post,count| %>
     <%= render partial: 'hub_posts/post', locals:{post: post, count: count} %>
   <% end %>
+</div>
 <% end %>

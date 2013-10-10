@@ -20,11 +20,28 @@
   <div class="navbar-inner">
     <div id="nav-center">
 	    <ul class="nav nav-left">
-		    <li><a class="brand" href="<%= root_path %>">Belloh <%= hub_name %></a></li>
+          <li>
+            <img id="logo-img" width="30px" src="http://clipartist.info/Holidays/Xmas/Animal/hippo_line_art_thestructorr_hippo_black_white_line_art_christmas_xmas_stuffed_animal-1331px.png" />
+          </li>
+          <li class="belloh-brackets">
+            <span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span>
+          </li>
+          <li><a class="brand" href="<%= root_path %>"><%= t(:logo)+hub_name %></a></li>
       </ul>
       <ul class="nav pull-right">
+          <li class="languages">
+            <div class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">English
+                <img src="http://png-4.findicons.com/files/icons/1588/farm_fresh_web/32/bullet_arrow_down.png" />
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                English
+                简体中文
+              </ul>
+            </div>
+          </li>
 	      <li><a href="#bellohModal" role="button" data-toggle="modal">
-          <img id="logo-img" width="30px" src="http://clipartist.info/Holidays/Xmas/Animal/hippo_line_art_thestructorr_hippo_black_white_line_art_christmas_xmas_stuffed_animal-1331px.png" />
           </a></li>
 	    </ul>
     </div>
@@ -51,18 +68,18 @@
 
 <div class="footer">
   <div class="footer-left">
-    <span><%= link_to "About", about_path%></span>
-    <span><%= link_to "Terms", terms_path%></span>
-    <span><%= link_to "Privacy", privacy_path%></span>
-    <span><%= link_to 'Hubs' %></span>
-    <span><%= link_to "Chinese", cn_path%></span>
-    <span><%= link_to "Usage", uses_path%></span>
-    <span><%= link_to "Blog", "http://belloh.blogspot.com" %></span>
+    <span><%= link_to t(:about), about_path%></span>
+    <span><%= link_to t(:help), about_path%></span>
+    <span><%= link_to t(:terms), terms_path%></span>
+    <span><%= link_to t(:privacy), privacy_path%></span>
+    <span><%= link_to t(:hubs), hubs_path %></span>
+    <span><%= link_to t(:usage), uses_path%></span>
+    <span><%= link_to t(:blog), "http://belloh.blogspot.com" %></span>
     <span><%= link_to "Twitter", "https://twitter.com/@bellohworld" %></span>
   </div>
 
   <div class="footer-right">
-      <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
+    <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
   </div>
 </div>
 

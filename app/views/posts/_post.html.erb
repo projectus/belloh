@@ -12,7 +12,7 @@
 	</div>
 	<div class="span3">
 		<div class="post-time row-fluid">
-		  <%= I18n.l post.created_at.localtime %>
+		  <%= l post.created_at.localtime %>
 		</div>
 		<div class="row-fluid post-location">
 			<%= image_tag 'tiles/globe.png', data: {title: post.location}, rel: 'tooltip' %>

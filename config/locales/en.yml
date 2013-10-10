@@ -20,10 +20,51 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  sender_placeholder: "Sender Description"
-  receiver_placeholder: "Receiver Description"
-  message_placeholder: "Message"
-  search_placeholder: "Search for location..."
-  filter_placeholder: "Filter posts..."
-  posting_at:         "Posting at: "
-  around_the_world:   "Around the World"
+  sender_placeholder: 'Sender Description'
+  receiver_placeholder: 'Receiver Description'
+  message_placeholder: 'Message'
+  search_placeholder: 'Search for location...'
+  filter_placeholder: 'Filter posts...'
+  posting_at:         'Posting at: '
+  around_the_world:   'Around the World'
+  about: 'About'
+  terms: 'Terms'
+  privacy: 'Privacy'
+  hubs: 'Hubs'
+  usage: 'Usage'
+  blog: 'Blog'
+  logo: 'Belloh'
+  
+  time:
+    am: 'am'
+    formats:
+      default: ! "%a, %d %b %Y %I:%M:%S %P"
+      long: ! "%B %d, %Y %I:%M %p"
+      short: ! "%d %b %I:%M %p"
+    pm: 'pm'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

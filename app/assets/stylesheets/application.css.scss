@@ -77,6 +77,14 @@ body.founders {
   margin-top: 7px !important;
 }
 
+.belloh-brackets {
+  color: #FFF !important;
+  margin-left: 5px !important;
+  margin-right: 15px !important;
+  margin-top: 4px !important;
+  font-weight: bold;
+}
+
 .navbar-inner {
 	box-shadow: 0 0 10px 1px black !important;
   border: none !important;
@@ -130,7 +138,6 @@ body.founders {
   height: 250px;
   border: 1px solid #ddd;
   float: left;
-
 }
 
 .navbar-fixed-top {
@@ -179,6 +186,26 @@ body.founders {
       font-size: 13px;
     }
   }
+}
+
+.languages  {
+  margin-top: 2px !important;
+  a{
+    font-size: 12px !important;
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
+  a:visited {
+    color: #FFF !important;
+    text-decoration: none !important;
+  }
+
 }
 
 @import "bootstrap";
