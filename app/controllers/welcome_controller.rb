@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def show
 		redirect_to root_url(subdomain: false) if request.subdomain.present?
-	  I18n.locale = :cn
+	  I18n.locale = :en
 	  @post = Post.new
 	  coords = session[:coords]
     if coords.nil?
