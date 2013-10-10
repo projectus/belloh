@@ -4,17 +4,76 @@
   <title>Belloh</title>
   <%= stylesheet_link_tag    "application" %>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
   <%= javascript_include_tag "application" %>
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
   <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
   <%= csrf_meta_tags %>
+
+  <script>
+      $(function() {
+          $( "#slider" ).slider();
+
+
+      });
+  </script>
+
+  <style>
+      #map-canvas {
+          margin: 0;
+          padding: 0;
+          height: 400px;
+
+      }
+
+      #slider {
+          width: 200px;
+          float: right;
+      }
+
+      .ui-slider { width: 200px; margin-left: -15px; }
+
+  </style>
+
+  <script>
+      var map;
+      function initialize() {
+          var mapOptions = {
+              zoom: 8,
+              center: new google.maps.LatLng(-34.397, 150.644),
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          map = new google.maps.Map(document.getElementById('map-canvas'),
+                  mapOptions);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+      $(document).bind("ready", function(){
+          $('#mapfull').on('shown', function () {
+              google.maps.event.trigger(map, 'resize');
+          })
+      })
+
+  </script>
 </head>
 <body>
+
+
 
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div id="nav-center">
 	    <ul class="nav nav-left">
-		    <li><a class="brand" href="<%= root_path %>">Belloh</a></li>
+		    <li><a class="brand" href="<%= root_path %>">Belloh <%= hub_name %></a></li>
       </ul>
       <ul class="nav pull-right">
 	      <li><a href="#bellohModal" role="button" data-toggle="modal">
@@ -29,6 +88,7 @@
   </div>
 </div>
 
+
 <!-- Modal -->
 <div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
@@ -36,6 +96,25 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   </div>
   <div class="modal-body">
+
+
+  </div>
+
+  </div>
+</div>
+
+
+
+
+
+<div id="mapfull" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    Map Full Screen
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body">
+    <div id="map-canvas"></div>
+
   </div>
 </div>
 

@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
       setup_posts_of_the_world
 		  coords = ["nil","nil"]
 	  else
-	    @posts = Post.near(@coords,1,:order => {:created_at=>:desc})
+	    @posts = Post.near(coords,1,:order => {:created_at=>:desc})
 	    @location = session[:location]
 		end
 		@post.latitude = coords[0]

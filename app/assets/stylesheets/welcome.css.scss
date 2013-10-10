@@ -84,7 +84,7 @@
 		width: 600px;
 		margin: auto;
 		input {
-			width: 588px !important;
+			width: 200px !important;
 		}
 	}
 }
@@ -97,4 +97,8 @@
 .pac-container {
 	position: fixed !important;
 	width: 350px !important;
+}
+
+.container {
+  margin-top: 30px;
 }
