@@ -66,8 +66,8 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
 <script>
     var map = null;
 
-    function initialize_interactive_map() {
-	    var latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
+    function initialize_interactive_map(lat,lng) {
+	    var latlng = new google.maps.LatLng(lat,lng);
   
       var mapOptions = {
         zoom: 8,
@@ -90,7 +90,7 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
       $('#mapfull').on('shown',function () {
 	      //google.maps.event.trigger(map, 'resize');
 	      if (map == null) {
-		      initialize_interactive_map();
+		      initialize_interactive_map(post_latitude.value,post_longitude.value);
 		    } else {
 				  map.setCenter(new google.maps.LatLng(post_latitude.value,post_longitude.value));
 		    }
@@ -118,7 +118,7 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
 		      "margin-top": "5px",
 		      "cursor": 'pointer',
 		      "opacity": "0.7"
-		  })
+		  });
 
 		  $(fullscreenlink).append(fullscreen);
 
