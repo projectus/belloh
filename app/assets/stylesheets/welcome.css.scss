@@ -72,11 +72,18 @@
 					margin: auto;
 				}
 			}
-			textarea {
-				width: 465px;
-				resize: none;
-				margin-bottom: 5px !important;
-			}
+			.span9 {
+				textarea {
+					width: 515px;
+					resize: none;
+					margin-bottom: 5px !important;
+				}
+				.btn {
+	        margin-top: -36px;
+	        margin-left: 462px;
+	        position: absolute;	  
+				}
+		  }
 		}	
 	}
 }
@@ -177,17 +184,4 @@ div.cn-logo {
   margin-right: 5px;
 }
 
-.textarea-div {
-  position: relative
-}
-
-.belloh-submit {
-  position: absolute !important;
-  right: -46px;
-  bottom: 5px;
-  border-radius: 0px !important;
-  height: 20px !important;
-  padding-top: 0px !important;
-  font-size: 14px;
-}
 

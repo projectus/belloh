@@ -43,6 +43,7 @@ $(function(){
 	
   $("#current-location").click(function(){
     getLocation(getPostsForLocation);
+    map = null;
   });
 
   $("#all-locations").click(function(){
@@ -66,9 +67,7 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
     var map = null;
 
     function initialize_interactive_map() {
-	    var lat = post_latitude.value;
-	    var lng = post_longitude.value;
-	    var latlng = new google.maps.LatLng(lat,lng);
+	    var latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
   
       var mapOptions = {
         zoom: 8,
@@ -90,7 +89,11 @@ google.maps.event.addDomListener(window, 'load', initialize_locations_autocomple
     $(function(){
       $('#mapfull').on('shown',function () {
 	      //google.maps.event.trigger(map, 'resize');
-	     if (map == null) initialize_interactive_map();
+	      if (map == null) {
+		      initialize_interactive_map();
+		    } else {
+				  map.setCenter(new google.maps.LatLng(post_latitude.value,post_longitude.value));
+		    }
       });
 
       create_fullscreen_link();
