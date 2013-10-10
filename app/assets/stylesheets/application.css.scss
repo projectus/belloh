@@ -29,8 +29,13 @@ body{
   background: #FFF;
 }
 
+input[type='text'] {
+	height: 15px !important;
+}
+
 input, textarea {
   border-radius: 3px !important;
+	font-size: 10pt !important;
 }
 
 /* Picture of the hippo */
