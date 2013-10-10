@@ -9,7 +9,6 @@
   img { max-width: none; }
 }
 
-
 #slider {
   width: 200px;
   float: right;
@@ -22,39 +21,6 @@
 #header {
 	padding: 10px;
 	margin-bottom: 10px;
-	.row-fluid {
-		.nav {
-			margin: 0 !important;
-			.dropdown-toggle {
-				background: none !important;
-				outline: none !important;
-				img { 
-					margin-bottom: -9px;
-					box-shadow: 0 0 2px 1px black;
-					border-radius: 5px 0 0 5px;
-					padding: 4px;	
-				}	
-			}
-			.triangle-bottomright { 
-			    border-bottom: 10px solid black; 
-			    border-left: 10px solid transparent;
-			    margin-left: 38px;
-			}
-			.dropdown-menu {
-				min-width: 0;
-				width: 100px;
-				padding: 4px;
-				.row-fluid {
-			    .mood-option {
-				    width: 50px;
-			    }
-		    }
-		  }
-		}
-		.btn {
-			margin-top: 7px;
-		}
-  }
 	
 	#new_post_box {
 	  padding: 10px;
@@ -72,16 +38,54 @@
 					margin: auto;
 				}
 			}
-			.span9 {
-				textarea {
-					width: 515px;
-					resize: none;
-					margin-bottom: 5px !important;
+			.input-prepend, .input-append {
+				margin: 0 !important;
+				.add-on {
+					padding-right: 0px !important;
+					background: none;
+					border: none;
 				}
-				.btn {
-	        margin-top: -36px;
-	        margin-left: 462px;
-	        position: absolute;	  
+			  .btn {
+				  border-radius: 0 3px 3px 0 !important;
+				}
+
+				.nav {
+					margin: 0 !important;
+					.dropdown-toggle {
+						background: none !important;
+						outline: none !important;
+						border-color: inherit !important;
+						img {
+							padding-right: 5px;
+						}	
+					}
+					.triangle-bottomright { 
+					    border-bottom: 10px solid;
+					    border-color: inherit;
+					    border-left: 10px solid transparent;
+					    margin-left: 34px;
+					    margin-right: 1px;
+					    margin-top: -8px;
+					}
+					.dropdown-menu {
+						min-width: 0;
+						width: 100px;
+						padding: 4px;
+						.row-fluid {
+					    .mood-option {
+						    width: 50px;
+						    cursor: pointer;
+								opacity: 0.7;
+					    }
+				    }
+				  }
+				}
+
+				textarea {
+					width: 450px;
+					resize: none;
+					border-radius: 0 !important;
+					margin: 0 !important;
 				}
 		  }
 		}	
@@ -122,10 +126,7 @@
 	
 	#location_search {
 		width: 210px;
-        height: 15px;
-		margin: 10px;
-        font-size: 10pt;
-      border-radius: 3px !important;
+		margin-top: 10px;
 	}
 }
 

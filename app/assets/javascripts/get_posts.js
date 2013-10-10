@@ -9,7 +9,8 @@ function getPostsForLocation(location) {
   post_longitude.value=lon;
 	$.ajax({
 	  data: the_data,
+	  dataType: 'script',
 	  type: 'get',
-	  url: "/posts"
+	  url: '/posts'
 	});
 }
