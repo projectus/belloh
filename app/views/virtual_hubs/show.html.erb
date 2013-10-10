@@ -5,7 +5,7 @@
 	</div>
 	<%= render 'form' %>
 <% else %>
-  <div id="header">
+  <div id="header" class="span8">
 	  <div id="new_post_box" mood="<%= @hub_post.mood %>">
 	    <%= render partial: 'posts/form', locals: {post: @hub_post} %>
     </div>
