@@ -3,16 +3,18 @@ class WelcomeController < ApplicationController
 		redirect_to root_url(subdomain: false) if request.subdomain.present?
 	  I18n.locale = :en
 	  @post = Post.new
-	  coords = session[:coords]
-    if coords.nil?
+	  lat = session[:lat]
+	  lng = session[:lng]
+    if lat.nil? || lng.nil?
       setup_posts_of_the_world
-		  coords = ["nil","nil"]
+		  lat = 'nil'
+		  lng = 'nil'
 	  else
-	    @posts = Post.near(coords,1,:order => {:created_at=>:desc})
+	    @posts = Post.near([lat,lng],1,:order => {:created_at=>:desc})
 	    @location = session[:location]
 		end
-		@post.latitude = coords[0]
-		@post.longitude = coords[1]
+		@post.latitude = lat
+		@post.longitude = lng
   end
 
   def about
