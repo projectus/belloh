@@ -104,7 +104,7 @@ body.founders {
 #about {
   background: #FFF;
   //background-image: linear-gradient(to bottom, #FFFFFF, #FFF);
-  padding: 40px 0px !important;
+  padding: 0px 0px !important;
   border-radius: 5px !important;
 
   h4 {
@@ -223,6 +223,7 @@ body.founders {
   border-right: 1px solid #C3CFD9;
   width: 200px;
   margin-left: 20px;
+  margin-top: 20px;
   background: #EEF2F5;
   position: fixed;
 
@@ -240,6 +241,17 @@ body.founders {
 
 .about-header {
   padding: 15px !important;
+}
+
+#about-content {
+  margin-right: 30px;
+  margin-left: 20px;
+  padding: 20px 0px !important;
+
+  h4 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 @import "bootstrap";
