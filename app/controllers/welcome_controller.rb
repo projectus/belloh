@@ -18,9 +18,11 @@ class WelcomeController < ApplicationController
   end
 
   def about
+    render :layout => 'about'
   end
 
   def terms
+    render :layout => 'about'
 
   end
 
@@ -52,8 +54,8 @@ class WelcomeController < ApplicationController
     render :layout => 'splash'
   end
 
-  def uses
-
+  def usage
+    render :layout => 'about'
   end
 
   def cn
