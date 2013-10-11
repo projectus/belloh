@@ -1,18 +1,9 @@
 class PostsController < ApplicationController
 
-  def index	
-    if params[:lat]=='nil' || params[:lat].nil?
-      setup_posts_of_the_world
-      session[:lat] = nil
-      session[:lng] = nil
-    else
-		  coords = [params[:lat],params[:lng]]
-      @posts = Post.near(coords,1,:order => {:created_at=>:desc})
-      result = Geocoder::search(coords).first
-      @location = result.nil? ? 'undefined' : result.address
-      session[:lat] = params[:lat]
-      session[:lng] = params[:lng]
-    end
+  def index
+    coords=setup_posts(params[:lat],params[:lng])
+    session[:lat] = coords[:lat]
+    session[:lng] = coords[:lng]
 
 	  respond_to do |format|
 		  format.html { redirect_to root_url }
@@ -26,7 +17,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to root_url }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'index' }
       end
     end
   end

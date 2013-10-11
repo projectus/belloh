@@ -4,12 +4,11 @@ function getPostsForLocation(location) {
   var the_data = 'lat=' + encodeURIComponent(lat)
                +'&lng=' + encodeURIComponent(lng);
 
-  setMap(lat,lng);
-  var post_latitude=document.getElementById("post_latitude");
-  var post_longitude=document.getElementById("post_longitude");
+  document.getElementById("post_latitude").value=lat;
+  document.getElementById("post_longitude").value=lng;
 
-  post_latitude.value=lat;
-  post_longitude.value=lng;
+  setMap();
+
   $.ajax({
     data: the_data,
     dataType: 'script',

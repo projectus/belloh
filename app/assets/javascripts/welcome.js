@@ -1,34 +1,38 @@
 function initialize_welcome_page(){
-    var post_longitude=document.getElementById("post_longitude");
-    var post_latitude=document.getElementById("post_latitude");
-    var geostatus=document.getElementById("geostatus");
 
-    create_fullscreen_link();
-    setMap(post_latitude.value,post_longitude.value);
+    initialize_sidebar();
 
     $('#posts').tooltip({
         selector: '[rel=tooltip]'
     });
 
+    $( "#slider" ).slider();
+}
+
+function initialize_sidebar() {
+
+    create_fullscreen_link();
+    setMap();
+    initialize_fullscreen_map();
+
     $("#current-location").click(function(){
         getLocation(getPostsForLocation);
-        map = null;
     });
 
     $("#current-location").bind("mouseover", function(){
         $(this).css("opacity", "1");
     }).bind("mouseout", function(){
         $(this).css("opacity", "0.9");
-     });
+    });
 
     $("#all-locations").click(function(){
         var world = {
             "coords": {
-                "latitude": "nil",
-                "longitude": "nil"
+                "latitude": "",
+                "longitude": ""
             }
         }
-        geostatus.innerHTML="Getting posts from world.";
+        document.getElementById("geostatus").innerHTML="Getting posts from world.";
         getPostsForLocation(world);
     });
 
@@ -36,18 +40,21 @@ function initialize_welcome_page(){
         $(this).css("opacity", "1");
     }).bind("mouseout", function(){
         $(this).css("opacity", "0.9");
-     });
+    });
+}
 
-    $( "#slider" ).slider();
-
+function initialize_fullscreen_map() {
     var map = null;
     var marker = null;
+    var post_longitude=document.getElementById("post_longitude");
+    var post_latitude=document.getElementById("post_latitude");
 
     $('#mapfull').on('shown',function () {
-        var latlng = null;
-        if (map == null) {
-            latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
-
+        var latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
+        if (map) {
+            map.setCenter(latlng);
+            marker.setPosition(latlng);
+        } else {
             var mapOptions = {
                 zoom: 8,
                 center: latlng,
@@ -61,10 +68,6 @@ function initialize_welcome_page(){
                 position: latlng,
                 map: map
             });
-        } else {
-            latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
-            map.setCenter(latlng);
-            marker.setPosition(latlng);
         }
     });
 }
