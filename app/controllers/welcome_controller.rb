@@ -11,7 +11,8 @@ class WelcomeController < ApplicationController
 		  lng = 'nil'
 	  else
 	    @posts = Post.near([lat,lng],1,:order => {:created_at=>:desc})
-	    @location = session[:location]
+      result = Geocoder::search([lat,lng]).first
+      @location = result.nil? ? 'undefined' : result.address
 		end
 		@post.latitude = lat
 		@post.longitude = lng

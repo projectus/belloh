@@ -9,10 +9,9 @@ class PostsController < ApplicationController
 		  coords = [params[:lat],params[:lng]]
       @posts = Post.near(coords,1,:order => {:created_at=>:desc})
       result = Geocoder::search(coords).first
-      @location = result.address unless result.nil?
+      @location = result.nil? ? 'undefined' : result.address
       session[:lat] = params[:lat]
       session[:lng] = params[:lng]
-      session[:location] = @location
     end
 
 	  respond_to do |format|
