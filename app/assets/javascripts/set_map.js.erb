@@ -1,12 +1,15 @@
-function setMap(lat,lon) {
-	var latlon = lat+","+lon;
-	var srcString = "http://maps.googleapis.com/maps/api/staticmap?center="
-	+latlon+"&zoom=12&size=210x210&sensor=false&markers=|"+latlon;
-	if (lat=="nil") {
-		srcString = "<%= asset_path 'tiles/rot-globe.gif' %>";
-		$("#map").attr("onload","$('#fullscreen_link').hide()");
-	} else {
-		$("#map").attr("onload","$('#fullscreen_link').show()");
-	}
+function setMap() {
+  var lat=document.getElementById("post_latitude").value;
+  var lng=document.getElementById("post_longitude").value;
+  var latlng = lat+","+lng;
+  var srcString = "http://maps.googleapis.com/maps/api/staticmap?center="
+          +latlng+"&zoom=12&size=210x210&sensor=false&markers=|"+latlng;
+  if (lat && lng) {
+    $("#map").attr("onload","$('#fullscreen_link').show()");
+  } else {
+    srcString = "<%= asset_path 'tiles/rot-globe.gif' %>";
+    $("#map").attr("onload","");
+    $('#fullscreen_link').hide();
+  }
   $("#map").attr("src", srcString);
 }

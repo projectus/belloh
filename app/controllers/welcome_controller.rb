@@ -1,20 +1,11 @@
 class WelcomeController < ApplicationController
   def show
 		redirect_to root_url(subdomain: false) if request.subdomain.present?
-	  I18n.locale = :en
-	  @post = Post.new
-	  lat = session[:lat]
-	  lng = session[:lng]
-    if lat.nil? || lng.nil?
-      setup_posts_of_the_world
-		  lat = 'nil'
-		  lng = 'nil'
-	  else
-	    @posts = Post.near([lat,lng],1,:order => {:created_at=>:desc})
-	    @location = session[:location]
-		end
-		@post.latitude = lat
-		@post.longitude = lng
+    coords=setup_posts(session[:lat],session[:lng])
+    I18n.locale = :en
+    @post = Post.new
+		@post.latitude = coords[:lat].to_s
+		@post.longitude = coords[:lng].to_s
   end
 
   def about
@@ -64,5 +55,9 @@ class WelcomeController < ApplicationController
 
   def test
     render :layout => 'test'
+  end
+
+  def terminology
+    render :layout => 'about'
   end
 end
