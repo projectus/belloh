@@ -40,8 +40,10 @@
 					margin: auto;
 				}
 			}
-			.input-prepend, .input-append {
-				margin: 0 !important;
+			
+			#new_post_content {
+				margin-bottom: 0;
+				margin-left: 3px;
 				.add-on {
 					padding-right: 0px !important;
 					background: none;
@@ -83,7 +85,7 @@
 				  border-radius: 0 3px 3px 0 !important;
 				}
 				textarea {
-					width: 450px;
+					width: 470px;
 					height: 40px;
 					resize: none;
 					border-radius: 0 !important;
