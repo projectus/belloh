@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def show
-		redirect_to root_url(subdomain: false) if request.subdomain.present?
+	  condition = (request.subdomain.present? && request.subdomain != "www")
+		redirect_to root_url(subdomain: false) if condition
     coords=setup_posts(session[:lat],session[:lng])
     I18n.locale = :en
     @post = Post.new
