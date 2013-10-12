@@ -17,7 +17,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to root_url }
       else
-        format.html { render action: 'index' }
+        format.html { render partial: 'form', locals: {post:@post} }
       end
     end
   end

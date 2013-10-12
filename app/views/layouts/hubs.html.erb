@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Belloh</title>
+  <%= stylesheet_link_tag    "application" %>
+
+  <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places,visualization"></script>
+
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="hub">
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div id="nav-center">
+      <ul class="nav nav-left">
+
+        <li><a class="brand" href="<%= root_path %>"><%= hub_name %></a></li>
+      </ul>
+      <ul class="nav pull-right">
+
+        <li>
+          <img id="logo-img" src="http://clipartist.info/Holidays/Xmas/Animal/hippo_line_art_thestructorr_hippo_black_white_line_art_christmas_xmas_stuffed_animal-1331px.png" />
+        </li>
+        <li class="belloh-brackets">
+          <span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    Belloh at the world
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  </div>
+  <div class="modal-body"></div>
+</div>
+
+<% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% end %>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<div class="footer">
+  <div class="footer-left">
+    <span><%= link_to t(:about), about_path%></span>
+    <span><%= link_to t(:help), about_path%></span>
+    <span><%= link_to t(:terms), terms_path%></span>
+    <span><%= link_to t(:privacy), privacy_path%></span>
+    <span><%= link_to t(:hubs), hubs_path %></span>
+    <span><%= link_to t(:usage), usage_path%></span>
+    <span><%= link_to t(:blog), "http://belloh.blogspot.com" %></span>
+    <span><%= link_to "Twitter", "https://twitter.com/@bellohworld" %></span>
+  </div>
+
+  <div class="footer-right">
+    <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
+  </div>
+</div>
+
+</body>
+
+</html>

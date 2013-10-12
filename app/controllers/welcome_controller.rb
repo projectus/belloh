@@ -60,4 +60,8 @@ class WelcomeController < ApplicationController
   def terminology
     render :layout => 'about'
   end
+
+  def usage_cn
+    render :layout => 'about'
+  end
 end
