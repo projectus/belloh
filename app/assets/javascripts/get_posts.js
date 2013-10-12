@@ -7,8 +7,6 @@ function getPostsForLocation(location) {
   document.getElementById("post_latitude").value=lat;
   document.getElementById("post_longitude").value=lng;
 
-  setMap();
-
   $.ajax({
     data: the_data,
     dataType: 'script',
