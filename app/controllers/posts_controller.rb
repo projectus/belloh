@@ -1,7 +1,7 @@
-class PostsController < ApplicationController
+class PostsController < HubPostsController
 
   def index
-    coords=setup_posts(params[:lat],params[:lng])
+    coords=setup_posts
     session[:lat] = coords[:lat]
     session[:lng] = coords[:lng]
 
@@ -17,7 +17,7 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to root_url }
       else
-        format.html { render partial: 'form', locals: {post: @post} }
+        format.html { render partial: 'posts/form', locals: {post: @post} }
       end
     end
   end

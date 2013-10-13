@@ -1,6 +1,6 @@
 function getPostsForLocation(location) {
   var lat=location.coords.latitude;
-  var lng=location.coords.longitude;
+  var lng=location.coords.longitude;  
   var the_data = 'lat=' + encodeURIComponent(lat)
                +'&lng=' + encodeURIComponent(lng);
 

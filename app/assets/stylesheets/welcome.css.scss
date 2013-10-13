@@ -141,12 +141,12 @@
 
 #content {
 	padding-top: 10px;
-    padding-bottom: 10px;
-	#filter {
+  padding-bottom: 10px;
+	#filter-bar {
 		width: 600px;
 		margin: auto;
-		input {
-			width: 200px !important;
+		#filter {
+			width: 400px !important;
 		}
 	}
 }
@@ -163,10 +163,6 @@
 
 .container {
   margin-top: 30px;
-}
-
-#filter input {
-  border-radius: 3px !important;
 }
 
 span.smallb{

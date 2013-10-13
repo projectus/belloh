@@ -30,12 +30,12 @@ body{
 }
 
 input[type=text] {
-	height: 15px !important;
+	//height: 15px !important;
 }
 
 input, textarea {
   border-radius: 3px !important;
-	font-size: 10pt !important;
+	//font-size: 10pt !important;
 }
 
 /* Picture of the hippo */
@@ -53,10 +53,6 @@ input, textarea {
 
 .brand-custom{
   font-family: 'Lemon', cursive !important;
-}
-
-.nav li a {
-	padding: 0 !important;
 }
 
 .navbar {
@@ -86,7 +82,7 @@ body.founders {
 }
 
 .navbar-inner {
-box-shadow: 0 0 2px 2px black !important;
+  box-shadow: 0 0 2px 2px black !important;
   border: none !important;
   background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
 
@@ -163,9 +159,8 @@ box-shadow: 0 0 2px 2px black !important;
     span {
       margin-right: 10px;
 
-      a{
+      a {
        color: #FFF !important;
-
       }
 
       a:hover {

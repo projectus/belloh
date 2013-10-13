@@ -2,9 +2,9 @@
   <div class="span9">
     <div class="post-header row-fluid">
       <%= post.sender.nil? ? '' : post.sender.username %>
-      [<%= post.sender_desc=='' ? 'anonymous' : post.sender_desc %>]
+      [<%= post.sender_desc %>]
       @
-      [<%= post.receiver_desc=='' ? 'anyone' : post.receiver_desc %>]
+      [<%= post.receiver_desc %>]
     </div>
     <div class="post-message row-fluid">
       <%= post.content %>
