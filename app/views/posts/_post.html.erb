@@ -1,22 +1,23 @@
-<div class="row-fluid post <%= 'post-first' if count==0 %>" mood="<%= post.mood %>">
-  <div class="span9">
-    <div class="post-header row-fluid">
-      <%= post.sender.nil? ? '' : post.sender.username %>
-      [<%= post.sender_desc %>]
-      @
-      [<%= post.receiver_desc %>]
-    </div>
-    <div class="post-message row-fluid">
-      <%= post.content %>
-    </div>
-	</div>
-	<div class="span3">
-
-		<div class="post-location">
-			<%= image_tag 'http://png-1.findicons.com/files/icons/766/base_software/16/drawingpin2_blue.png', data: {title: post.location}, rel: 'tooltip' %>
+<div class="post" mood="<%= post.mood %>">
+	<div class="row-fluid">
+	  <div class="span11">
+	    <div class="post-header">
+	      <%= post.sender.nil? ? '' : post.sender.username %>
+	      [<%= post.sender_desc %>]
+	      @
+	      [<%= post.receiver_desc %>]
+	    </div><br/>
+	    <div class="post-message">
+	      <%= post.content %>
+	    </div>
 		</div>
-      <div class="post-time">
-        <%= l post.created_at.localtime %>
-      </div>
+		<div class="span1">
+			<div class="post-location">
+			</div>
+	    <div class="post-time">
+		    <%= time_ago_in_words(post.created_at.localtime) %>
+	      <%#= l post.created_at.localtime %>
+	    </div>
+		</div>
 	</div>
 </div>

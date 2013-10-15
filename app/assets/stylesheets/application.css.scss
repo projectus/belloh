@@ -13,15 +13,7 @@
  */
 
 body{
-  //background: image-url('http://rlv.zcache.com/creepy_swamp_postcards-r0eedadf7a54f4fc29e8bf4f27e64bd43_vgbaq_8byvr_512.jpg') no-repeat center center fixed;
-  background: image-url('bkg/rainbow.png') no-repeat center center fixed;
-
-  //background: image-url('https://uwaterloo.ca/includes_new/images/homepage/solar-car-DC.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
 }
 
@@ -29,77 +21,8 @@ body{
   background: #FFF;
 }
 
-input[type=text] {
-	//height: 15px !important;
-}
-
-input, textarea {
-  border-radius: 3px !important;
-	//font-size: 10pt !important;
-}
-
-/* Picture of the hippo */
-.nav img {
-	margin-top: 2px;
-	padding-bottom: 2px;
-}
-
-.nav {
-	.brand {
-	  padding: 10px !important;
-     font-family: 'Lemon', cursive !important;
-  }
-}
-
-.brand-custom{
-  font-family: 'Lemon', cursive !important;
-}
-
-.navbar {
-  background: #3B3B3D !important;
-}
-
-.brand {
-  color: #FFF !important;
-}
-
-body.founders {
-  background: image-url('bkg/foundersden.jpg') no-repeat center center fixed;
-  background-size:1300px 900px !important;
-}
-
-#logo-img{
-  margin-top: 7px !important;
-  width: 30px;
-}
-
-.belloh-brackets {
-  color: #FFF !important;
-  margin-left: 5px !important;
-  margin-right: 15px !important;
-  margin-top: 4px !important;
-  font-weight: bold;
-}
-
-.navbar-inner {
-  box-shadow: 0 0 2px 2px black !important;
-  border: none !important;
-  background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
-
-	#nav-center {
-	  margin: auto;
-	  width: 900px;
-	  font-size: 24pt;
-	}
-}
-
-.navbar-found .navbar-inner {
-  background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
-}
-
 #about {
   background: #FFF;
-  //background-image: linear-gradient(to bottom, #FFFFFF, #FFF);
   padding: 0px 0px !important;
   border-radius: 5px !important;
 
@@ -132,10 +55,6 @@ body.founders {
   height: 250px;
   border: 1px solid #ddd;
   float: left;
-}
-
-.navbar-fixed-top {
-  height: 40px !important;
 }
 
 .footer {
@@ -269,7 +188,4 @@ body.founders {
 body#hub {
   background: image-url('http://www.designagency.co.uk/media/1233/family-guy.jpg') no-repeat center center fixed;
 }
-
-
-@import "bootstrap";
 

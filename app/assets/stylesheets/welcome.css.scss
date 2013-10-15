@@ -11,33 +11,22 @@
 	}
 }
 
-#slider {
-  width: 200px;
-  float: right;
-}
-
-#main {
-  margin-left: 24px;
-}
-
 #header {
-	padding: 10px;
-	margin-bottom: 10px;
 	
 	#new_post_box {
-	  padding: 10px;
-	  border-radius: 10px;
-	  box-shadow: inset 0 0 1px 1px #00000F;
+	  padding: 20px;
 
 		form {
 			margin: 0;
 			#new_post_header {
 				font-size: xx-large;
-				margin-bottom: 8px;
+				margin-bottom: 10px;
 				text-align: center;
 		    
 				input {
 					margin: auto;
+					margin-top: -5px;
+					width: 180px;
 				}
 			}
 			
@@ -60,8 +49,7 @@
 							}	
 						}
 						.triangle-bottomright { 
-						    border-bottom: 10px solid;
-						    border-color: inherit;
+						    border-bottom: 10px solid black;
 						    border-left: 10px solid transparent;
 						    margin-left: 34px;
 						    margin-right: 1px;
@@ -81,11 +69,9 @@
 					  }
 					}
 				}
-			  .btn {
-				  border-radius: 0 3px 3px 0 !important;
-				}
+
 				textarea {
-					width: 470px;
+					width: 430px;
 					height: 40px;
 					resize: none;
 					border-radius: 0 !important;
@@ -99,91 +85,54 @@
 #sidebar {
 	text-align: center;
 	position: fixed;
-	width: 240px;
+	width: 260px;
 
-	#map {
-		border-radius: 5px;
-		width: 210px;
+  .nav-pills > li {
+	  float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
 	}
+	
+  #map-container {
+		width: 210px !important;
+		height: 210px !important;
+		margin: auto;
+		#map {
+		 border-radius: 5px;
+     text-align: center;
+		}
+  }
 	
 	#geostatus {
 	  font-weight: bold;
-	  font-size: 10pt;
-	  color: #FFF;
 	  margin: 10px;
-	}
-	
-	#current-location {
-		margin-left: 30px;
-	}
-
-	#all-locations {
-		margin-right: 30px;
 	}
 
   #all-locations, #current-location {
-    width: 60px;
-    border-radius: 10px;
-    margin-bottom: 10px;
     cursor: pointer;
-    opacity: 0.9;
   }
 	
 	#location_search {
-		width: 210px;
 		margin-top: 10px;
 	}
 }
 
-#sidebar, #header {
-	border-radius: 10px 10px 0 0;
-}
-
 #content {
-	padding-top: 10px;
-  padding-bottom: 10px;
 	#filter-bar {
-		width: 600px;
-		margin: auto;
 		#filter {
-			width: 400px !important;
+			width: 380px !important;
+		}
+		.nav-pills {
+			margin-top: -2px;
 		}
 	}
 }
 
-#sidebar, #content, #header {
-  background-color:rgba(0,0,0,0.7);
-  box-shadow: 0 0 5px 1px black;
-}
 
 .pac-container {
 	position: fixed !important;
 	width: 350px !important;
-}
-
-.container {
-  margin-top: 30px;
-}
-
-span.smallb{
-  font-size: 12px;
-
-}
-
-span.mediumb{
-  font-size: 16px;
-
-}
-
-span.bigb{
-  font-size: 22px;
-
-}
-
-div.cn-logo {
-  margin-top: 2px !important;
-  float: left;
-  margin-right: 5px;
 }
 
 

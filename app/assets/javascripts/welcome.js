@@ -7,10 +7,11 @@ function initialize_welcome_page(){
 
 function initialize_sidebar() {
 
-    create_fullscreen_link();
     setMap();
     initialize_fullscreen_map();
 
+    $('#map').attr('href','#mapfull').attr("data-toggle", "modal").css('cursor', 'pointer');
+    
     $("#current-location").click(function(){
         getLocation(getPostsForLocation);
     });
@@ -65,38 +66,5 @@ function initialize_fullscreen_map() {
                 map: map
             });
         }
-    });
-}
-
-function create_fullscreen_link() {
-    var fullscreenlink = document.createElement("a");
-
-    fullscreenlink.id="fullscreen_link";
-    fullscreenlink.href="#mapfull";
-
-    $(fullscreenlink).attr("role", "button");
-
-    $(fullscreenlink).attr("data-toggle", "modal");
-
-    var fullscreen = document.createElement("img");
-
-    fullscreen.src = "http://png-1.findicons.com/files/icons/1150/tango/22/view_fullscreen.png";
-
-    $(fullscreen).css({
-        "position": "absolute",
-        "right": "15px",
-        "margin-top": "5px",
-        "cursor": 'pointer',
-        "opacity": "0.7"
-    });
-
-    $(fullscreenlink).append(fullscreen);
-
-    $(".map-div").append(fullscreenlink);
-
-    $(fullscreen).bind("mouseover", function(){
-        $(this).css("opacity", "1");
-    }).bind("mouseout", function(){
-        $(this).css("opacity", "0.7");
     });
 }
