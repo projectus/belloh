@@ -1,21 +1,22 @@
+<div id="sidebar" class="well">
+	<input id="location_search" type="text" placeholder="<%= t(:search_placeholder) %>">
+	<ul class="nav nav-pills">
+	  <li><a id="current-location">Current Location</a></li>
+	  <li><a id="all-locations">Around the world</a></li>
+	</ul>
+  <div id="map-container" class="row-fluid"><img id="map"/></div>
+	<div id="geostatus"><%= t(:posting_at)+@location %></div>	
+</div>
+
 <div id="main" class="row">
-	<div id="sidebar">
-		<input id="location_search" type="text" placeholder="<%= t(:search_placeholder) %>">
-		<div class="row-fluid">
-		  <a class="span6"><%= image_tag 'tiles/locator.png', id:"current-location" %></a>
-		  <a class="span6"><%= image_tag 'tiles/globe.png', id:"all-locations" %></a>
-		</div>
-    <div class="map-div"><img id="map" src="#"/></div>
-		<div id="geostatus"><%= t(:posting_at)+@location %></div>	
-	</div>
-	<div class="span3"></div>
+	<div class="span4"></div>
 	<div class="span8">
-		<div id="header">
+		<div id="header" class="well">
 			<div id="new_post_box" mood="<%= @post.mood %>">
 			  <%= render partial: 'posts/form', locals: {post: @post} %>
 		  </div>
 	  </div>
-	  <div id="content">
+	  <div id="content" class="well">
 		  <div id="filter-bar">
 			  <%= form_tag(posts_path, method: :get, id: 'filter-form', remote: true) do %>
 			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder), id: 'filter' %>			
@@ -28,7 +29,7 @@
 					</ul>
 			  <% end %>
 	    </div>
-		  <div id="posts" class="container-fluid">
+		  <div id="posts">
 				<%= render partial: 'posts/list' %>
 		  </div>
 	  </div>
