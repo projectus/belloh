@@ -2,11 +2,7 @@ function initialize_welcome_page(){
 
     initialize_sidebar();
 
-    $('#posts').tooltip({
-        selector: '[rel=tooltip]'
-    });
-
-    $( "#slider" ).slider();
+    $('[rel=tooltip]').tooltip();
 }
 
 function initialize_sidebar() {

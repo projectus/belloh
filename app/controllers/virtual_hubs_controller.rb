@@ -8,6 +8,8 @@ class VirtualHubsController < ApplicationController
 	    @hub_post = HubPost.new
 	    @hub_post.virtual_hub = @vhub
     end
+
+    render :layout => 'hubs'
   end
 
   def create

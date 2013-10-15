@@ -1,8 +1,9 @@
 class WelcomeController < ApplicationController
   def show
-		redirect_to root_url(subdomain: false) if request.subdomain.present?
-    coords=setup_posts(session[:lat],session[:lng])
-    I18n.locale = :en
+	  condition = (request.subdomain.present? && request.subdomain != "www")
+		redirect_to root_url(subdomain: false) if condition
+    coords=setup_posts
+    I18n.locale = :fr
     @post = Post.new
 		@post.latitude = coords[:lat].to_s
 		@post.longitude = coords[:lng].to_s
@@ -58,6 +59,10 @@ class WelcomeController < ApplicationController
   end
 
   def terminology
+    render :layout => 'about'
+  end
+
+  def usage_cn
     render :layout => 'about'
   end
 end

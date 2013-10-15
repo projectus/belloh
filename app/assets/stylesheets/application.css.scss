@@ -30,12 +30,12 @@ body{
 }
 
 input[type=text] {
-	height: 15px !important;
+	//height: 15px !important;
 }
 
 input, textarea {
   border-radius: 3px !important;
-	font-size: 10pt !important;
+	//font-size: 10pt !important;
 }
 
 /* Picture of the hippo */
@@ -53,10 +53,6 @@ input, textarea {
 
 .brand-custom{
   font-family: 'Lemon', cursive !important;
-}
-
-.nav li a {
-	padding: 0 !important;
 }
 
 .navbar {
@@ -86,7 +82,7 @@ body.founders {
 }
 
 .navbar-inner {
-	box-shadow: 0 0 10px 1px black !important;
+  box-shadow: 0 0 2px 2px black !important;
   border: none !important;
   background-image: linear-gradient(to bottom, #5A5A66, #313140) !important;
 
@@ -163,9 +159,8 @@ body.founders {
     span {
       margin-right: 10px;
 
-      a{
+      a {
        color: #FFF !important;
-
       }
 
       a:hover {
@@ -255,9 +250,26 @@ body.founders {
   }
 }
 
-.usage-content {
+.transparent-wrapper {
+  background-color: rgba(0, 0, 0, 0.698);
+  box-shadow: 0 0 5px 1px #000000;
+}
+
+#hub-info {
+  padding: 10px !important;
+}
+
+#hub-detail {
+ background: #FFF;
+  padding: 10px;
+  font-size: 9.5pt;
 
 }
+
+body#hub {
+  background: image-url('http://www.designagency.co.uk/media/1233/family-guy.jpg') no-repeat center center fixed;
+}
+
 
 @import "bootstrap";
 

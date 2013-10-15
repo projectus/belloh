@@ -32,6 +32,11 @@ Belloh::Application.routes.draw do
   get 'usage', to: "welcome#usage"
   get 'cn', to: "welcome#cn"
   get 'test', to: "welcome#test"
+  get 'terminology', to: "welcome#terminology"
+
+  #temporary for development
+
+  get 'usage_cn', to: "welcome#usage_cn"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

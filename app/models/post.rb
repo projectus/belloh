@@ -8,7 +8,6 @@ class Post < ActiveRecord::Base
 	belongs_to :sender, class_name: 'User'
 	
 	validates :mood, inclusion: MOODS
-	validates_presence_of :latitude, :longitude
 
   before_validation do self.mood.downcase! end
 

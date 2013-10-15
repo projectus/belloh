@@ -16,9 +16,17 @@
 		  </div>
 	  </div>
 	  <div id="content">
-		  <div id="filter">
-		    <input type="text" placeholder="<%= t(:filter_placeholder) %>">
-        <div id="slider"></div>
+		  <div id="filter-bar">
+			  <%= form_tag(posts_path, method: :get, id: 'filter-form', remote: true) do %>
+			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder), id: 'filter' %>			
+					<ul class="nav nav-pills pull-right">
+					  <li class="active" data-title="50m" rel="tooltip">
+					    <a href="#">Near</a>
+					  </li>
+					  <li data-title="500m" rel="tooltip"><a href="#">Mid</a></li>
+					  <li data-title="2km" rel="tooltip"><a href="#">Far</a></li>
+					</ul>
+			  <% end %>
 	    </div>
 		  <div id="posts" class="container-fluid">
 				<%= render partial: 'posts/list' %>
