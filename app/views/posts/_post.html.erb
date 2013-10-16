@@ -1,12 +1,14 @@
-<div class="post" mood="<%= post.mood %>">
+<div class="post-splitter"></div>
+
+<div class="post">
 	<div class="row-fluid">
-	  <div class="span11">
+	  <div class="span11" mood="<%= post.mood %>">
 	    <div class="post-header">
 	      <%= post.sender.nil? ? '' : post.sender.username %>
 	      [<%= post.sender_desc %>]
 	      @
 	      [<%= post.receiver_desc %>]
-	    </div><br/>
+	    </div>
 	    <div class="post-message">
 	      <%= post.content %>
 	    </div>
@@ -15,8 +17,7 @@
 			<div class="post-location">
 			</div>
 	    <div class="post-time">
-		    <%= time_ago_in_words(post.created_at.localtime) %>
-	      <%#= l post.created_at.localtime %>
+		    <%= readable_time_ago(post.created_at.localtime) %>
 	    </div>
 		</div>
 	</div>
