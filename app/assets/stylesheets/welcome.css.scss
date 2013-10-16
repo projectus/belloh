@@ -11,28 +11,26 @@
 	}
 }
 
-#header {
-	
+#posts-header {
 	#new_post_box {
 	  padding: 20px;
-
+	  background: #fff !important;
+	  border-radius: 5px;
 		form {
 			margin: 0;
 			#new_post_header {
 				font-size: xx-large;
 				margin-bottom: 10px;
-				text-align: center;
-		    
+				text-align: center;		    
 				input {
 					margin: auto;
-					margin-top: -5px;
+					margin-top: -3px;
 					width: 180px;
 				}
 			}
 			
 			#new_post_content {
 				margin-bottom: 0;
-				margin-left: 3px;
 				.add-on {
 					padding-right: 0px !important;
 					background: none;
@@ -53,7 +51,6 @@
 						    border-left: 10px solid transparent;
 						    margin-left: 34px;
 						    margin-right: 1px;
-						    margin-top: -8px;
 						}
 						.dropdown-menu {
 							min-width: 0;
@@ -64,12 +61,12 @@
 							    width: 50px;
 							    cursor: pointer;
 									opacity: 0.7;
+									border: 0 !important;
 						    }
 					    }
 					  }
 					}
 				}
-
 				textarea {
 					width: 430px;
 					height: 40px;
@@ -84,8 +81,10 @@
 
 #sidebar {
 	text-align: center;
-	position: fixed;
-	width: 260px;
+	/* VERY IMPORTANT. MAKES THE SCROLL MUCH SMOOTHER ON CHROME */
+	-webkit-transform: translateZ(0); 
+	width: 280px;
+	top: 10px;
 
   .nav-pills > li {
 	  float:none;
@@ -118,7 +117,7 @@
 	}
 }
 
-#content {
+#posts {
 	#filter-bar {
 		#filter {
 			width: 380px !important;
@@ -128,7 +127,6 @@
 		}
 	}
 }
-
 
 .pac-container {
 	position: fixed !important;

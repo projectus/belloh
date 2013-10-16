@@ -3,54 +3,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 [mood=neutral] {
-  //background-image: linear-gradient(to bottom, #FFFFFF, #D6D6D6);
-  background: #ddd;
+  border: 5px solid #fff;
+  background: #fff;
   color: black !important;
 }
 
 [mood=positive] {
-  //background: linear-gradient(#C3DC78, #A3CF59) repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: black !important;
-  background: #3eb932;
-  //text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+  background: #24bf51;
+  border: 5px solid #24bf51;
 }
 
 [mood=negative] {
-  //background: linear-gradient(#ED7877, #D55857) repeat scroll 0 0 rgba(0, 0, 0, 0);
-  background: #ad1d28;
+  background: #c00;
+  border: 5px solid #c00;
   color: black !important;
-  //text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
 }
 
 [mood=caution] {
-  //background: linear-gradient(#F5E063, #FAB830) repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: black !important;
-  background: #df6e1e;
-  //text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  background: #ff7f00;
+  border: 5px solid #ff7f00;
+}
+
+.post-splitter {
+	border-bottom: 1px solid #bbb;
+  margin: 5px -20px; 
 }
 
 .post {	
-  padding: 10px;
-  border-bottom: 1px solid black;
   .span11 {
 	  border-radius: 5px;
 	  padding: 10px;
 	  background: white;
 	  .post-header {
 	    font-weight: bold;
-	    float: left;
+	    margin-bottom: 6px;
 	  }
 	  .post-message {
-	    font-size: 10pt;
-	    margin-top: 6px;
 	  }
   }
   
   .post-time {
     font-style: italic;
-    font-size: 8pt;
-    right: 5px;
-    bottom: 0px;
   }
 
   .post-location {

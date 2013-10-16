@@ -14,28 +14,35 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
+<!--
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="<%= root_path %>"><%= t(:logo)+hub_name %></a>
     </div>
   </div>
-</div>
-
-<!-- Modal -->
+</div>-->
+<!--
 <div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
 	  Belloh at the world
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   </div>
   <div class="modal-body"></div>
-</div>
+</div>-->
 
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% end %>
 
-<div class="container">
+<div class="container" id="content">
+	<div id="header">
+		<div id="belloh">Belloh 
+			<span class="smallb">)</span>
+			<span class="mediumb">)</span>
+			<span class="largeb">)</span>
+		</div>
+	</div>
   <%= yield %>
 </div>
 
