@@ -124,10 +124,12 @@
 		}
 		.nav-pills {
 			margin-top: -2px;
+			li > a {
+				cursor: pointer;
+			}
 		}
 	}
 }
-
 
 #sidebar {
 	background: rgba(245,245,245,0.7);

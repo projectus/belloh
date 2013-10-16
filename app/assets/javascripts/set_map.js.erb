@@ -1,6 +1,8 @@
 function setMap() {
+	
   var lat=document.getElementById("post_latitude").value;
   var lng=document.getElementById("post_longitude").value;
+
   var srcString = null;
 
   if (lat && lng) {
@@ -11,11 +13,15 @@ function setMap() {
   else {
 	  srcString = "<%= asset_path 'tiles/rot-globe.gif' %>";
   }
+
   mapSwap(srcString);
 }
 
 function mapSwap(srcString) {
-	$('#map').fadeOut(500,function(){
-		$(this).attr('src',srcString).attr('onload','$(this).fadeIn(500)');
-	});
+	var $map = $('#map');
+	if ($map.attr('src') != srcString) {
+		$map.fadeOut(500,function(){
+			$(this).attr('src',srcString);
+		});
+  }
 }

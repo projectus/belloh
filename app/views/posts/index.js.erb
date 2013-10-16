@@ -1,6 +1,6 @@
 $('#post-list').html("<%=j render 'list' %>");
 $('#geostatus').html("<%=j t(:posting_at) + @location %>");
-$('#post_latitude').val("<%=j latitude %>");
-$('#post_longitude').val("<%=j longitude %>");
+$('#post_latitude').val("<%=j session[:lat].to_s %>");
+$('#post_longitude').val("<%=j session[:lng].to_s %>");
 setMap();
 

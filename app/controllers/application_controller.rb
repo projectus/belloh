@@ -6,19 +6,25 @@ class ApplicationController < ActionController::Base
   private
     def setup_posts_around_world
 	    filtr = params[:filter].to_s
-	    names = filtr.split(' @ ')
+		  names = filtr.split('@')
 	    if names.size > 1
-	      @posts = Post.where("lower(sender_desc) LIKE ? AND lower(receiver_desc) LIKE ?","%#{names[0].downcase}%","%#{names[-1].downcase}%")
-      elsif !names.empty?
-	      @posts = Post.where("lower(sender_desc) LIKE ? OR lower(receiver_desc) LIKE ?","%#{names[0].downcase}%","%#{names[0].downcase}%")
-      else
+	      @posts = Post.sender_desc_like(names[0]).receiver_desc_like(names[-1])
+	    elsif !names.empty?
+	      @posts = Post.desc_like(names[0])
+	    else
 	      @posts = Post.all
 	    end
       @location = I18n.t(:around_the_world)
     end
 
-    def setup_posts_around_location(coords,radius)
-      @posts = Post.near(coords, radius, :order => {:created_at=>:desc}).where("sender_desc LIKE ?", "%#{params[:filter].to_s}%")
+    def setup_posts_around_location(coords,filter_words,radius)
+	    if filter_words.size > 1
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).sender_desc_like(filter_words[0]).receiver_desc_like(filter_words[-1])
+	    elsif !filter_words.empty?
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).desc_like(filter_words[0])
+	    else
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc})
+	    end
       result = Geocoder::search(coords).first
       @location = result.nil? ? 'undefined' : result.address
     end
@@ -27,20 +33,23 @@ class ApplicationController < ActionController::Base
       Float(lat) && Float(lng) rescue false
     end
 
-    def param_or_session(key)
+    def params_or_session(key)
 	    return params[key] unless params[key].nil?
 	    session[key]
 	  end
 	
     def setup_posts
-	    lat=param_or_session(:lat)
-	    lng=param_or_session(:lng)
+	    lat=params_or_session(:lat)
+	    lng=params_or_session(:lng)
+		  words = params[:filter].to_s.split('@')
+		  range = params_or_session(:range).to_s
+		  range = 'near' if Post::RANGES[range].nil?
       if lat_lng_are_floats?(lat,lng)
-        setup_posts_around_location([lat,lng],1)
-        {lat:lat,lng:lng}
+        setup_posts_around_location([lat,lng],words,Post::RANGES[range])
+        {lat:lat,lng:lng,range:range}
       else
         setup_posts_around_world
-        {lat:nil,lng:nil}
+        {lat:nil,lng:nil,range:nil}
       end
     end
 end

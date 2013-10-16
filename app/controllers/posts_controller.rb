@@ -1,9 +1,10 @@
-class PostsController < HubPostsController
+class PostsController < ApplicationController
 
   def index
     coords=setup_posts
     session[:lat] = coords[:lat]
     session[:lng] = coords[:lng]
+    session[:range] = coords[:range]
 
 	  respond_to do |format|
 		  format.html { redirect_to root_url }

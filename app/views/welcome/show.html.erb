@@ -20,13 +20,17 @@
 	  <div id="posts" class="well">
 		  <div id="filter-bar">
 			  <%= form_tag(posts_path, method: :get, id: 'filter-form', remote: true) do %>
-			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder), id: 'filter' %>			
+			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder) %>			
 					<ul class="nav nav-pills pull-right">
-					  <li class="active" data-title="50m" rel="tooltip">
-					    <a href="#">Near</a>
+					  <li range='near' class="<%= 'active' if @range=='near' %>" data-title="50m" rel="tooltip">
+					    <a>Near</a>
 					  </li>
-					  <li data-title="500m" rel="tooltip"><a href="#">Mid</a></li>
-					  <li data-title="2km" rel="tooltip"><a href="#">Far</a></li>
+					  <li range='mid' class="<%= 'active' if @range=='mid' %>"data-title="500m" rel="tooltip">
+						  <a>Mid</a>
+						</li>
+					  <li range='far' class="<%= 'active' if @range=='far' %>" data-title="2km" rel="tooltip">
+						  <a>Far</a>
+						</li>
 					</ul>
 			  <% end %>
 	    </div>

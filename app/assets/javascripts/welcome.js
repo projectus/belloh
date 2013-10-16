@@ -1,25 +1,27 @@
 function initialize_welcome_page(){
 
     initialize_sidebar();
-
+    initialize_filter_bar();
     $('[rel=tooltip]').tooltip();
+}
+
+function initialize_filter_bar() {
+  $('#filter-bar .nav-pills li').click(function(){
+	  var range = $(this).attr('range');
+	  $('#filter-bar').find('.active').removeClass('active');
+	  $(this).addClass('active');
+	  getPostsForRange(range);
+	});
 }
 
 function initialize_sidebar() {
 
+    $('#map').attr('href','#mapfull').attr("data-toggle", "modal").css('cursor', 'pointer').attr('onload',"$(this).fadeIn(500)");
     setMap();
     initialize_fullscreen_map();
-
-    $('#map').attr('href','#mapfull').attr("data-toggle", "modal").css('cursor', 'pointer');
-    
+   
     $("#current-location").click(function(){
         getLocation(getPostsForLocation);
-    });
-
-    $("#current-location").bind("mouseover", function(){
-        $(this).css("opacity", "1");
-    }).bind("mouseout", function(){
-        $(this).css("opacity", "0.9");
     });
 
     $("#all-locations").click(function(){
@@ -31,12 +33,6 @@ function initialize_sidebar() {
         }
         document.getElementById("geostatus").innerHTML="Getting posts from world.";
         getPostsForLocation(world);
-    });
-
-    $("#all-locations").bind("mouseover", function(){
-        $(this).css("opacity", "1");
-    }).bind("mouseout", function(){
-        $(this).css("opacity", "0.9");
     });
 }
 

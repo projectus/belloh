@@ -7,6 +7,8 @@ class WelcomeController < ApplicationController
     @post = Post.new
 		@post.latitude = coords[:lat].to_s
 		@post.longitude = coords[:lng].to_s
+		@range = coords[:range]
+		@range ||= 'near'
   end
 
   def about
