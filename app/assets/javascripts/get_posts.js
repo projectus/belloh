@@ -7,7 +7,6 @@ function getPostsForLocation(location) {
   //document.getElementById("post_latitude").value=lat;
   //document.getElementById("post_longitude").value=lng;
   document.getElementById("filter").value='';
-  $(window).scrollTop(0);
 
   $.ajax({
     data: the_data,
