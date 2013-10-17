@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     coords=setup_posts
     session[:lat] = coords[:lat]
     session[:lng] = coords[:lng]
-    session[:range] = coords[:range]
+    session[:range] = coords[:range] unless coords[:range].nil?
 
 	  respond_to do |format|
 		  format.html { redirect_to root_url }

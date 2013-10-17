@@ -74,6 +74,22 @@
 					border-radius: 0 !important;
 					margin: 0 !important;
 				}
+				label {
+					padding-top: 12px;
+					.smallb, .mediumb, .largeb{
+						font-weight: bolder;
+						margin-right: -1px;
+					}
+					.smallb {
+						font-size: 10pt;
+					}
+					.mediumb {
+						font-size: 14pt;
+					}
+					.largeb {
+						font-size: 18pt;
+					}
+			  }
 		  }
 		}	
 	}
@@ -135,8 +151,8 @@
 	background: rgba(245,245,245,0.7);
 }
 
+/* google location dropdown */
 .pac-container {
-	position: fixed !important;
 	width: 350px !important;
 }
 

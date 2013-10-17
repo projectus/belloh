@@ -3,6 +3,15 @@ function initialize_welcome_page(){
     initialize_sidebar();
     initialize_filter_bar();
     $('[rel=tooltip]').tooltip();
+
+/* for the google location autocomplete dropdown to follow input */
+    $(window).scroll(function(){
+	    if ($(this).scrollTop() >= 160) {
+		    $('.pac-container').css('position','fixed').css('top','60px');
+	    } else {
+		    $('.pac-container').css('position','absolute').css('top','220px');
+	    }
+    });
 }
 
 function initialize_filter_bar() {
@@ -63,4 +72,52 @@ function initialize_fullscreen_map() {
             });
         }
     });
+/*
+		google.maps.event.addListener(map, 'click', function(event) {
+
+		    //if marker exists, erase marker
+		    if(singleMarker){
+		        singleMarker.setMap(null);
+		    }
+
+		    singleMarker = new google.maps.Marker({
+		        position: event.latLng, //mouse click position
+		        map: map,
+		        draggable: true,
+		        icon: "http://www.google.com/mapfiles/marker_green.png"
+		    });
+		});
+		*/
+}
+
+function initialize_locations_autocomplete() {
+	var geostatus=document.getElementById("geostatus");
+  var input=document.getElementById('location_search');
+  var autocomplete = new google.maps.places.Autocomplete(input);
+
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      // Inform the user that the place was not found and return.
+      geostatus.innerHTML = 'location not found';
+      return;
+    }
+
+    geostatus.innerHTML = 'Getting posts for ' + place.name + '...';
+    var location = {
+      "coords": {
+          "latitude": place.geometry.location.lat(),
+          "longitude": place.geometry.location.lng()
+      }
+    };
+
+    getPostsForLocation(location);
+	  
+	/* Hack to clear the input box */
+		$(input).blur();    
+		  setTimeout(function(){
+		  $(input).val('');
+		},10);
+  });
 }

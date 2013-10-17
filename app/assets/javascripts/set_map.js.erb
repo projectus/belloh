@@ -9,9 +9,11 @@ function setMap() {
 	  var latlng = lat+","+lng;
 	  srcString = "http://maps.googleapis.com/maps/api/staticmap?center="
 	            +latlng+"&zoom=12&size=210x210&sensor=false&markers=|"+latlng;
+		$('#ranges').show();
   } 
   else {
 	  srcString = "<%= asset_path 'tiles/rot-globe.gif' %>";
+		$('#ranges').hide();
   }
 
   mapSwap(srcString);
