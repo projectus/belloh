@@ -1,5 +1,5 @@
 <ul class="nav nav-pills pull-right">
-  <li range='near' class="<%= 'active' if range=='near' %>" data-title="50m" rel="tooltip">
+  <li range='near' class="<%= 'active' if range=='near' || range.nil? %>" data-title="50m" rel="tooltip">
     <a>Near</a>
   </li>
   <li range='mid' class="<%= 'active' if range=='mid' %>"data-title="500m" rel="tooltip">
