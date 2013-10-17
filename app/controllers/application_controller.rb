@@ -8,22 +8,22 @@ class ApplicationController < ActionController::Base
 	    filtr = params[:filter].to_s
 		  names = filtr.split('@')
 	    if names.size > 1
-	      @posts = Post.sender_desc_like(names[0]).receiver_desc_like(names[-1])
+	      @posts = Post.sender_desc_like(names[0]).receiver_desc_like(names[-1]).page(params[:page])
 	    elsif !names.empty?
-	      @posts = Post.desc_like(names[0])
+	      @posts = Post.desc_like(names[0]).page(params[:page])
 	    else
-	      @posts = Post.all
+	      @posts = Post.all.page(params[:page])
 	    end
       @location = I18n.t(:around_the_world)
     end
 
     def setup_posts_around_location(coords,filter_words,radius)
 	    if filter_words.size > 1
-	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).sender_desc_like(filter_words[0]).receiver_desc_like(filter_words[-1])
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).sender_desc_like(filter_words[0]).receiver_desc_like(filter_words[-1]).page(params[:page])
 	    elsif !filter_words.empty?
-	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).desc_like(filter_words[0])
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).desc_like(filter_words[0]).page(params[:page])
 	    else
-	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc})
+	      @posts = Post.near(coords, radius, :units=>:km, :order => {:created_at=>:desc}).page(params[:page])
 	    end
       result = Geocoder::search(coords).first
       @location = result.nil? ? 'undefined' : result.address

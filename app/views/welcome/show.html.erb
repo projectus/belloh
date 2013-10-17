@@ -27,6 +27,7 @@
 			  <% end %>
 	    </div>
 	    <div id="post-list">
+		    <%= paginate @posts, remote: true, :params => {:controller => 'posts', :action => 'index'} %>
 			  <%= render partial: 'posts/list' %>
 			</div>
 	  </div>
