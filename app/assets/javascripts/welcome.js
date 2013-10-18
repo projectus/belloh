@@ -11,7 +11,8 @@ function initialize_welcome_page(){
 	    } else {
 		    $('.pac-container').css('position','absolute').css('top','220px');
 	    }
-	    
+	  
+	/* infinite scroll. if next-page link is in view, click it and remove it from the DOM */  
 	    var next = $('#next-page a[rel=next]');
 	    if (next.length) {
 		    if( isScrolledIntoView(next) ) {
@@ -112,8 +113,7 @@ function initialize_fullscreen_map() {
         var mapOptions = {
           zoom: zoom,
           center: latlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP//,
-          //size: new google.maps.Size(400, 400, 'px', 'px')
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
         map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
