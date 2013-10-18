@@ -1,7 +1,14 @@
-$(window).scrollTop(0);
-$('#post-list').html("<%=j paginate @posts, remote: true %><%=j render 'list' %>");
-$('#geostatus').html("<%=j t(:posting_at) + @location %>");
-$('#post_latitude').val("<%=j session[:lat].to_s %>");
-$('#post_longitude').val("<%=j session[:lng].to_s %>");
-setMap();
+$('#next-page').html("<%=j link_to_next_page @posts, 'Load more posts', remote: true %>");
+<% if params[:page].nil? %>
+  if ($(window).scrollTop() > 160) {
+	  $(window).scrollTop(160);
+  }
+  $('#post-list').html("<%=j render 'list' %>");
+	$('#geostatus').html("<%=j t(:posting_at) + @location %>");
+	$('#post_latitude').val("<%=j session[:lat].to_s %>");
+	$('#post_longitude').val("<%=j session[:lng].to_s %>");
+	setMap();
+<% else %>
+  $('#post-list').append("<%=j render 'list' %>");
+<% end %>
 
