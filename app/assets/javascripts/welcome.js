@@ -11,7 +11,26 @@ function initialize_welcome_page(){
 	    } else {
 		    $('.pac-container').css('position','absolute').css('top','220px');
 	    }
+	    
+	    var next = $('#next-page a[rel=next]');
+	    if (next.length) {
+		    if( isScrolledIntoView(next) ) {
+			    next.click();
+			    next.remove();
+		    }
+      }
     });
+}
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 function initialize_filter_bar() {
@@ -52,25 +71,36 @@ function initialize_fullscreen_map() {
     var post_latitude=document.getElementById("post_latitude");
 
     $('#mapfull').on('shown',function () {
-        var latlng = new google.maps.LatLng(post_latitude.value,post_longitude.value);
-        if (map) {
-            map.setCenter(latlng);
-            marker.setPosition(latlng);
-        } else {
-            var mapOptions = {
-                zoom: 8,
-                center: latlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                size: new google.maps.Size(400, 400, 'px', 'px')
-            };
+      var lat = post_latitude.value
+      var lng = post_longitude.value
+      var latlng = null; var zoom = null;
+      if (lat && lng) {
+        latlng = new google.maps.LatLng(lat,lng);
+        zoom = 12;
+      } else {
+	      latlng = new google.maps.LatLng(0,0);
+	      zoom = 1;
+      }
 
-            map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+      if (map) {
+          map.setCenter(latlng);
+          marker.setPosition(latlng);
+          map.setZoom(zoom);
+      } else {
+        var mapOptions = {
+          zoom: zoom,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          size: new google.maps.Size(400, 400, 'px', 'px')
+        };
 
-            marker = new google.maps.Marker({
-                position: latlng,
-                map: map
-            });
-        }
+        map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+        marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+      }
     });
 /*
 		google.maps.event.addListener(map, 'click', function(event) {
