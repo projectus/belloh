@@ -2,14 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map-canvas {
-  margin: 0;
-  padding: 0;
-  height: 400px !important;
-  img { 
-	  max-width: none; 
+#mapfull {
+	.modal-footer {
+		padding: 5px;
+	}
+	#map-canvas {
+	  margin: 0;
+	  padding: 0;
+	  height: 380px !important;
+	  img { 
+		  max-width: none; 
+		}
 	}
 }
+
 
 #posts-header {
 	#new_post_box {

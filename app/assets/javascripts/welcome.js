@@ -112,8 +112,8 @@ function initialize_fullscreen_map() {
         var mapOptions = {
           zoom: zoom,
           center: latlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          size: new google.maps.Size(400, 400, 'px', 'px')
+          mapTypeId: google.maps.MapTypeId.ROADMAP//,
+          //size: new google.maps.Size(400, 400, 'px', 'px')
         };
 
         map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
@@ -145,22 +145,6 @@ function initialize_fullscreen_map() {
 		    getPostsForLocation(coords);
       }
 	  });
-/*
-		google.maps.event.addListener(map, 'click', function(event) {
-
-		    //if marker exists, erase marker
-		    if(singleMarker){
-		        singleMarker.setMap(null);
-		    }
-
-		    singleMarker = new google.maps.Marker({
-		        position: event.latLng, //mouse click position
-		        map: map,
-		        draggable: true,
-		        icon: "http://www.google.com/mapfiles/marker_green.png"
-		    });
-		});
-		*/
 }
 
 function initialize_locations_autocomplete() {
