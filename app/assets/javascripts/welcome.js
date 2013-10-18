@@ -64,28 +64,50 @@ function initialize_sidebar() {
     });
 }
 
+function getRange() {
+  var pill = $('#filter-bar').find('.active');
+  if (pill.length) return pill.attr('range'); else return null; 	
+}
+
 function initialize_fullscreen_map() {
     var map = null;
     var marker = null;
+    var circle = null;
     var post_longitude=document.getElementById("post_longitude");
     var post_latitude=document.getElementById("post_latitude");
 
     $('#mapfull').on('shown',function () {
-      var lat = post_latitude.value
-      var lng = post_longitude.value
-      var latlng = null; var zoom = null;
+      var lat = post_latitude.value;
+      var lng = post_longitude.value;
+
+      var latlng = null;
+      var zoom = 1;
+      var radius = 0;
+
       if (lat && lng) {
         latlng = new google.maps.LatLng(lat,lng);
-        zoom = 12;
+
+        var range = getRange();
+
+        if (range == 'near') {
+          zoom = 18;
+          radius = 50;
+        } else if (range == 'mid') {
+          zoom = 15;
+          radius = 500;
+        } else if (range == 'far') {
+          zoom = 12;
+          radius = 5000;
+        }
       } else {
 	      latlng = new google.maps.LatLng(0,0);
-	      zoom = 1;
       }
 
       if (map) {
           map.setCenter(latlng);
           marker.setPosition(latlng);
           map.setZoom(zoom);
+          circle.setRadius(radius);
       } else {
         var mapOptions = {
           zoom: zoom,
@@ -98,10 +120,31 @@ function initialize_fullscreen_map() {
 
         marker = new google.maps.Marker({
           position: latlng,
+          draggable: true,
           map: map
         });
+
+        circle = new google.maps.Circle({
+          radius: radius,
+          fillColor: 'green',
+          map: map,
+        });
+        circle.bindTo('center', marker, 'position');
       }
     });
+
+    $('#pinpoint').on('click',function(){
+	    if (marker) {
+		    var pos = marker.getPosition();
+		    var coords = {
+            "coords": {
+                "latitude": pos.lat(),
+                "longitude": pos.lng()
+            }
+        }
+		    getPostsForLocation(coords);
+      }
+	  });
 /*
 		google.maps.event.addListener(map, 'click', function(event) {
 
