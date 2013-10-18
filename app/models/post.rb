@@ -32,8 +32,8 @@ end
 
 class Post < ActiveRecord::Base
 	include Filter
-	reverse_geocoded_by :latitude, :longitude, :address => :location
-	after_validation :reverse_geocode
+	reverse_geocoded_by :latitude, :longitude#, :address => :location
+	#after_validation :reverse_geocode
 	
 	RANGES = {'near'=>0.05,'mid'=>0.5,'far'=>5}
 end
