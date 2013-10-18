@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 	    elsif !filter_words.empty?
 	      @posts = Post.desc_like(filter_words[0]).page(params[:page])
 	    else
-	      @posts = Post.all.page(params[:page])
+	      @posts = Post.page(params[:page]).where("created_at <= ?", session[:latest]||=Time.now)
 	    end
       @location = I18n.t(:around_the_world)
     end
@@ -36,18 +36,18 @@ class ApplicationController < ActionController::Base
 	    session[key]
 	  end
 	
-    def setup_posts
-	    lat   = params_or_session(:lat)
-	    lng   = params_or_session(:lng)
-	
+    def setup_posts	
 	    if params[:page].nil?
 		    filtr = params[:filter]
 		    session[:filter] = filtr
+		    session[:latest] = nil
 		  else
 			  filtr = session[:filter]
 			end
 			
 		  words = filtr.to_s.split('@')
+		  lat   = params_or_session(:lat)
+	    lng   = params_or_session(:lng)
 		  range = params_or_session(:range)
 		  range = 'near' if Post::RANGES[range].nil?
 		
