@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    coords=setup_posts
+    coords=setup_location_posts
     session[:lat] = coords[:lat]
     session[:lng] = coords[:lng]
     session[:range] = coords[:range]

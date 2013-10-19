@@ -4,18 +4,19 @@ function initialize_welcome_page(){
     initialize_filter_bar();
     $('[rel=tooltip]').tooltip();
 
-/* for the google location autocomplete dropdown to follow input */
     $(window).scroll(function(){
+	
+/* for the google location autocomplete dropdown to follow input */
 	    if ($(this).scrollTop() >= 160) {
 		    $('.pac-container').css('position','fixed').css('top','60px');
 	    } else {
 		    $('.pac-container').css('position','absolute').css('top','220px');
 	    }
-	  
+	
 	/* infinite scroll. if next-page link is in view, click it and remove it from the DOM */  
 	    var next = $('#next-page a[rel=next]');
 	    if (next.length) {
-		    if( isScrolledIntoView(next) ) {
+		    if( isScrolledIntoView(next) ) {				
 			    next.click();
 			    next.remove();
 		    }
@@ -26,7 +27,7 @@ function initialize_welcome_page(){
 function isScrolledIntoView(elem)
 {
     var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+    var docViewBottom = docViewTop + $(window).height() + 1000;
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();

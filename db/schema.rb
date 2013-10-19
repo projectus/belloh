@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20131009185700) do
   create_table "posts", force: true do |t|
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "location"
+    #t.string   "location"
     t.text     "content"
     t.string   "sender_desc"
     t.string   "receiver_desc"

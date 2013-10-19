@@ -8,6 +8,7 @@ module Filter
 	
   def self.filter_query(query,columns)
 	  words=query.split(/\s+/)
+	  return nil if words.empty?
 	  ilikes=[]
 	  Array.wrap(columns).each do |c|
 		  ilikes << '('+words.map {|x| c+" ILIKE '%"+x+"%'"}.join(' AND ')+')'
@@ -27,14 +28,20 @@ module Filter
 	    where(Filter.filter_query(receiver_desc,'receiver_desc'))}
 	  scope :desc_like, lambda {|desc|
 		  where(Filter.filter_query(desc,['sender_desc','receiver_desc']))}
+		scope :descs_like, lambda {|sender_desc,receiver_desc|
+			sender_desc_like(sender_desc).receiver_desc_like(receiver_desc)}
+		scope :before, lambda {|latest|
+			where("created_at <= ?", latest||=Time.now)}
   end
 end
 
 class Post < ActiveRecord::Base
 	include Filter
-	reverse_geocoded_by :latitude, :longitude#, :address => :location
-	#after_validation :reverse_geocode
-	
+	reverse_geocoded_by :latitude, :longitude
+
+	scope :nearby, lambda {|coords,radius|
+		near(coords, radius, :order => {:created_at=>:desc})}
+			
 	RANGES = {'near'=>0.05,'mid'=>0.5,'far'=>5}
 end
 
