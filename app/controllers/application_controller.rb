@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
       if lat_lng_are_floats?(lat,lng)
 		    @posts = @posts.nearby([lat,lng], Post::RANGES[range])
 	      result = Geocoder::search([lat,lng]).first
-	      @location = result.nil? ? 'undefined' : result.address
+	      @location = result.nil? ? 'undefined' : result.address 
         {lat:lat,lng:lng,range:range}
       else
 	      @location = I18n.t(:around_the_world)

@@ -37,7 +37,6 @@ end
 
 class Post < ActiveRecord::Base
 	include Filter
-	#reverse_geocoded_by :latitude, :longitude
 	reverse_geocoded_by :latitude, :longitude do |obj,results|
 	  if geo = results.first
 	    if geo.city.nil?
@@ -46,7 +45,7 @@ class Post < ActiveRecord::Base
 			  obj.city  = geo.city
         obj.city += ', '+geo.state unless geo.state.nil?
       end
-	    obj.country = geo.country
+	    obj.country = geo.country unless geo.country.nil?
 	  end
 	end
 	after_validation :reverse_geocode
