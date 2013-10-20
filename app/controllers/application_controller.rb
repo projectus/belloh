@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
         {lat:lat,lng:lng,range:range}
       else
 	      @location = I18n.t(:around_the_world)
-        {lat:nil,lng:nil,range:nil}
+        {lat:nil,lng:nil,range:range}
       end
 	  end
 		

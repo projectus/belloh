@@ -37,8 +37,20 @@ end
 
 class Post < ActiveRecord::Base
 	include Filter
-	reverse_geocoded_by :latitude, :longitude
-
+	#reverse_geocoded_by :latitude, :longitude
+	reverse_geocoded_by :latitude, :longitude do |obj,results|
+	  if geo = results.first
+	    if geo.city.nil?
+		    obj.city = geo.state unless geo.state.nil?
+		  else
+			  obj.city  = geo.city
+        obj.city += ', '+geo.state unless geo.state.nil?
+      end
+	    obj.country = geo.country
+	  end
+	end
+	after_validation :reverse_geocode
+	
 	scope :nearby, lambda {|coords,radius|
 		near(coords, radius, :order => {:created_at=>:desc})}
 			

@@ -2,7 +2,9 @@ function initialize_welcome_page(){
 
     initialize_sidebar();
     initialize_filter_bar();
-    $('[rel=tooltip]').tooltip();
+		$('body').tooltip({
+		    selector: '[rel=tooltip]'
+		});
 
     $(window).scroll(function(){
 	
