@@ -16,4 +16,5 @@ module PostsHelper
 		seconds = (tdiff / 1.second).round
 		return seconds.to_s + 's'
 	end
+	
 end

@@ -14,23 +14,6 @@
 </head>
 <body>
 
-<!--
-<div class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="<%= root_path %>"><%= t(:logo)+hub_name %></a>
-    </div>
-  </div>
-</div>-->
-<!--
-<div id="bellohModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-header">
-	  Belloh at the world
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-  </div>
-  <div class="modal-body"></div>
-</div>-->
-
 <% if user_signed_in? %>
   <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% end %>

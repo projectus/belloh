@@ -2,14 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map-canvas {
-  margin: 0;
-  padding: 0;
-  height: 400px !important;
-  img { 
-	  max-width: none; 
+#mapfull {
+	.modal-footer {
+		padding: 5px;
+	}
+	#map-canvas {
+	  margin: 0;
+	  padding: 0;
+	  height: 380px !important;
+	  img { 
+		  max-width: none; 
+		}
 	}
 }
+
 
 #posts-header {
 	#new_post_box {
@@ -74,6 +80,22 @@
 					border-radius: 0 !important;
 					margin: 0 !important;
 				}
+				label {
+					padding-top: 12px;
+					.smallb, .mediumb, .largeb{
+						font-weight: bolder;
+						margin-right: -1px;
+					}
+					.smallb {
+						font-size: 10pt;
+					}
+					.mediumb {
+						font-size: 14pt;
+					}
+					.largeb {
+						font-size: 18pt;
+					}
+			  }
 		  }
 		}	
 	}
@@ -124,12 +146,19 @@
 		}
 		.nav-pills {
 			margin-top: -2px;
+			li > a {
+				cursor: pointer;
+			}
 		}
 	}
 }
 
+#sidebar {
+	background: rgba(245,245,245,0.7);
+}
+
+/* google location dropdown */
 .pac-container {
-	position: fixed !important;
 	width: 350px !important;
 }
 

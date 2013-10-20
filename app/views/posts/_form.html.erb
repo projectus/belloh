@@ -1,4 +1,4 @@
-<%= form_for(post) do |f| %>
+<%= form_for(post, remote: true) do |f| %>
   <%= render partial: 'posts/errors', locals: {post: post} %>
 
 	<div id="new_post_header">
@@ -31,8 +31,8 @@
 	    </ul>
 	  </span>
     <%= f.text_area :content, placeholder: t(:message_placeholder) %>
-	  <label for="commit" class="btn btn-info inside-button">
-      <span class="smallb">)</span><span class="mediumb">)</span><span class="bigb">)</span>
+	  <label for="commit" class="btn btn-info">
+      <span class="smallb">)</span><span class="mediumb">)</span><span class="largeb">)</span>
       <%= f.submit nil, id: 'commit', style: 'display:none;' %>
     </label>
   </div>

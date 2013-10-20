@@ -1,21 +1,42 @@
 function setMap() {
+	
   var lat=document.getElementById("post_latitude").value;
   var lng=document.getElementById("post_longitude").value;
+
   var srcString = null;
 
   if (lat && lng) {
 	  var latlng = lat+","+lng;
+	
+	  var range = getRange();
+
+    var zoom = '1';
+    if (range == 'near') {
+      zoom = '18';
+    } else if (range == 'mid') {
+      zoom = '15';
+    } else if (range == 'far') {
+      zoom = '12';
+    }
+
 	  srcString = "http://maps.googleapis.com/maps/api/staticmap?center="
-	            +latlng+"&zoom=12&size=210x210&sensor=false&markers=|"+latlng;
+	            +latlng+"&zoom="+zoom+"&size=210x210&sensor=false&markers=|"+latlng;
+	
+		$('#ranges').show();
   } 
   else {
-	  srcString = "<%= asset_path 'tiles/rot-globe.gif' %>";
+	  srcString = "<%= asset_path 'tiles/globe.png' %>";
+		$('#ranges').hide();
   }
+
   mapSwap(srcString);
 }
 
 function mapSwap(srcString) {
-	$('#map').fadeOut(500,function(){
-		$(this).attr('src',srcString).attr('onload','$(this).fadeIn(500)');
-	});
+	var $map = $('#map');
+	if ($map.attr('src') != srcString) {
+		$map.fadeOut(500,function(){
+			$(this).attr('src',srcString);
+		});
+  }
 }

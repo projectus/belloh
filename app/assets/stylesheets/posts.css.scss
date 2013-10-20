@@ -27,11 +27,14 @@
 }
 
 .post-splitter {
-	border-bottom: 1px solid #bbb;
+	border-bottom: 1px solid #e3e3e3;
   margin: 5px -20px; 
 }
 
 .post {	
+	.tooltip-inner {
+	  white-space:pre-wrap;
+	}
   .span11 {
 	  border-radius: 5px;
 	  padding: 10px;

@@ -20,18 +20,17 @@
 	  <div id="posts" class="well">
 		  <div id="filter-bar">
 			  <%= form_tag(posts_path, method: :get, id: 'filter-form', remote: true) do %>
-			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder), id: 'filter' %>			
-					<ul class="nav nav-pills pull-right">
-					  <li class="active" data-title="50m" rel="tooltip">
-					    <a href="#">Near</a>
-					  </li>
-					  <li data-title="500m" rel="tooltip"><a href="#">Mid</a></li>
-					  <li data-title="2km" rel="tooltip"><a href="#">Far</a></li>
-					</ul>
+			    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder) %>
+			    <span id="ranges" style="<%= 'display: none' if  @range.nil? %>">
+	          <%= render partial: 'ranges', locals: {range: session[:range]} %>
+					</span>
 			  <% end %>
 	    </div>
 	    <div id="post-list">
 			  <%= render partial: 'posts/list' %>
+			</div>
+			<div id="next-page">
+				<%= link_to_next_page @posts, 'Load more posts', remote: true, :params => {:controller => 'posts', :action => 'index'} %>
 			</div>
 	  </div>
 	</div>
@@ -39,12 +38,17 @@
 
 <div id="mapfull" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-header">
-    Pinpoint a location to <b>belloh</b>
+    Pinpoint a location to <b>belloh</b> by dragging the marker around
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
   </div>
   <div class="modal-body">
     <div id="map-canvas"></div>
   </div>
+  <div class="modal-footer">
+    <button id="pinpoint" type="button" class="btn btn-success" data-dismiss="modal" aria-hidden="true">
+	    Get posts around here
+	  </button>
+	</div>
 </div>
 
 <script>

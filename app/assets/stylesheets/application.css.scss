@@ -13,8 +13,10 @@
  */
 
 body{
-  padding-bottom: 40px;
+	padding-bottom: 40px;
   padding-top: 20px;
+  //background: image-url('bkg/foundersden.png') fixed;
+  //background-size: cover;
 }
 
 #header {
@@ -152,12 +154,6 @@ body{
   }
 
 }
-
-.inside-button {
-  padding-top: 10px !important;
-  font-weight: bold;
-}
-
 
 .info-menu {
   border-top:  1px solid #C3CFD9;
