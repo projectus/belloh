@@ -12,11 +12,26 @@
  *= require_tree .
  */
 
+@import url(//fonts.googleapis.com/css?family=Ubuntu);
+
 body{
-	padding-bottom: 40px;
+  padding-bottom: 40px;
   padding-top: 20px;
   //background: image-url('bkg/foundersden.png') fixed;
   //background-size: cover;
+  a {
+    color: orangered;
+  }
+}
+
+.nav-pills > li.active {
+  a, a:hover {
+    background: orangered;
+  }
+}
+
+body, textarea, input {
+  font-family: 'Ubuntu', Tahoma, sans-serif !important;
 }
 
 #header {
@@ -213,3 +228,4 @@ body#hub {
   background: image-url('http://www.designagency.co.uk/media/1233/family-guy.jpg') no-repeat center center fixed;
 }
 
+@import 'bootstrap';

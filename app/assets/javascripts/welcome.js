@@ -2,27 +2,27 @@ function initialize_welcome_page(){
 
     initialize_sidebar();
     initialize_filter_bar();
-		$('body').tooltip({
-		    selector: '[rel=tooltip]'
-		});
+    $('body').tooltip({
+        selector: '[rel=tooltip]'
+    });
 
     $(window).scroll(function(){
-	
-/* for the google location autocomplete dropdown to follow input */
-	    if ($(this).scrollTop() >= 160) {
-		    $('.pac-container').css('position','fixed').css('top','60px');
-	    } else {
-		    $('.pac-container').css('position','absolute').css('top','220px');
-	    }
-	
-	/* infinite scroll. if next-page link is in view, click it and remove it from the DOM */  
-	    var next = $('#next-page a[rel=next]');
-	    if (next.length) {
-		    if( isScrolledIntoView(next) ) {				
-			    next.click();
-			    next.remove();
-		    }
-      }
+
+        /* for the google location autocomplete dropdown to follow input */
+        if ($(this).scrollTop() >= 160) {
+            $('.pac-container').css('position','fixed').css('top','60px');
+        } else {
+            $('.pac-container').css('position','absolute').css('top','220px');
+        }
+
+        /* infinite scroll. if next-page link is in view, click it and remove it from the DOM */
+        var next = $('#next-page a[rel=next]');
+        if (next.length) {
+            if( isScrolledIntoView(next) ) {
+                next.click();
+                next.remove();
+            }
+        }
     });
 }
 

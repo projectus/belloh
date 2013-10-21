@@ -16,7 +16,6 @@
 	}
 }
 
-
 #posts-header {
 	#new_post_box {
 	  padding: 20px;
@@ -102,27 +101,28 @@
 }
 
 #sidebar {
-	text-align: center;
-	/* VERY IMPORTANT. MAKES THE SCROLL MUCH SMOOTHER ON CHROME */
-	-webkit-transform: translateZ(0); 
-	width: 280px;
-	top: 10px;
+  background: rgba(245,245,245,0.7);
+  text-align: center;
+  /* VERY IMPORTANT. MAKES THE SCROLL MUCH SMOOTHER ON CHROME */
+  -webkit-transform: translateZ(0);
+  width: 280px;
+  top: 10px;
 
   .nav-pills > li {
-	  float:none;
+	float:none;
     display:inline-block;
     *display:inline; /* ie7 fix */
     zoom:1; /* hasLayout ie7 trigger */
 	}
 	
   #map-container {
-		width: 210px !important;
-		height: 210px !important;
-		margin: auto;
-		#map {
-		 border-radius: 5px;
-     text-align: center;
-		}
+    width: 210px !important;
+    height: 210px !important;
+    margin: auto;
+    #map {
+      border-radius: 5px;
+      text-align: center;
+    }
   }
 	
 	#geostatus {
@@ -133,28 +133,28 @@
   #all-locations, #current-location {
     cursor: pointer;
   }
-	
-	#location_search {
-		margin-top: 10px;
-	}
+
+  #location_search {
+    margin-top: 10px;
+  }
 }
 
 #posts {
-	#filter-bar {
-		#filter {
-			width: 380px !important;
-		}
-		.nav-pills {
-			margin-top: -2px;
-			li > a {
-				cursor: pointer;
-			}
-		}
-	}
-}
+  #filter-bar {
+    form {
+      margin: 0;
+      #filter {
+        width: 380px !important;
+      }
+    }
 
-#sidebar {
-	background: rgba(245,245,245,0.7);
+    .nav-pills {
+      margin-top: -2px;
+      li > a {
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 /* google location dropdown */
