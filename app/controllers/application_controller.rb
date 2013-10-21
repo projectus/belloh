@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 	  end
 
     def setup_location_posts # find nearby posts
-	    setup_posts
+	    setup_posts(Post)
 	
 			# location stuff
 		  lat   = params_or_session(:lat)
@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
       end
 	  end
 		
-    def setup_posts	# filters and paginates posts
+    def setup_posts(post_type)	# filters and paginates posts
 	    if params[:page].nil?
 		    filtr = params[:filter]
 		    session[:filter] = filtr
@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
 			  filtr = session[:filter]
 			end
 
-      @posts = Post.page(params[:page]).before(session[:latest])
+      @posts = post_type.page(params[:page]).before(session[:latest])
 			
 		  words = filtr.to_s.split('@')
 

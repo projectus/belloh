@@ -62,46 +62,6 @@ body, textarea, input {
 	}
 }
 
-.splash {
-  background: #FFF;
-}
-
-#about {
-  background: #FFF;
-  padding: 0px 0px !important;
-  border-radius: 5px !important;
-
-  h4 {
-
-  }
-}
-
-.intro-bar {
-  width: 100%;
-  height: 200px;
-  background: #846D75;
-  color: white;
-}
-
-.info-odd{
-  width: 100%;
-  height: 300px;
-  background: #FFF;
-}
-
-.info-even{
-  width: 100%;
-  height: 300px;
-  background: #E4D8DE;
-}
-
-.hubbable {
-  width: 200px;
-  height: 250px;
-  border: 1px solid #ddd;
-  float: left;
-}
-
 .footer {
   width: 100%;
   height: 20px;
@@ -145,87 +105,6 @@ body, textarea, input {
       font-size: 13px;
     }
   }
-}
-
-#languages  {
-  margin-top: 2px !important;
-  .dropdown-toggle {
-	  outline: none;
-	}
-  a{
-    font-size: 12px !important;
-    color: #FFF !important;
-    text-decoration: none !important;
-  }
-
-  a:hover {
-    color: #FFF !important;
-    text-decoration: none !important;
-  }
-
-  a:visited {
-    color: #FFF !important;
-    text-decoration: none !important;
-  }
-
-}
-
-.info-menu {
-  border-top:  1px solid #C3CFD9;
-  border-left: 1px solid #C3CFD9;
-  border-right: 1px solid #C3CFD9;
-  width: 200px;
-  margin-left: 20px;
-  margin-top: 20px;
-  background: #EEF2F5;
-  position: fixed;
-
-  .info-cell {
-    border-bottom: 1px solid #C3CFD9;
-    padding: 10px;
-  }
-
-  .info-inner {
-    background: #FFF;
-    border-bottom: 1px solid #C3CFD9;
-    padding: 10px;
-  }
-}
-
-.about-header {
-  padding: 15px !important;
-}
-
-#about-content {
-  margin-right: 30px;
-  margin-left: 20px;
-  padding: 0px 0px !important;
-  padding-bottom: 40px !important;
-
-  h4 {
-    margin-top: 40px !important;
-    margin-bottom: 20px !important;
-  }
-}
-
-.transparent-wrapper {
-  background-color: rgba(0, 0, 0, 0.698);
-  box-shadow: 0 0 5px 1px #000000;
-}
-
-#hub-info {
-  padding: 10px !important;
-}
-
-#hub-detail {
- background: #FFF;
-  padding: 10px;
-  font-size: 9.5pt;
-
-}
-
-body#hub {
-  background: image-url('http://www.designagency.co.uk/media/1233/family-guy.jpg') no-repeat center center fixed;
 }
 
 @import 'bootstrap';

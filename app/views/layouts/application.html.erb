@@ -22,20 +22,13 @@
 <% end %>
 
 <div class="container" id="content">
-	<div id="header">
-		<div id="belloh">Belloh 
-			<span class="smallb">)</span>
-			<span class="mediumb">)</span>
-			<span class="largeb">)</span>
-		</div>
-	</div>
   <%= yield %>
 </div>
 
 <div class="footer">
   <div class="footer-left">
     <span><%= link_to t(:about), about_path%></span>
-    <span><%= link_to t(:help), about_path%></span>
+    <span><%= link_to t(:help), help_path%></span>
     <span><%= link_to t(:terms), terms_path%></span>
     <span><%= link_to t(:privacy), privacy_path%></span>
     <span><%= link_to t(:hubs), hubs_path %></span>

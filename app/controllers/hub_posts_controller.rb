@@ -1,13 +1,21 @@
 class HubPostsController < ApplicationController
+	def index
+		setup_posts(HubPost)
+
+	  respond_to do |format|
+		  format.html { redirect_to root_url }
+      format.js
+    end
+	end
+	
   def create
 	  @hub_post = HubPost.new(post_params)
     respond_to do |format|
       if @hub_post.save
 	      format.html { redirect_to root_url }
-        format.js
+        format.js { redirect_to hub_posts_url }
       else
-	      format.html
-        format.js
+        format.html { render partial: 'posts/form', locals: {post: @hub_post} }
       end
     end
   end

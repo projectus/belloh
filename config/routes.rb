@@ -7,7 +7,7 @@ class Subdomain
 end
 
 Belloh::Application.routes.draw do
-	
+
 	constraints(Subdomain) do
 	  get '/', to: 'virtual_hubs#show'
 	end
@@ -15,7 +15,7 @@ Belloh::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#show'
 	
-	resources :hub_posts, only: [:create]
+	resources :hub_posts, only: [:index,:create]
   resources :virtual_hubs, only: [:create]
 
   resources :posts, only: [:index,:create]
@@ -24,19 +24,12 @@ Belloh::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get 'about', to: "welcome#about"
-  get 'terms', to: "welcome#terms"
-  get 'splash', to: "welcome#splash"
-  get 'privacy', to: "welcome#privacy"
-  get 'hubs', to: "welcome#hubs"
-  get 'usage', to: "welcome#usage"
-  get 'cn', to: "welcome#cn"
-  get 'test', to: "welcome#test"
-  get 'terminology', to: "welcome#terminology"
-
-  #temporary for development
-
-  get 'usage_cn', to: "welcome#usage_cn"
+  get 'about', to: "information#about"
+  get 'help', to: "information#help"
+  get 'terms', to: "information#terms"
+  get 'privacy', to: "information#privacy"
+  get 'hubs', to: "information#hubs"
+  get 'usage', to: "information#usage"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,7 @@
+$('#next-page').html("<%=j link_to_next_page @posts, 'Load more posts', remote: true %>");
+
+<% if params[:page].nil? %>
+  $('#post-list').html("<%=j render partial: 'posts/list', locals: {posts: @posts} %>");  
+<% else %>
+  $('#post-list').append("<%=j render partial: 'posts/list', locals: {posts: @posts} %>");
+<% end %>

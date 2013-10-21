@@ -4,7 +4,7 @@ $('#next-page').html("<%=j link_to_next_page @posts, 'Load more posts', remote: 
   if ($(window).scrollTop() > 160) {
 	  $(window).scrollTop(160);
   }
-  $('#post-list').html("<%=j render 'list' %>");
+  $('#post-list').html("<%=j render partial: 'list', locals: {posts: @posts} %>");
 
   <% if params[:filter].nil? %>
 	  $('#post_content').val("");	
@@ -16,6 +16,6 @@ $('#next-page').html("<%=j link_to_next_page @posts, 'Load more posts', remote: 
 	setMap();
   
 <% else %>
-  $('#post-list').append("<%=j render 'list' %>");
+  $('#post-list').append("<%=j render partial: 'list', locals: {posts: @posts} %>");
 <% end %>
 
