@@ -19,3 +19,11 @@
 		<%= link_to_next_page posts, 'Load more posts', remote: true, :params => {:path => path} %>
 	</div>
 </div>
+
+<script>
+$(function(){
+	$('#filter').on('input',function(){
+		$('#filter-form').submit();
+	});
+});
+</script>
