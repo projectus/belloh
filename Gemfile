@@ -27,6 +27,7 @@ gem 'devise'
 gem 'geocoder'
 gem 'bootstrap-sass'
 gem 'kaminari' # pagination
+gem 'paperclip', '~> 3.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'

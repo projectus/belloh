@@ -13,7 +13,11 @@ class PostsController < ApplicationController
 	end
 
   def create
-	  @post = Post.new(post_params)
+    if user_signed_in?
+      @post = current_user.posts.build(post_params)
+    else
+	    @post = Post.new(post_params)
+    end
     respond_to do |format|
       if @post.save
 	      format.html { redirect_to root_url }

@@ -1,8 +1,16 @@
 <div id="posts-header" class="well">
+  <div id="post-as">
+    <% if user_signed_in? %>
+      Post as
+      <a id="suser" style="display: none;"><%= current_user.username %></a>
+      <a id="anonym">Anonymous</a> instead
+    <% end %>
+  </div>
 	<div id="new_post_box" mood="<%= post.mood %>">
 	  <%= render partial: 'posts/form', locals: {post: post} %>
   </div>
 </div>
+
 <div id="posts" class="well">
   <div id="filter-bar">
 	  <%= form_tag(path, method: :get, id: 'filter-form', remote: true) do %>

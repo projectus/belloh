@@ -1,8 +1,34 @@
+<script>
+  $(function(){
+    $('#suser').click(function(){
+      $('#sender-anonym').hide();
+      $('#sender-suser').show();
+      $('#suser').hide();
+      $('#anonym').show();
+    });
+
+    $('#anonym').click(function(){
+      $('#sender-anonym').show();
+      $('#sender-suser').hide();
+      $('#suser').show();
+      $('#anonym').hide();
+    });
+  });
+</script>
+
 <%= form_for(post, remote: true) do |f| %>
   <%= render partial: 'posts/errors', locals: {post: post} %>
 
 	<div id="new_post_header">
-    [ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]
+    <span id="sender-anonym">[ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]</span>
+    <% if user_signed_in? %>
+    <span id="sender-suser"><%= link_to current_user.username, nil %></span>
+    <style>
+      #sender-anonym {
+        display: none;
+      }
+    </style>
+    <% end %>
     @
     [ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]
   </div>

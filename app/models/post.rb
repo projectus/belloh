@@ -17,7 +17,6 @@ module Filter
 	end
 	
   included do
-		belongs_to :sender, class_name: 'User'
 		validates :mood, inclusion: MOODS
 	  before_validation do self.mood.downcase! end
 		
@@ -37,7 +36,9 @@ end
 
 class Post < ActiveRecord::Base
 	include Filter
-	reverse_geocoded_by :latitude, :longitude do |obj,results|
+  belongs_to :sender, class_name: 'User'
+
+  reverse_geocoded_by :latitude, :longitude do |obj,results|
 	  if geo = results.first
 	    if geo.city.nil?
 		    obj.city = geo.state unless geo.state.nil?

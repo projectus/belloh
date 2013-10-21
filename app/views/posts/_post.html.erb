@@ -2,15 +2,29 @@
 
 <div class="post">
 	<div class="row-fluid">
-	  <div class="span11" mood="<%= post.mood %>">
+    <div class="span11" mood="<%= post.mood %>">
 	    <div class="post-header">
-	      <%= post.sender.nil? ? '' : post.sender.username %>
-	      [<%= post.sender_desc %>]
-	      @
-	      [<%= post.receiver_desc %>]
+        <% unless post.sender.nil? %>
+        <%= link_to(post.sender.username, post.sender) %>
+          <% unless post.sender_desc.empty? %>
+            [<%= post.sender_desc %>]
+          <% end %>
+        <% else %>
+          <% if post.sender_desc.empty? %>
+            [anonymous]
+          <% else %>
+            [<%= post.sender_desc %>]
+          <% end %>
+        <% end %>
+        @
+        <% if post.receiver_desc.empty? %>
+        [anyone]
+        <% else %>
+        [<%= post.receiver_desc %>]
+        <% end %>
 	    </div>
 	    <div class="post-message">
-	      <%= post.content %>
+	      <%= post.content.html_safe %>
 	    </div>
 		</div>
 		<div class="span1">

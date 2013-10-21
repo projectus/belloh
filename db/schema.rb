@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131009185700) do
+ActiveRecord::Schema.define(version: 20131021204740) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "hub_posts", force: true do |t|
     t.string   "content"
     t.string   "sender_desc"
     t.string   "receiver_desc"
-    t.string   "mood",          default: "neutral"
+    t.string   "mood",           default: "neutral"
     t.integer  "sender_id"
     t.integer  "virtual_hub_id"
     t.datetime "created_at"

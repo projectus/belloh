@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :posts, foreign_key: :sender_id
+  has_many :hub_posts, foreign_key: :sender_id
+
+  #has_attached_file :avatar, :styles => { :medium => "300x300#", :thumb => "50x50#" }, :default_url => "/images/:style/missing.jpg"
 
   def login=(login)
 	  @login = login

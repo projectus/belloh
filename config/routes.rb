@@ -14,8 +14,9 @@ Belloh::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#show'
-	
-	resources :hub_posts, only: [:index,:create]
+
+  get "user/:id", to: "users#show", as: "user"
+  resources :hub_posts, only: [:index,:create]
   resources :virtual_hubs, only: [:create]
 
   resources :posts, only: [:index,:create]
