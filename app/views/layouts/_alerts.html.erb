@@ -1,0 +1,16 @@
+<% flash.each do |name, msg| %>
+  <div class="<%= bootstrap_alert_type(name) %>">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <%= msg %>
+  </div>
+<% end %>
+
+<script>
+$(function(){
+	setTimeout(function() {
+    $('.alert').fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove(); 
+    });
+	}, 2000);
+});
+</script>

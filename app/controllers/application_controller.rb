@@ -12,6 +12,14 @@ class ApplicationController < ActionController::Base
 	    text.sub!(/&me\W*$/,'&'+current_user.username)
 	  end
 	
+	  def is_me_the_only_reference?(text)
+		  text.match(/&[^m][^e]/).nil?
+		end
+		
+		def are_there_no_references?(text)
+		  text.match(/&\w+/).nil?
+		end
+		
     def lat_lng_are_floats?(lat,lng)
       Float(lat) && Float(lng) rescue false
     end

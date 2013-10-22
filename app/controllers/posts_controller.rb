@@ -15,11 +15,19 @@ class PostsController < ApplicationController
   def create
     if user_signed_in?
       @post = current_user.posts.build(post_params)
+	    unless is_me_the_only_reference?(@post.sender_desc)
+        redirect_to posts_url, alert: 'you can only reference yourself (&me) as sender'
+        return
+      end
 	    parse_references!(@post.sender_desc)
 	    parse_references!(@post.receiver_desc)
 	    parse_references!(@post.content)
     else
 	    @post = Post.new(post_params)
+	    unless are_there_no_references?(@post.sender_desc)
+        redirect_to posts_url, alert: 'sign in to reference as a sender'
+        return
+      end
     end
     respond_to do |format|
       if @post.save

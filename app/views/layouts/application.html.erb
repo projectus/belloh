@@ -17,26 +17,29 @@
 </head>
 <body>
 
-<div class="container" id="content">
-  <%= yield %>
-</div>
+	<div class="container" id="content">
+		<div id="alerts">
+      <%= render 'layouts/alerts' %>
+	  </div>
+	  <%= yield %>
+	</div>
 
-<div class="footer">
-  <div class="footer-left">
-    <span><%= link_to t(:about), about_path%></span>
-    <span><%= link_to t(:help), help_path%></span>
-    <span><%= link_to t(:terms), terms_path%></span>
-    <span><%= link_to t(:privacy), privacy_path%></span>
-    <span><%= link_to t(:hubs), hubs_path %></span>
-    <span><%= link_to t(:usage), usage_path%></span>
-    <span><%= link_to t(:blog), "http://belloh.blogspot.com" %></span>
-    <span><%= link_to "Twitter", "https://twitter.com/@bellohworld" %></span>
-  </div>
+	<div class="footer">
+	  <div class="footer-left">
+	    <span><%= link_to t(:about), about_path%></span>
+	    <span><%= link_to t(:help), help_path%></span>
+	    <span><%= link_to t(:terms), terms_path%></span>
+	    <span><%= link_to t(:privacy), privacy_path%></span>
+	    <span><%= link_to t(:hubs), hubs_path %></span>
+	    <span><%= link_to t(:usage), usage_path%></span>
+	    <span><%= link_to t(:blog), "http://belloh.blogspot.com" %></span>
+	    <span><%= link_to "Twitter", "https://twitter.com/@bellohworld" %></span>
+	  </div>
 
-  <div class="footer-right">
-    <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
-  </div>
-</div>
+	  <div class="footer-right">
+	    <span class="copyright-symbol">&copy;</span> 2013 Belloh.com.
+	  </div>
+	</div>
 
 </body>
 
