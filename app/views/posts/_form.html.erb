@@ -19,18 +19,20 @@
 <%= form_for(post, remote: true) do |f| %>
   <%= render partial: 'posts/errors', locals: {post: post} %>
 
-	<div id="new_post_header">
-    <span id="sender-anonym">[ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]</span>
-    <% if user_signed_in? %>
-    <span id="sender-suser"><%= link_to current_user.username, nil %></span>
-    <style>
-      #sender-anonym {
-        display: none;
-      }
-    </style>
-    <% end %>
-    @
-    [ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]
+	<div id="new_post_header" class="row-fluid">
+    <!--<span id="sender-anonym"></span>-->
+    <div class="span2">
+	    <div style="float:right;">
+				<% if user_signed_in? %>
+			  <span id="sender-suser"><%= link_to current_user.username, nil %></span>
+			  <% end %>
+		  </div>
+		  <div style="float:right;margin-top:15px;"><span>@</span></div>
+	  </div>
+	  <div class="span10">
+	    <div>[ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]</div>
+	    <div style="margin-top:10px;">[ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]</div>
+    </div>
   </div>
 
   <div id="new_post_content" class="input-prepend input-append">

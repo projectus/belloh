@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  sender_placeholder: 'Sender Description'
+  sender_placeholder: 'Your Description'
   receiver_placeholder: 'Receiver Description'
   message_placeholder: 'Message'
   search_placeholder: 'Search for location...'
@@ -34,14 +34,6 @@ en:
   usage: 'Usage'
   blog: 'Blog'
   logo: 'Belloh'
-  
-  time:
-    am: 'am'
-    formats:
-      default: ! "%a, %d %b %Y %I:%M:%S %P"
-      long: ! "%B %d, %Y %I:%M %p"
-      short: ! "%d %b %I:%M %p"
-    pm: 'pm'
 
 
 
