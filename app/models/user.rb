@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validate :username_isnt_me
+
   has_many :posts, foreign_key: :sender_id
   has_many :hub_posts, foreign_key: :sender_id
 
@@ -27,4 +29,9 @@ class User < ActiveRecord::Base
 			where(conditions).first
 		end
 	end
+	
+	private
+	  def username_isnt_me
+	    errors.add(:username, "The username 'me' is reserved. Sorry!") if self.username == "me"
+	  end
 end
