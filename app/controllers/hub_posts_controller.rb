@@ -8,14 +8,21 @@ class HubPostsController < ApplicationController
     end
 	end
 	
-  def create
-	  @hub_post = HubPost.new(post_params)
+  def create	
+    if user_signed_in?
+      @post = current_user.hub_posts.build(post_params)
+	    parse_references!(@post.sender_desc)
+	    parse_references!(@post.receiver_desc)
+	    parse_references!(@post.content)
+    else
+	    @post = HubPost.new(post_params)
+    end
     respond_to do |format|
-      if @hub_post.save
+      if @post.save
 	      format.html { redirect_to root_url }
         format.js { redirect_to hub_posts_url }
       else
-        format.html { render partial: 'posts/form', locals: {post: @hub_post} }
+        format.html { render partial: 'posts/form', locals: {post: @post} }
       end
     end
   end

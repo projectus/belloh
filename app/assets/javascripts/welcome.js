@@ -9,10 +9,10 @@ function initialize_welcome_page(){
     $(window).scroll(function(){
 
         /* for the google location autocomplete dropdown to follow input */
-        if ($(this).scrollTop() >= 160) {
+        if ($(this).scrollTop() >= 173) {
             $('.pac-container').css('position','fixed').css('top','60px');
         } else {
-            $('.pac-container').css('position','absolute').css('top','220px');
+            $('.pac-container').css('position','absolute').css('top','233px');
         }
 
         /* infinite scroll. if next-page link is in view, click it and remove it from the DOM */

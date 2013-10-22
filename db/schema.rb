@@ -21,14 +21,14 @@ ActiveRecord::Schema.define(version: 20131021204740) do
     t.string   "sender_desc"
     t.string   "receiver_desc"
     t.string   "mood",           default: "neutral"
-    t.integer  "sender_id"
     t.integer  "virtual_hub_id"
+    t.integer  "sender_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "hub_posts", ["sender_id"], name: "index_hub_posts_on_sender_id", unique: true, using: :btree
   add_index "hub_posts", ["virtual_hub_id"], name: "index_hub_posts_on_virtual_hub_id", using: :btree
+  add_index "hub_posts", ["sender_id"], name: "index_hub_posts_on_sender_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.float    "latitude"
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20131021204740) do
     t.string   "sender_desc"
     t.string   "receiver_desc"
     t.string   "mood",          default: "neutral"
+    t.integer  "sender_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "sender_id"
   end
 
   add_index "posts", ["latitude", "longitude"], name: "index_posts_on_latitude_and_longitude", using: :btree

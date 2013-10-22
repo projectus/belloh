@@ -15,6 +15,9 @@ class PostsController < ApplicationController
   def create
     if user_signed_in?
       @post = current_user.posts.build(post_params)
+	    parse_references!(@post.sender_desc)
+	    parse_references!(@post.receiver_desc)
+	    parse_references!(@post.content)
     else
 	    @post = Post.new(post_params)
     end
@@ -30,7 +33,7 @@ class PostsController < ApplicationController
 
   private
     # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
+    def post_params	    
       params.require(:post).permit(:content, :receiver_desc, 
         :sender_desc, :latitude, :longitude, :mood)
     end

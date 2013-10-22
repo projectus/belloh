@@ -17,4 +17,16 @@ module PostsHelper
 		return seconds.to_s + 's'
 	end
 	
+	def links_to_users(desc)
+		occs = desc.scan(/&\w*/)
+		new_desc = desc
+		occs.each do |occ|
+			username = occ[1..-1]
+			user = User.find_by_username(username)
+			next if user.nil?
+			link = link_to username, user
+			new_desc.sub!(occ,link)
+		end
+		return new_desc.html_safe
+	end
 end

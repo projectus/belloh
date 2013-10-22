@@ -4,7 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
-
+    def parse_references!(text)
+	    occs = text.scan(/&me\W/)
+	    occs.each do |occ|
+	      text.sub!(occ,'&'+current_user.username+occ[-1])
+	    end
+	    text.sub!(/&me\W*$/,'&'+current_user.username)
+	  end
+	
     def lat_lng_are_floats?(lat,lng)
       Float(lat) && Float(lng) rescue false
     end

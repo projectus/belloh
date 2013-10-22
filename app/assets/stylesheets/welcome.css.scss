@@ -2,6 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#header {
+	line-height: 100pt;
+	margin-bottom: 10px;
+	word-wrap: break-word;
+	#belloh {
+		font-size: 100pt;
+		font-weight: bolder;
+		.smallb, .mediumb, .largeb{
+			font-weight: bolder;
+			margin-right: -40px;
+		}
+		.smallb {
+			font-size: 60pt;
+			color: #c00;
+		}
+		.mediumb {
+			font-size: 80pt;
+			color: #ff7f00;
+		}
+		.largeb {
+			font-size: 100pt;
+			color: #24bf51;
+		}
+	}
+}
+
 #mapfull {
 	.modal-footer {
 		padding: 5px;
@@ -17,11 +43,6 @@
 }
 
 #posts-header {
-    padding-top: 0;
-    #post-as {
-      padding: 5px;
-      cursor: pointer;
-    }
 	#new_post_box {
 	  padding: 20px;
 	  background: #fff !important;
@@ -78,7 +99,7 @@
 					}
 				}
 				textarea {
-					width: 400px;
+					width: 420px;
 					height: 40px;
 					resize: none;
 					border-radius: 0 !important;

@@ -34,34 +34,6 @@ body, textarea, input {
   font-family: 'Ubuntu', Tahoma, sans-serif !important;
 }
 
-#header {
-	height: 120px;
-	padding: 10px;
-	margin-bottom: 10px;
-	text-align: center;
-	#belloh {
-		font-size: 100pt;
-		font-weight: bolder;
-		margin-top: 40px;
-		.smallb, .mediumb, .largeb{
-			font-weight: bolder;
-			margin-right: -40px;
-		}
-		.smallb {
-			font-size: 60pt;
-			color: #c00;
-		}
-		.mediumb {
-			font-size: 80pt;
-			color: #ff7f00;
-		}
-		.largeb {
-			font-size: 100pt;
-			color: #24bf51;
-		}
-	}
-}
-
 .footer {
   width: 100%;
   height: 20px;

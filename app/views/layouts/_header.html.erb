@@ -1,7 +1,18 @@
-<div id="header">
-	<div id="belloh"><%= name %> 
-		<span class="smallb">)</span>
-		<span class="mediumb">)</span>
-		<span class="largeb">)</span>
+<div class="row-fluid">
+	<div id="header" class="span10">
+		<div id="belloh">
+			<span><%= name %></span>
+			<span class="smallb">)</span>
+			<span class="mediumb">)</span>
+			<span class="largeb">)</span>
+		</div>
+	</div>
+	<div class="span2 well">
+		<% if user_signed_in? %>
+		  Signed in as: <%= link_to current_user.username, current_user %><br/>
+	    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+	  <% else %>
+	    <%= link_to "Sign In", new_user_session_path %>
+	  <% end %>
 	</div>
 </div>
