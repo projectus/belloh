@@ -9,7 +9,7 @@
 	<%= render partial: 'layouts/header', locals: {name: @vhub.name} %>
 
 	<div class="span8">
-		<%= render partial: 'layouts/posts', locals: {posts: @posts, post: @hub_post, path: hub_posts_path}%>
+		<%= render partial: 'layouts/posts', locals: {posts: @posts, post: @hub_post, controller: 'hub_posts'}%>
 	</div>
 
 	<div class="span4">

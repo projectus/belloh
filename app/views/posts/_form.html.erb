@@ -1,15 +1,15 @@
 <script>
   $(function(){
     $('#suser').click(function(){
+      $('#sender-user').show();
       $('#sender-anonym').hide();
-      $('#sender-suser').show();
       $('#suser').hide();
       $('#anonym').show();
     });
 
     $('#anonym').click(function(){
+      $('#sender-user').hide();
       $('#sender-anonym').show();
-      $('#sender-suser').hide();
       $('#suser').show();
       $('#anonym').hide();
     });
@@ -19,20 +19,30 @@
 <%= form_for(post, remote: true) do |f| %>
   <%= render partial: 'posts/errors', locals: {post: post} %>
 
-	<div id="new_post_header" class="row-fluid">
-    <!--<span id="sender-anonym"></span>-->
-    <div class="span2">
-	    <div style="float:right;">
-				<% if user_signed_in? %>
-			  <span id="sender-suser"><%= link_to current_user.username, nil %></span>
-			  <% end %>
+	<div id="new_post_header">
+		<div id="sender-anonym">
+		  [ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]
+	    @ [ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]
+		</div>
+		<% if user_signed_in? %>
+		<style>
+		  #sender-anonym {
+			  display: none;
+		  }
+		</style>
+    <div id="sender-user">
+	    <div style="display: inline-block;">
+		    <div style="line-height:27pt;max-width: 250px;overflow:hidden;text-overflow:ellipsis;">
+				  <%= link_to current_user.username, nil %>
+			  </div>
+			  <div style="margin-top:5px;"><span>@</span></div>
 		  </div>
-		  <div style="float:right;margin-top:15px;"><span>@</span></div>
-	  </div>
-	  <div class="span10">
-	    <div>[ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]</div>
-	    <div style="margin-top:10px;">[ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]</div>
+		  <div style="display: inline-block;">
+		    <div>[ <%= f.text_field :sender_desc, placeholder: t(:sender_placeholder) %> ]</div>
+		    <div style="margin-top:10px;">[ <%= f.text_field :receiver_desc, placeholder: t(:receiver_placeholder) %> ]</div>
+	    </div>
     </div>
+	  <% end %>
   </div>
 
   <div id="new_post_content" class="input-prepend input-append">

@@ -13,7 +13,7 @@
 
 <div id="posts" class="well">
   <div id="filter-bar">
-	  <%= form_tag(path, method: :get, id: 'filter-form', remote: true) do %>
+	  <%= form_tag({controller: controller, action: 'index'}, method: :get, id: 'filter-form', remote: true) do %>
 	    <%= search_field_tag 'filter', nil, placeholder: t(:filter_placeholder) %>
 	    <span id="ranges" style="<%= 'display: none' if  @range.nil? %>">
         <%= render partial: 'welcome/ranges', locals: {range: session[:range]} %>
@@ -24,7 +24,7 @@
 	  <%= render partial: 'posts/list', locals: {posts: posts} %>
 	</div>
 	<div id="next-page">
-		<%= link_to_next_page posts, 'Load more posts', remote: true, :params => {:path => path} %>
+		<%= link_to_next_page posts, 'Load more posts', remote: true, :params => {controller: controller, action: 'index'} %>
 	</div>
 </div>
 
