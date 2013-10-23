@@ -1,5 +1,5 @@
 class HubPost < ActiveRecord::Base
-	include Post::Filter
+	include Post::Common
   belongs_to :virtual_hub
   belongs_to :sender, class_name: 'User'
 

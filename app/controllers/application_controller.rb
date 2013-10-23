@@ -4,14 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   private
-    def parse_references!(text)
-	    occs = text.scan(/&me\W/)
-	    occs.each do |occ|
-	      text.sub!(occ,'&'+current_user.username+occ[-1])
-	    end
-	    text.sub!(/&me\W*$/,'&'+current_user.username)
-	  end
-	
 	  def is_me_the_only_reference?(text)
 		  text.match(/&[^m][^e]/).nil?
 		end
@@ -58,14 +50,6 @@ class ApplicationController < ActionController::Base
 			  filtr = session[:filter]
 			end
 
-      @posts = post_type.page(params[:page]).before(session[:latest])
-			
-		  words = filtr.to_s.split('@')
-
-	    if words.size > 1
-	      @posts = @posts.descs_like(words[0],words[-1])
-	    elsif !words.empty?
-	      @posts = @posts.desc_like(words[0])
-	    end
+      @posts = post_type.filtr(filtr).page(params[:page]).before(session[:latest])
 	  end
 end
