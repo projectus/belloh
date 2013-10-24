@@ -18,7 +18,7 @@
 	    <div class="post-time">
 		    <%= readable_time_ago(post.created_at.localtime) %>
 	    </div>
-	    <% if session[:lat].nil? && !hub_post? %>
+	    <% if session[:lat].blank? && !hub_post? %>
 	    <div class="post-location" rel="tooltip" data-title="<%= 'Earth' if post.city.nil? %><%= post.city %>
 <%= post.country %>">
 		    <%= image_tag 'tiles/globe-small.png' %>
