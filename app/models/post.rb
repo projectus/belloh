@@ -13,6 +13,8 @@ module Common
 	end
 	
   included do
+	  belongs_to :sender, class_name: 'User'
+	
 	  before_validation do 
 		  self.mood.downcase!
 		  user = User.find_by_id(sender_id)
@@ -70,7 +72,6 @@ end
 
 class Post < ActiveRecord::Base
 	include Common
-  belongs_to :sender, class_name: 'User'
 
   reverse_geocoded_by :latitude, :longitude do |obj,results|
 	  if geo = results.first

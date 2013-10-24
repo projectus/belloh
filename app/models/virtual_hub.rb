@@ -1,5 +1,5 @@
 class VirtualHub < ActiveRecord::Base
-	belongs_to :admin, class_name: 'User'
+	belongs_to :admin, class_name: 'User', foreign_key: :admin_id
 	has_many :posts, class_name: 'HubPost'
 	
 	has_attached_file :background, :size => { :in => 0..2.megabytes }#, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
