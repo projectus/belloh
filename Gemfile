@@ -29,6 +29,7 @@ gem 'bootstrap-sass'
 gem 'kaminari' # pagination
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
+gem 'rails_autolink'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
