@@ -1,7 +1,7 @@
 class HubPostsController < ApplicationController
 	def index
-		setup_posts(HubPost)
-
+		vhub = VirtualHub.find(session[:vhub_id])
+		setup_posts(vhub.posts)
 	  respond_to do |format|
 		  format.html { redirect_to root_url }
       format.js

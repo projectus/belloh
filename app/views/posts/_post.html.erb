@@ -4,15 +4,9 @@
 	<div class="row-fluid">
     <div class="span11" mood="<%= post.mood %>">
 	    <div class="post-header">
-        [<% if post.sender_desc.empty? %>
-          anonymous
-        <% end %>
-        <%= links_to_users(post.sender_desc) %> ]
+        [ <%= links_to_users(post.sender_desc) %> ]
         @
-        [<% if post.receiver_desc.empty? %>
-        anyone
-        <% end %>
-        <%= links_to_users(post.receiver_desc) %> ]
+        [ <%= links_to_users(post.receiver_desc) %> ]
 	    </div>
 	    <div class="post-message">
 	      <%= links_to_users(post.content) %>

@@ -1,8 +1,8 @@
-<% if @virtual_hub.errors.any? %>
+<% if vhub.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@virtual_hub.errors.count, "error") %> prohibited this virtual hub from being saved:</h2>
+    <h2><%= pluralize(vhub.errors.count, "error") %> prohibited this virtual hub from being saved:</h2>
     <ul>
-    <% @virtual_hub.errors.full_messages.each do |msg| %>
+    <% vhub.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>

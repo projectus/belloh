@@ -1,11 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    coords=setup_location_posts
-    session[:lat] = coords[:lat]
-    session[:lng] = coords[:lng]
-    session[:range] = coords[:range]
-
+    setup_location_posts
 	  respond_to do |format|
 		  format.html { redirect_to root_url }
       format.js

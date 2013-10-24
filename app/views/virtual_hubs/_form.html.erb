@@ -1,5 +1,5 @@
 <%= form_for(@virtual_hub) do |f| %>
-  <%= render 'errors' %>
+  <%= render partial: 'errors', locals: {vhub: @virtual_hub} %>
   <%= f.hidden_field :name %>
   <div><%= f.submit 'Create', class: 'btn btn-info' %></div>
 <% end %>

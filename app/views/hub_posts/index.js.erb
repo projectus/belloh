@@ -2,7 +2,11 @@ $('#next-page').html("<%=j link_to_next_page @posts, 'Load more posts', remote: 
 $('#alerts').html("<%=j render 'layouts/alerts' %>");
 
 <% if params[:page].nil? %>
-  $('#post-list').html("<%=j render partial: 'posts/list', locals: {posts: @posts} %>");  
+  $('#post-list').html("<%=j render partial: 'posts/list', locals: {posts: @posts} %>");
+
+  <% if params[:filter].nil? %>
+	  $('#post_content').val("");	
+	<% end %>
 <% else %>
   $('#post-list').append("<%=j render partial: 'posts/list', locals: {posts: @posts} %>");
 <% end %>

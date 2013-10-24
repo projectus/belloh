@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, foreign_key: :sender_id
   has_many :hub_posts, foreign_key: :sender_id
+  has_many :virtual_hubs, foreign_key: :admin_id
 
   #has_attached_file :avatar, :styles => { :medium => "300x300#", :thumb => "50x50#" }, :default_url => "/images/:style/missing.jpg"
 

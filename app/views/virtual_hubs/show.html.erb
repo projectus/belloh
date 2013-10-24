@@ -1,3 +1,15 @@
+<% if @background.exists? %>
+<style>
+  body {
+	  background: url("<%= @background.url %>") no-repeat center center fixed;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+  }
+</style>
+<% end %>
+
 <% if @vhub.nil? %>
   <div class="well">
 	  <h1>the [ <%= @virtual_hub.name %> ] virtual hub does not exist yet.<h1>
@@ -14,14 +26,19 @@
 		</div>
 
 		<div class="span4">
-	    <div class="hub-logo">
-	      <img src="http://2.bp.blogspot.com/_UgJT7XB2G0Y/S-CLPc6ekDI/AAAAAAAANd4/slIv7ZJjBWc/s1600/family+guy1+1024x768.jpg" />
+	    <div class="well">
+		    <% if @avatar.exists? %>
+	        <%= image_tag @avatar.url(:default) %>
+	      <% else %>
+	        <%= image_tag 'tiles/hippo.png' %>
+	      <% end %>
 	    </div>
 
-	    <div id="hub-detail">
-	      Brian is a hub that Get people to comment on Brian. Whether or not you like Brian or you hate him,
-	      you can comment on him. There will be no consequences and hard feelings
+	    <div class="well">
+	      <%= @vhub.description %>
 	    </div>
+	
+			<%= link_to 'Edit Virtual Hub', edit_vhub_path, class: 'btn btn-info' %>
 		</div>
 	</div>
 	<% end %>

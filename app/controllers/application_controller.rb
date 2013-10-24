@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
     end
 
     def params_or_session(key)
-	    return params[key] unless params[key].nil?
+	    session[key] = params[key] unless params[key].nil?
 	    session[key]
 	  end
 
@@ -34,10 +34,8 @@ class ApplicationController < ActionController::Base
 		    @posts = @posts.nearby([lat,lng], Post::RANGES[range])
 	      result = Geocoder::search([lat,lng]).first
 	      @location = result.nil? ? 'undefined' : result.address 
-        {lat:lat,lng:lng,range:range}
       else
 	      @location = I18n.t(:around_the_world)
-        {lat:nil,lng:nil,range:range}
       end
 	  end
 		

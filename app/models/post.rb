@@ -17,9 +17,9 @@ module Common
 		  self.mood.downcase!
 		  user = User.find_by_id(sender_id)
 		  unless user.nil?
-			  parse_references!(sender_desc,user)
-		    parse_references!(receiver_desc,user)
-		    parse_references!(content,user)
+			  sender_desc.empty? ? self.sender_desc = 'anonymous' : parse_self_references!(sender_desc,user)
+			  receiver_desc.empty? ? self.receiver_desc = 'anyone' : parse_self_references!(receiver_desc,user)			
+		    parse_self_references!(content,user)
       end
 		end
 		
@@ -32,7 +32,7 @@ module Common
 	    elsif !words.empty?
 	      desc_like(words[0])
 	    else
-		    scoped
+		    all
 		  end
 		end
 
@@ -41,6 +41,7 @@ module Common
 		end
 						
 		default_scope { order('created_at DESC') }
+		
     scope :sender_desc_like, lambda {|sender_desc|
 	    where(Common.filter_sql(sender_desc,'sender_desc'))}
 	
@@ -58,7 +59,7 @@ module Common
   end
 
   private
-    def parse_references!(text,user)
+    def parse_self_references!(text,user)
       occs = text.scan(/&me\W/)
       occs.each do |occ|
         text.sub!(occ,'&'+user.username+occ[-1])

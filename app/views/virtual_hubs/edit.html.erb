@@ -1,0 +1,12 @@
+<%= form_for(@vhub, url: update_vhub_path) do |f| %>
+  <%= render partial: 'errors', locals: {vhub: @vhub} %>
+  <%= f.label :description %>
+  <%= f.text_area :description %><br/>
+  <%= f.label :background %><br/>
+  <%= f.file_field :background %>
+  <%= f.label :avatar %><br/>
+  <%= f.file_field :avatar %>
+  <div>
+    <%= f.submit 'Update', class: 'btn btn-info' %>
+  </div>
+<% end %>

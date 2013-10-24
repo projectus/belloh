@@ -10,6 +10,8 @@ Belloh::Application.routes.draw do
 
 	constraints(Subdomain) do
 	  get '/', to: 'virtual_hubs#show'
+	  get 'edit', to: 'virtual_hubs#edit', as: 'edit_vhub'
+	  patch 'update', to: 'virtual_hubs#update', as: 'update_vhub'
 	end
 
   # You can have the root of your site routed with "root"
