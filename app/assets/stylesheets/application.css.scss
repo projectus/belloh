@@ -17,11 +17,45 @@
 body{
   padding-bottom: 40px;
   padding-top: 20px;
-  //background: image-url('bkg/foundersden.png') fixed;
-  //background-size: cover;
+  background: image-url('bkg/foundersden.png') fixed;
+  background-size: cover;
   a {
     color: orangered;
   }
+}
+
+#header {
+	line-height: 100pt;
+	margin-bottom: 10px;
+	word-wrap: break-word;
+	#belloh {
+		font-size: 100pt;
+		font-weight: bolder;
+		#wave {
+			display: inline-block;
+			background: #333333;
+			width:85px;
+			padding:0 10px;
+			border-radius:5px;
+			.smallb, .mediumb, .largeb{
+				font-weight: bolder;
+				margin-right: -40px;
+				color: white;
+			}
+			.smallb {
+				font-size: 60pt;
+				//color: #c00;
+			}
+			.mediumb {
+				font-size: 80pt;
+				//color: #ff7f00;
+			}
+			.largeb {
+				font-size: 100pt;
+				//color: #24bf51;
+			}
+	  }
+	}
 }
 
 .nav-pills > li.active {
