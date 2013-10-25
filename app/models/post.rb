@@ -17,12 +17,13 @@ module Common
 	
 	  before_validation do 
 		  self.mood.downcase!
-		  user = User.find_by_id(sender_id)
-		  unless user.nil?
-			  sender_desc.empty? ? self.sender_desc = 'anonymous' : parse_self_references!(sender_desc,user)
-			  receiver_desc.empty? ? self.receiver_desc = 'anyone' : parse_self_references!(receiver_desc,user)			
-		    parse_self_references!(content,user)
+		  unless sender.nil?
+			  parse_self_references!(sender_desc)
+			  parse_self_references!(receiver_desc)			
+		    parse_self_references!(content)
       end
+      self.sender_desc = 'anonymous' if sender_desc.empty?
+      self.receiver_desc = 'anyone' if receiver_desc.empty?
 		end
 		
 		validates :mood, inclusion: MOODS
@@ -61,12 +62,12 @@ module Common
   end
 
   private
-    def parse_self_references!(text,user)
+    def parse_self_references!(text)
       occs = text.scan(/&me\W/)
       occs.each do |occ|
-        text.sub!(occ,'&'+user.username+occ[-1])
+        text.sub!(occ,'&'+sender.username+occ[-1])
       end
-      text.sub!(/&me\W*$/,'&'+user.username)
+      text.sub!(/&me\W*$/,'&'+sender.username)
     end
 end
 

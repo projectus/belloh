@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     setup_location_posts
+    p session[:lat]
 	  respond_to do |format|
 		  format.html { redirect_to root_url }
       format.js
