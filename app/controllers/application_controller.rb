@@ -41,20 +41,20 @@ class ApplicationController < ActionController::Base
 	  end
 
     def setup_new_posts(post_type)
-      @posts = post_type.filtr(session[:filter]).after(session[:latest])
-      session[:latest] = @posts.first.id unless @posts.empty?
+      @posts = post_type.filtr(session[:filter]).after(session[:newest])
+      session[:newest] = @posts.first.id unless @posts.empty?
 	  end
 			
     def setup_posts(post_type)	# filters and paginates posts
 	    if params[:page].nil?
 		    filtr = params[:filter]
 		    session[:filter] = filtr
-		    session[:latest] = nil
+		    session[:before] = nil
 		  else
 			  filtr = session[:filter]
 			end
 
-      @posts = post_type.filtr(filtr).page(params[:page]).before(session[:latest])
-      session[:latest] = @posts.first.id
+      @posts = post_type.filtr(filtr).page(params[:page]).before(session[:before])
+      session[:before] ||= @posts.first.id unless @posts.empty?
 	  end
 end
