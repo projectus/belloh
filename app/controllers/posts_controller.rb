@@ -1,14 +1,19 @@
-class PostsController < ApplicationController
-
+class PostsController < ApplicationController	
   def index
     setup_location_posts
-    p session[:lat]
 	  respond_to do |format|
 		  format.html { redirect_to root_url }
       format.js
     end
 	end
-
+  
+  def sync
+	  setup_location_posts(true)
+	  respond_to do |format|
+      format.js
+    end
+	end
+	
   def create
     if user_signed_in?
       @post = current_user.posts.build(post_params)
@@ -25,8 +30,9 @@ class PostsController < ApplicationController
     end
     respond_to do |format|
       if @post.save
+	      setup_new_posts(Post)
 	      format.html { redirect_to root_url }
-        format.js { redirect_to posts_url }
+        format.js { render 'sync' }
       else
         format.html { render partial: 'posts/form', locals: {post: @post} }
       end

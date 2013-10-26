@@ -12,6 +12,7 @@ Belloh::Application.routes.draw do
 	  get '/', to: 'virtual_hubs#show'
 	  get 'edit', to: 'virtual_hubs#edit', as: 'edit_vhub'
 	  patch 'update', to: 'virtual_hubs#update', as: 'update_vhub'
+	  get 'sync', to: 'hub_posts#sync'
 	end
 
   # You can have the root of your site routed with "root"
@@ -22,6 +23,7 @@ Belloh::Application.routes.draw do
   resources :virtual_hubs, only: [:create]
 
   resources :posts, only: [:index,:create]
+  get 'sync', to: 'posts#sync'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
   # The priority is based upon order of creation: first created -> highest priority.

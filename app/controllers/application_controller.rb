@@ -20,9 +20,10 @@ class ApplicationController < ActionController::Base
 	    session[key] = params[key] unless params[key].nil?
 	    session[key]
 	  end
-
-    def setup_location_posts # find nearby posts
-	    setup_posts(Post)
+	
+    def setup_location_posts(newones=false) # find nearby posts
+	    
+	    newones ? setup_new_posts(Post) : setup_posts(Post)
 	
 			# location stuff
 		  lat   = params_or_session(:lat)
@@ -38,7 +39,12 @@ class ApplicationController < ActionController::Base
 	      @location = I18n.t(:around_the_world)
       end
 	  end
-		
+
+    def setup_new_posts(post_type)
+      @posts = post_type.filtr(session[:filter]).after(session[:latest])
+      session[:latest] = @posts.first.id unless @posts.empty?
+	  end
+			
     def setup_posts(post_type)	# filters and paginates posts
 	    if params[:page].nil?
 		    filtr = params[:filter]
@@ -49,5 +55,6 @@ class ApplicationController < ActionController::Base
 			end
 
       @posts = post_type.filtr(filtr).page(params[:page]).before(session[:latest])
+      session[:latest] = @posts.first.id
 	  end
 end

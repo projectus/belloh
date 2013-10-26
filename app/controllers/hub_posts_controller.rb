@@ -7,7 +7,15 @@ class HubPostsController < ApplicationController
       format.js
     end
 	end
-	
+
+  def sync
+	  vhub = VirtualHub.find(session[:vhub_id])
+	  setup_new_posts(vhub.posts)
+	  respond_to do |format|
+      format.js { render 'posts/sync' }
+    end
+	end
+		
   def create	
     if user_signed_in?
       @post = current_user.hub_posts.build(post_params)
@@ -24,8 +32,10 @@ class HubPostsController < ApplicationController
     end
     respond_to do |format|
       if @post.save
+	      vhub = @post.virtual_hub
+	      setup_new_posts(vhub.posts)
 	      format.html { redirect_to root_url }
-        format.js { redirect_to hub_posts_url }
+        format.js { render 'posts/sync' }
       else
         format.html { render partial: 'posts/form', locals: {post: @post} }
       end

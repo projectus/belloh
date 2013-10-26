@@ -10,7 +10,7 @@ class VirtualHubsController < ApplicationController
 	  else
 	    @hub_post = HubPost.new
 	    @hub_post.virtual_hub = @vhub
-	    @posts = @vhub.posts.page(params[:page])
+	    setup_posts(@vhub.posts)
 	    @background = @vhub.background
 	    @avatar = @vhub.avatar
 	    session[:vhub_id] = @vhub.id

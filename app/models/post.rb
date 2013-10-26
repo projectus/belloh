@@ -43,7 +43,7 @@ module Common
 		  MOODS.map(&:capitalize)
 		end
 						
-		default_scope { order('created_at DESC') }
+		default_scope { order('id DESC') }
 		
     scope :sender_desc_like, lambda {|sender_desc|
 	    where(Common.filter_sql(sender_desc,'sender_desc'))}
@@ -58,7 +58,10 @@ module Common
 			sender_desc_like(sender_desc).receiver_desc_like(receiver_desc)}
 			
 		scope :before, lambda {|latest|
-			where("created_at <= ?", latest||=Time.now)}
+      latest.nil? ? all : where("id <= ?", latest)}
+			
+    scope :after, lambda {|latest|
+      latest.nil? ? all : where("id > ?", latest)}
   end
 
   private

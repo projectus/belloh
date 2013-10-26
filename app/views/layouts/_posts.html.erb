@@ -23,8 +23,18 @@
 
 <script>
 $(function(){
+	
 	$('#filter').on('input',function(){
 		$('#filter-form').submit();
 	});
+	
+	updatePosts();
 });
+
+function updatePosts () {
+  setTimeout(function(){
+	  $.getScript("/sync.js");
+		updatePosts();
+	}, 10000);	
+}
 </script>

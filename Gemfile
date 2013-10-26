@@ -30,6 +30,8 @@ gem 'kaminari' # pagination
 gem 'paperclip', '~> 3.0'
 gem 'aws-sdk'
 gem 'rails_autolink'
+#gem 'private_pub'
+#gem 'thin'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
